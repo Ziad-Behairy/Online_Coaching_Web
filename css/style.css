@@ -86,7 +86,7 @@ p {
 }
 
 img {
-	max-width: 100%;
+	max-width: 75%;
 }
 
 input:focus,
@@ -324,14 +324,22 @@ ol {
 -----------------------*/
 
 .header-section {
-	position: absolute;
-	left: 0;
+	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	padding: 0 15px;
 	padding-top: 55px;
 	z-index: 99;
-}
+	background-color: transparent;
+	transition: opacity 0.3s ease-in-out;
+  }
+  
+  .header-section.scrolled {
+	opacity: 0.9; /* Adjust the opacity value as desired */
+	background-color: black; /* Set the background color to black */
+  }
+  
 
 .logo a {
 	display: inline-block;
