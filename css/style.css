@@ -429,13 +429,13 @@ ol {
 	transition: all 0.3s;
 }
 
-.nav-menu ul li a:after {
+/*.nav-menu ul li a:after {
 	position: absolute;
 	left: 0;
 	top: 22px;
 	height: 1px;
 	width: 100%;
-	background: #C7261C;
+	/*background: #C7261C;*/
 	content: "";
 	-webkit-transform: rotate(-20deg);
 	-ms-transform: rotate(-20deg);
@@ -444,7 +444,7 @@ ol {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-}
+}*/
 
 .top-option {
 	text-align: right;
@@ -3262,4 +3262,69 @@ ol {
 	.search-model-form input {
 		font-size: 28px;
 	}
+
+
+
+	.imageupload {
+		margin: 20px;
+	  }
+	  
+	  .panel {
+		background-color: #f5f5f5;
+		border: none;
+		border-radius: 4px;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+		padding: 20px;
+	  }
+	  
+	  .panel-default {
+		background-color: #fff;
+		border-color: #ddd;
+	  }
+	  
+	  /* Additional styles for the image upload */
+	  
+	  .imageupload .upload-preview {
+		text-align: center;
+		margin-bottom: 20px;
+	  }
+	  
+	  .imageupload .upload-preview img {
+		max-width: 100%;
+		height: auto;
+	  }
+	  
+	  .imageupload .upload-btn-wrapper {
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+	  }
+	  
+	  .imageupload .btn {
+		border: 2px solid gray;
+		color: gray;
+		background-color: transparent;
+		padding: 8px 20px;
+		border-radius: 4px;
+		font-size: 14px;
+		font-weight: bold;
+	  }
+	  
+	  .imageupload .upload-btn-wrapper input[type="file"] {
+		font-size: 100px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+	  }
+	  
+	  .imageupload .file-name {
+		margin-left: 10px;
+	  }
+	  
+	  .imageupload .file-name::placeholder {
+		color: #aaa;
+	  }
+	  
+	  
 }

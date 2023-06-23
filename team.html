@@ -388,6 +388,28 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        // Function to handle the scroll event
+function handleScroll() {
+  const header = document.querySelector('.header-section');
+  const logo = header.querySelector('.logo');
+  const scrollPos = window.pageYOffset;
+
+  if (scrollPos > 0) {
+    header.classList.add('scrolled');
+    logo.style.display = 'none'; // Hide the logo when scrolling down
+  } else {
+    header.classList.remove('scrolled');
+    logo.style.display = 'block'; // Show the logo when at the top
+  }
+}
+
+// Add event listeners for scroll and DOMContentLoaded
+window.addEventListener('scroll', handleScroll);
+document.addEventListener('DOMContentLoaded', handleScroll);
+
+    </script>
+
 
 </body>
 

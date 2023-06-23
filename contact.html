@@ -176,15 +176,30 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Comment"></textarea>
-                            <button type="submit">Submit</button>
+                        <form action="#" onsubmit="return validateForm()">
+                          <input type="text" placeholder="Name" required>
+                          <input type="email" placeholder="Email" required>
+                          <input type="text" placeholder="Website" required>
+                          <textarea placeholder="Comment" required></textarea>
+                          <button type="submit">Submit</button>
                         </form>
+                      </div>
+            <div class="imageupload panel panel-default">
+                <div class="placeholder-img">
+                    <img src="img/upload-placeholder.png" alt="img">
+                </div>
+            
+                <p class="img-title">صورة البطاقة الوجه الأمامي</p>
+                <div class="file-tab panel-body">
+                    <div class="upload-tools">
+                        <label class="btn btn-default btn-file">
+                            <span><i class="fa fa-folder-open-o"></i></span>
+                            <input type="file">
+                        </label>
+                        <button type="button" class="btn btn-default"><i class="fa fa-trash-o"></i></button>
                     </div>
                 </div>
+                <span class="text-danger"></span>
             </div>
             <div class="map">
                 <iframe
@@ -321,6 +336,73 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        // Function to handle the scroll event
+function handleScroll() {
+  const header = document.querySelector('.header-section');
+  const logo = header.querySelector('.logo');
+  const scrollPos = window.pageYOffset;
+
+  if (scrollPos > 0) {
+    header.classList.add('scrolled');
+    logo.style.display = 'none'; // Hide the logo when scrolling down
+  } else {
+    header.classList.remove('scrolled');
+    logo.style.display = 'block'; // Show the logo when at the top
+  }
+}
+
+// Add event listeners for scroll and DOMContentLoaded
+window.addEventListener('scroll', handleScroll);
+document.addEventListener('DOMContentLoaded', handleScroll);
+
+    </script>
+
+<script>
+    function validateForm() {
+      var nameInput = document.querySelector('input[type="text"][placeholder="Name"]');
+      var emailInput = document.querySelector('input[type="email"][placeholder="Email"]');
+      var websiteInput = document.querySelector('input[type="text"][placeholder="Website"]');
+      var commentInput = document.querySelector('textarea[placeholder="Comment"]');
+  
+      if (!nameInput.value.trim()) {
+        alert("Please enter your name.");
+        nameInput.focus();
+        return false;
+      }
+  
+      if (!emailInput.value.trim()) {
+        alert("Please enter your email.");
+        emailInput.focus();
+        return false;
+      }
+  
+      if (!validateEmail(emailInput.value.trim())) {
+        alert("Please enter a valid email address.");
+        emailInput.focus();
+        return false;
+      }
+  
+      if (!websiteInput.value.trim()) {
+        alert("Please enter your website.");
+        websiteInput.focus();
+        return false;
+      }
+  
+      if (!commentInput.value.trim()) {
+        alert("Please enter your comment.");
+        commentInput.focus();
+        return false;
+      }
+  
+      return true;
+    }
+  
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+  </script>
 
 
 </body>
