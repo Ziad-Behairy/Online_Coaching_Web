@@ -429,22 +429,7 @@ ol {
 	transition: all 0.3s;
 }
 
-/*.nav-menu ul li a:after {
-	position: absolute;
-	left: 0;
-	top: 22px;
-	height: 1px;
-	width: 100%;
-	/*background: #C7261C;*/
-	content: "";
-	-webkit-transform: rotate(-20deg);
-	-ms-transform: rotate(-20deg);
-	transform: rotate(-20deg);
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-}*/
+
 
 .top-option {
 	text-align: right;
