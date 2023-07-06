@@ -168,7 +168,7 @@ ol {
 	display: inline-block;
 	font-size: 14px;
 	padding: 17px 30px 16px;
-	color: #ffffff;
+	color: #000000;
 	background: #C7261C;
 	line-height: normal;
 	letter-spacing: 1px;
@@ -336,10 +336,10 @@ ol {
   }
   
   .header-section.scrolled {
-	opacity: 0.9; /* Adjust the opacity value as desired */
-	background-color: black; /* Set the background color to black */
-	height: 125px;
-  }
+	opacity: 1; /* Adjust the opacity value as desired */
+	background-color: white; /* Set the background color to black */
+	height: 95px;
+	}
   
 
 .logo a {
@@ -355,7 +355,10 @@ ol {
 	padding: 0;
 	margin: 0;
 	margin-left: -150px; /* Adjust the value as needed */
-  }
+	margin-top: -20px; /* Adjust the value as needed */
+	}
+
+ul {}
   
   .nav-menu ul li {
 	display: inline-block;
@@ -422,7 +425,7 @@ ol {
 }
 
 .nav-menu ul li a {
-	color: #ffffff;
+	color: #000000;
 	display: block;
 	font-size: 15px;
 	font-weight: 500;
@@ -440,7 +443,8 @@ ol {
 
 .top-option {
 	text-align: right;
-	padding: 9px 0;
+	padding: 9px;
+	margin-top: -20px;
 }
 
 .top-option .to-search {
@@ -453,15 +457,15 @@ ol {
 	position: absolute;
 	right: 0;
 	top: 5px;
-	height: 15px;
-	width: 1px;
-	background: rgba(255, 255, 255, 0.3);
+	height: 16px;
+	width: 2px;
+	background: rgb(0 0 0 / 30%);
 	content: "";
 }
 
 .top-option .to-search i {
 	font-size: 16px;
-	color: #ffffff;
+	color: #000000;
 	cursor: pointer;
 }
 
@@ -471,7 +475,7 @@ ol {
 
 .top-option .to-social a {
 	display: inline-block;
-	color: #ffffff;
+	color: #000000;
 	font-size: 16px;
 	margin-left: 15px;
 }
@@ -549,7 +553,7 @@ ol {
 .hs-slider .hs-item .hi-text span {
 	display: block;
 	font-size: 18px;
-	color: #ffffff;
+	color: #070707;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 6px;
@@ -561,7 +565,7 @@ ol {
 
 .hs-slider .hs-item .hi-text h1 {
 	font-size: 80px;
-	color: #ffffff;
+	color: #000000;
 	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 90px;
