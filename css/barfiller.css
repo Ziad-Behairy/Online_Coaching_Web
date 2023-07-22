@@ -18,8 +18,8 @@ body {
     position:relative;
     width: 3px;
     height: 100%;
-    /* background: #000000; */
-    /* z-index:1; */
+    background: #000000;
+    z-index:1;
     background: #c7261c;
     width: 634.27px;
     transition: width 2s ease-in-out 0s;

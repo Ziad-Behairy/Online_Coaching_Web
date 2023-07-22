@@ -87,6 +87,7 @@ p {
 
 img {
 	max-width: 75%;
+	/* align-self: auto; */
 }
 
 input:focus,
@@ -486,6 +487,7 @@ ol {
 
 .canvas-open {
 	display: none;
+	color: #000000;
 }
 
 /*---------------------
@@ -1366,7 +1368,7 @@ ol {
 -----------------------*/
 
 .testimonial-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .ts_slider.owl-carousel .owl-item img {
@@ -1405,13 +1407,13 @@ ol {
 }
 
 .ts_slider .ts_item .ti_text p {
-	color: #fefefe;
+	color: #000000;
 	letter-spacing: 1px;
 	margin-bottom: 20px;
 }
 
 .ts_slider .ts_item .ti_text h5 {
-	color: #ffffff;
+	color: #000000;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-bottom: 8px;
@@ -1506,7 +1508,7 @@ ol {
 -----------------------*/
 
 .class-timetable-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .class-timetable-section.class-details-timetable {
@@ -1705,7 +1707,7 @@ ol {
 -----------------------*/
 
 .class-details-section {
-	background: #151515;
+	background: #ffffff;
 	padding-bottom: 60px;
 }
 
@@ -1722,14 +1724,14 @@ ol {
 }
 
 .class-details-text .cd-text .cd-single-item h3 {
-	color: #ffffff;
+	color: #000000;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-bottom: 28px;
 }
 
 .class-details-text .cd-text .cd-single-item p {
-	color: #c4c4c4;
+	color: #7b7979;
 }
 
 .class-details-text .cd-trainer .cd-trainer-pic img {
@@ -1745,14 +1747,14 @@ ol {
 }
 
 .class-details-text .cd-trainer .cd-trainer-text .trainer-title h4 {
-	color: #ffffff;
+	color: #000000;
 	font-weight: 600;
 	margin-bottom: 6px;
 }
 
 .class-details-text .cd-trainer .cd-trainer-text .trainer-title span {
 	font-size: 12px;
-	color: #aaaaaa;
+	color: #343a40;
 	text-transform: uppercase;
 }
 
@@ -1765,7 +1767,7 @@ ol {
 .class-details-text .cd-trainer .cd-trainer-text .trainer-social a {
 	display: inline-block;
 	font-size: 14px;
-	color: #c4c4c4;
+	color: #495057;
 	margin-right: 9px;
 }
 
@@ -1774,7 +1776,7 @@ ol {
 }
 
 .class-details-text .cd-trainer .cd-trainer-text p {
-	color: #c4c4c4;
+	color: #495057;
 }
 
 .class-details-text .cd-trainer .cd-trainer-text .trainer-info {
@@ -1784,7 +1786,7 @@ ol {
 
 .class-details-text .cd-trainer .cd-trainer-text .trainer-info li {
 	font-size: 14px;
-	color: #c4c4c4;
+	color: #495057;
 	list-style: none;
 	padding-bottom: 8px;
 	border-bottom: 1px solid #252525;
@@ -1798,7 +1800,7 @@ ol {
 }
 
 .class-details-text .cd-trainer .cd-trainer-text .trainer-info li span {
-	color: #ffffff;
+	color: #000000;
 	font-weight: 700;
 	width: 150px;
 	display: inline-block;
@@ -2070,7 +2072,7 @@ ol {
 -----------------------*/
 
 .blog-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .blog-section .sidebar-option {
@@ -2104,7 +2106,7 @@ ol {
 
 .blog-item .bi-text h5 a {
 	font-size: 20px;
-	color: #ffffff;
+	color: black;
 	font-weight: 600;
 	line-height: 28px;
 }
@@ -2138,7 +2140,7 @@ ol {
 }
 
 .blog-item .bi-text p {
-	color: #c4c4c4;
+	color: #495057;
 	line-height: 22px;
 	margin-bottom: 0;
 }
@@ -2570,7 +2572,7 @@ ol {
 -----------------------*/
 
 .contact-section {
-	background: #151515;
+	background: #ffffff;
 }
 
 .section-title.contact-title {
@@ -2585,15 +2587,14 @@ ol {
 
 .contact-widget .cw-text i {
 	font-size: 30px;
-	color: #C7261C;
+	color: #ffffff;
 	display: inline-block;
 	height: 65px;
 	width: 65px;
-	background: #363636;
+	background: #c7261c;
 	border-radius: 50%;
 	line-height: 65px;
 	text-align: center;
-
 	margin-right: 20px;
 }
 
@@ -2869,11 +2870,11 @@ ol {
 		position: absolute;
 		right: 40px;
 		top: 61px;
-		font-size: 22px;
-		width: 30px;
+		font-size: 26px;
+		width: 35px;
 		height: 30px;
-		color: #ffffff;
-		border: 1px solid #ffffff;
+		color: #000000;
+		border: 1px solid #000000;
 		border-radius: 2px;
 		line-height: 29px;
 		text-align: center;
@@ -3013,13 +3014,13 @@ ol {
 	}
 	.canvas-open {
 		position: absolute;
-		right: 40px;
-		top: 61px;
+		/* right: auto; */
+		top: 112px;
+		left: auto;
 		font-size: 22px;
 		width: 30px;
 		height: 30px;
-		color: #ffffff;
-		border: 1px solid #ffffff;
+		border: black;
 		border-radius: 2px;
 		line-height: 29px;
 		text-align: center;
