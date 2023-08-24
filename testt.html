@@ -1,23 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HTML Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hs-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hs-item {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .hi-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .hi-text span {
+            display: block;
+            font-size: 18px;
+            color: #070707;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 6px;
+            margin-bottom: 18px;
+        }
+
+        .hi-text h1 {
+            font-size: 48px;
+            color: #000000;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 54px;
+            margin-bottom: 24px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <title>Fixed Background Slider</title>
 </head>
 <body>
-    <form action="https://forms.gle/e4gmhsbg1b2RbZgR7" method="post ">
-      
-        <div class="form-element">
-            <label for="name">Name:</label>
-            <input type="text" name="entry.1858654559" >
+    <section class="hero-section">
+        <div class="hs-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="img/testimonial/test1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6">
+                            <div class="hi-text">
+                                <span>Success Stories</span>
+                                <h1>Not all <strong>Pandas</strong> are big</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hs-item set-bg" data-setbg="img/testimonial/test2.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6">
+                            <div class="hi-text">
+                                <span>Success Stories</span>
+                                <h1>Not all <strong>Pandas</strong> are fat</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more slides with different backgrounds and text -->
         </div>
-        <div class="form-element">
-            <label>Image:</label>
-            <input type="file" name="dlut" value="1687582151042" >
-        </div>
-      
-        <input type="submit" value="Submit">
-      </form>
+    </section>
+    <script>
+        $(document).ready(function () {
+            const sliderText = $(".hs-item .hi-text h1");
+            const hsSlider = $(".hs-slider");
+            let currentSlideIndex = 0;
+            const variableTexts = [
+                "New Text 1",
+                "New Text 2",
+                // Add more new text values as needed
+            ];
 
-            
+            function changeText() {
+                currentSlideIndex = (currentSlideIndex + 1) % sliderText.length;
+                sliderText.html(variableTexts[currentSlideIndex]);
+            }
+
+            hsSlider.on("click", changeText);
+        });
+    </script>
 </body>
 </html>

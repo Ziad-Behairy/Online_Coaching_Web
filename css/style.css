@@ -1,11 +1,4 @@
-/******************************************************************
-  Template Name: Gym
-  Description:  Gym Fitness HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
-******************************************************************/
+****************************************/
 
 /*------------------------------------------------------------------
 [Table of contents]
@@ -77,7 +70,7 @@ h6 {
 }
 
 p {
-	font-size: 14px;
+	font-size: 16px;
 	font-family: "Muli", sans-serif;
 	color: #5e5d5d;
 	font-weight: 400;
@@ -120,15 +113,15 @@ ol {
 }
 
 .section-title span {
-	font-size: 16px;
+	font-size: 31px;
 	color: #C7261C;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 720;
 }
 
 .section-title h2 {
 	color: #000000;
-	font-size: 32px;
+	font-size: 35px;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-top: 8px;
@@ -455,19 +448,19 @@ ol {
 }
 
 .top-option .to-search:after {
-	position: absolute;
-	right: 0;
-	top: 5px;
-	height: 16px;
-	width: 2px;
-	background: rgb(255 255 255 / 30%);
-	content: "";
+	/* position: absolute; */
+	/* right: 0; */
+	/* top: 5px; */
+	/* height: 16px; */
+	/* width: 2px; */
+	/* background: rgb(255 255 255 / 30%); */
+	/* content: ""; */
 }
 
 .top-option .to-search i {
-	font-size: 16px;
-	color: #000000;
-	cursor: pointer;
+	/* font-size: 16px; */
+	/* color: #000000; */
+	/* cursor: pointer; */
 }
 
 .top-option .to-social {
@@ -477,7 +470,7 @@ ol {
 .top-option .to-social a {
 	display: inline-block;
 	color: #000000;
-	font-size: 16px;
+	font-size: 18px;
 	margin-left: 15px;
 }
 
@@ -588,10 +581,10 @@ ol {
 }
 
 /*---------------------
-  ChoseUs Section
+  ChooseUs Section
 -----------------------*/
 
-.choseus-section {
+.ChooseUs-section {
 	background: #ffffff;
 	padding-bottom: 70px;
 }
@@ -768,117 +761,123 @@ ol {
 -----------------------*/
 
 .pricing-section {
-	background: #ffffff;
+    background: #ffffff;
 }
 
 .pricing-section .section-title {
-	margin-bottom: 56px;
+    margin-bottom: 56px;
 }
 
 .ps-item {
-	text-align: center;
-	padding: 40px 30px 52px;
-	border: 1px solid #464646;
-	-webkit-transform: skewY(-4deg);
-	-ms-transform: skewY(-4deg);
-	transform: skewY(-4deg);
-	-webkit-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
-	margin-bottom: 30px;
-	position: relative;
+    text-align: center;
+    padding: 40px 30px 48px;
+    border: 2px solid black;
+    /* Remove skew transformations */
+    /* -webkit-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+    transform: skewY(-4deg); */
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-bottom: 30px;
+    position: relative;
 }
 
 .ps-item:hover {
-	background: #000000;
-	border-color: #ffffff;
+    background: #000000;
+    border-color: #ffffff;
 }
 
 .ps-item:hover h3 {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .ps-item:hover .pi-price span {
-	color: #444444;
+    color: #444444;
 }
 
 .ps-item:hover ul li {
-	color: #ffffff;
-	font-weight: 600;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .ps-item:hover .primary-btn.pricing-btn {
-	background: #C7261C;
+    background: #C7261C;
 }
 
 .ps-item:hover .thumb-icon {
-	opacity: 1;
-	visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .ps-item h3 {
-	font-size: 28px;
-	color: #c7261c;
-	font-weight: 600;
-	margin-bottom: 16px;
-	-webkit-transform: skewY(4deg);
-	-ms-transform: skewY(4deg);
-	transform: skewY(4deg);
+    font-size: 24px;
+    color: #c7261c;
+    font-weight: 600;
+    margin-bottom: 16px;
+    /* Remove skew transformations */
+    /* -webkit-transform: skewY(4deg);
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); */
 }
 
 .ps-item .pi-price {
-	margin-bottom: 30px;
-	-webkit-transform: skewY(4deg);
-	-ms-transform: skewY(4deg);
-	transform: skewY(4deg);
+    margin-bottom: 30px;
+    /* Remove skew transformations */
+    /* -webkit-transform: skewY(4deg);
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); */
 }
 
 .ps-item .pi-price h2 {
-	font-size: 60px;
-	color: #C7261C;
-	font-weight: 600;
+    font-size: 60px;
+    color: #C7261C;
+    font-weight: 600;
 }
 
 .ps-item .pi-price span {
-	color: #c4c4c4;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: uppercase;
+    color: #c4c4c4;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .ps-item ul {
-	margin-bottom: 40px;
-	-webkit-transform: skewY(4deg);
-	-ms-transform: skewY(4deg);
-	transform: skewY(4deg);
+    margin-bottom: 40px;
+    /* Remove skew transformations */
+    /* -webkit-transform: skewY(4deg);
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); */
 }
 
 .ps-item ul li {
-	font-size: 14px;
-	color: #343434;
-	line-height: 32px;
-	list-style: none;
+    font-size: 14px;
+    color: #343434;
+    line-height: 32px;
+    list-style: none;
 }
 
 .ps-item .primary-btn.pricing-btn {
-	display: block;
-	background: #c7261c;
-	-webkit-transform: skewY(4deg);
-	-ms-transform: skewY(4deg);
-	transform: skewY(4deg);
+    display: block;
+    background: #c7261c;
+    /* Remove skew transformations */
+    /* -webkit-transform: skewY(4deg);
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); */
 }
 
 .ps-item .thumb-icon {
-	font-size: 48px;
-	color: #C7261C;
-	position: absolute;
-	left: 50px;
-	bottom: 120px;
-	-webkit-transform: skewY(4deg);
-	-ms-transform: skewY(4deg);
-	transform: skewY(4deg);
-	opacity: 0;
-	visibility: hidden;
+    font-size: 48px;
+    color: #C7261C;
+    position: absolute;
+    left: 50px;
+    bottom: 120px;
+    /* Remove skew transformations */
+    /* -webkit-transform: skewY(4deg);
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); */
+    opacity: 0;
+    visibility: hidden;
 }
 
 /*---------------------
@@ -941,45 +940,45 @@ ol {
 }
 
 /*---------------------
-  Team Section
+  transformation Section
 -----------------------*/
 
-.team-section {
+.transformation-section {
 	background: #ffffff;
 }
 
-.team-section.team-page {
+.transformation-section.transformation-page {
 	padding-bottom: 70px;
 }
 
-.team-section.team-page .ts-item {
+.transformation-section.transformation-page .ts-item {
 	margin-bottom: 30px;
 }
 
-.team-section.team-page .ts-item:hover .ts_text {
+.transformation-section.transformation-page .ts-item:hover .ts_text {
 	bottom: -30px;
 }
 
-.team-section.team-page .ts-item .tt_social {
+.transformation-section.transformation-page .ts-item .tt_social {
 	-webkit-transform: skewY(5deg);
 	-ms-transform: skewY(5deg);
 	transform: skewY(5deg);
 	margin-top: 13px;
 }
 
-.team-section.team-page .ts-item .tt_social a {
+.transformation-section.transformation-page .ts-item .tt_social a {
 	font-size: 14px;
 	color: #c4c4c4;
 	margin-right: 10px;
 }
 
-.team-section.team-page .ts-item .tt_social a:last-child {
+.transformation-section.transformation-page .ts-item .tt_social a:last-child {
 	margin-right: 0;
 }
 
-.team-title .section-title {
-	text-align: left;
-	float: left;
+.transformation-title .section-title {
+	text-align: center;
+	
 }
 
 .primary-btn.appoinment-btn {
@@ -993,12 +992,12 @@ ol {
 	max-width: 100%;
 }
 
-.ts-slider.owl-carousel .owl-dots {
+/* .ts-slider.owl-carousel .owl-dots {
 	text-align: center;
 	margin-top: 30px;
-}
+} */
 
-.ts-slider.owl-carousel .owl-dots button {
+/* .ts-slider.owl-carousel .owl-dots button {
 	height: 4px;
 	width: 20px;
 	background: #5c5c5c;
@@ -1014,7 +1013,7 @@ ol {
 
 .ts-slider.owl-carousel .owl-dots button:last-child {
 	margin-right: 0;
-}
+} */
 
 .ts-item {
 	height: 450px;
@@ -1158,8 +1157,8 @@ ol {
 }
 
 .fs-about .fa-social a {
-	font-size: 14px;
-	color: #8e1d16;
+	font-size: 20px;
+	color: #9e1f16e5;
 	margin-right: 10px;
 }
 
@@ -1285,7 +1284,7 @@ ol {
 }
 
 /*---------------------
-  About Us Section
+  The Panda Section
 -----------------------*/
 
 .about-video {
@@ -1321,7 +1320,7 @@ ol {
 
 .about-text .section-title {
 	text-align: left;
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 }
 
 .about-text .at-desc {
@@ -1974,7 +1973,7 @@ ol {
 -------------------------*/
 
 .bmi-calculator-section {
-	background: #151515;
+	background: white;
 }
 
 .section-title.chart-title {
@@ -2006,7 +2005,7 @@ ol {
 
 .chart-table table tbody tr td {
 	font-size: 14px;
-	color: #c4c4c4;
+	color: #b61f16;
 	border-right: 1px solid #363636;
 	padding: 17px 0 17px 50px;
 }
@@ -2020,13 +2019,13 @@ ol {
 }
 
 .chart-calculate-form p {
-	color: #c4c4c4;
+	color: #000000;
 	margin-bottom: 24px;
 }
 
 .chart-calculate-form form input {
 	font-size: 14px;
-	color: #c4c4c4;
+	color: #000000;
 	width: 100%;
 	height: 50px;
 	border: 1px solid #363636;
@@ -2524,7 +2523,7 @@ ol {
 
 .leave-comment form textarea {
 	font-size: 13px;
-	color: #c4c4c4;
+	color: black;
 	width: 100%;
 	height: 100px;
 	border: 1px solid #363636;
@@ -2576,7 +2575,7 @@ ol {
 }
 
 .section-title.contact-title {
-	text-align: left;
+	text-align: center;
 	margin-bottom: 35px;
 }
 
@@ -2771,7 +2770,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 1153px;
 	}
 }
 
@@ -3234,7 +3233,7 @@ ol {
 		font-size: 38px;
 		line-height: normal;
 	}
-	.team-title {
+	.transformation-title {
 		margin-bottom: 20px;
 	}
 	.about-text {

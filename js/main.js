@@ -83,7 +83,7 @@
     });
 
     /*------------------
-        Team Slider
+        transformation Slider
     --------------------*/
     $(".ts-slider").owlCarousel({
         loop: true,
@@ -172,3 +172,15 @@
     });
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
