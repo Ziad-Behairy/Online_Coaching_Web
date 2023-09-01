@@ -1,123 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="owl.carousel.min.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
 
-        .hero-section {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
+<style>
+    :root {
+        /* Font Sizes */
+        --font-size-normal: 16px;
+        --font-size-huge: 42px;
+        --font-size-small: 13px;
+        --font-size-medium: 20px;
+        --font-size-large: 36px;
+        --font-size-x-large: 42px;
 
-        .hs-slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+        /* Colors */
+        --color-black: #000000;
+        --color-cyan-bluish-gray: #abb8c3;
+        --color-white: #ffffff;
+        --color-pale-pink: #f78da7;
+        --color-vivid-red: #cf2e2e;
+        --color-luminous-vivid-orange: #ff6900;
+        --color-luminous-vivid-amber: #fcb900;
+        --color-light-green-cyan: #7bdcb5;
+        --color-vivid-green-cyan: #00d084;
+        --color-pale-cyan-blue: #8ed1fc;
+        --color-vivid-cyan-blue: #0693e3;
+        --color-vivid-purple: #9b51e0;
 
-        .hs-item {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100%;
-        }
+        /* Gradients */
+        --gradient-vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+        /* ... (other gradients) ... */
 
-        .hi-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            width: 80%;
-            max-width: 600px;
-        }
+        /* Spacing */
+        --spacing-20: 0.44rem;
+        /* ... (other spacing variables) ... */
 
-        .hi-text span {
-            display: block;
-            font-size: 18px;
-            color: #070707;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 6px;
-            margin-bottom: 18px;
-        }
+        /* Shadows */
+        --shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        /* ... (other shadow variables) ... */
+    }
 
-        .hi-text h1 {
-            font-size: 48px;
-            color: #000000;
-            font-weight: 700;
-            text-transform: uppercase;
-            line-height: 54px;
-            margin-bottom: 24px;
-        }
-    </style>
-    <script src="jquery.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
-    <title>Fixed Background Slider</title>
-</head>
+    body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        font-family: Montserrat;
+        color: #c12323;
+        font-weight: 400;
+        line-height: 1.66em;
+        -webkit-box-direction: normal;
+        font-size: 100%;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1140px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 10;
+        padding: 100px 0 0px;
+    }
+</style>
 <body>
-    <section class="hero-section">
-        <div class="hs-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="img/testimonial/test1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-6">
-                            <div class="hi-text">
-                                <span>Success Stories</span>
-                                <h1>Not all <strong>Pandas</strong> are big</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hs-item set-bg" data-setbg="img/testimonial/test2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-6">
-                            <div class="hi-text">
-                                <span>Success Stories</span>
-                                <h1>Not all <strong>Pandas</strong> are fat</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more slides with different backgrounds and text -->
-        </div>
-    </section>
-    <script>
-        $(document).ready(function () {
-            const sliderText = $(".hs-item .hi-text h1");
-            const hsSlider = $(".hs-slider");
-            let currentSlideIndex = 0;
-            const variableTexts = [
-                "New Text 1",
-                "New Text 2",
-                // Add more new text values as needed
-            ];
+    <div class="page-section-content vc_row-fluid mk-grid ">
+        <div class="mk-padding-wrapper wpb_row">
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
 
-            function changeText() {
-                currentSlideIndex = (currentSlideIndex + 1) % sliderText.length;
-                sliderText.html(variableTexts[currentSlideIndex]);
-            }
+<h2 id="fancy-title-39" class="mk-fancy-title  simple-style jupiter-donut- hefth color-gradient">
+<span>
+    <i>		<p>Middle East’s #1 selling Online Coach</p>
+    </i>	</span>
+</h2>
+<div class="clearboth"></div>
 
-            hsSlider.on("click", changeText);
-        });
-    </script>
+
+
+<div class=" vc_custom_1525838617471">
+
+<div id="text-block-40" class="mk-text-block  jupiter-donut- ">
+
+
+<p>Durrah has transformed thousands of clients to this day, creating custom plans that suit their everyday needs, not one individual is the same so there is no cookie cutter programs here.</p>
+
+<div class="clearboth"></div>
+</div>
+
+</div>
+
+
+<div class="wpb_row vc_inner vc_row vc_row-fluid jupiter-donut-   attched-false   ">
+        <div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div id="milestone-41" class="mk-milestone milestone-large center-align jupiter-donut- scroll-animated">
+
+    <i></i>
+
+<div class="milestone-top">
+            <span style="color:#ffffff;font-weight:bold" class="milestone-number" data-speed="2000" data-stop="2013">2013</span>
+            <div style="color:#ffffff;font-size:18px" class="milestone-text">Coaching since</div>	</div>
+
+<div class="clearboth"></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div id="milestone-42" class="mk-milestone milestone-large center-align jupiter-donut- scroll-animated">
+
+    <i></i>
+
+<div class="milestone-top">
+            <span style="color:#ffffff;font-weight:bold" class="milestone-number" data-speed="2000" data-stop="8000">8000</span>
+            <div style="color:#ffffff;font-size:18px" class="milestone-text">Over 8000 programs made</div>	</div>
+
+<div class="clearboth"></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div id="milestone-43" class="mk-milestone milestone-large center-align jupiter-donut- scroll-animated">
+
+    <i></i>
+
+<div class="milestone-top">
+            <span style="color:#ffffff;font-weight:bold" class="milestone-number" data-speed="2000" data-stop="600">600</span>
+            <div style="color:#ffffff;font-size:18px" class="milestone-text">Over 600 published transformations</div>	</div>
+
+<div class="clearboth"></div>
+</div>
+</div></div></div>	</div>
+<div id="mk-gradient-button-44" class="mk-gradient-button fullwidth-false btn-align-center custom-width-true">
+<a href="https://durrahnation.com/custom-programs/" class="mk-button mk-button--dimension-flat mk-button--size-medium mk-button--corner-full_rounded light-skin" target="_self">
+    <span class="text">BUY NOW</span>
+<i class="darker-background"></i></a>
+</div></div>
+</div>
+        <div class="clearboth"></div>
+    </div>
 </body>
 </html>
+
+
+
