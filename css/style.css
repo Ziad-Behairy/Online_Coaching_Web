@@ -89,6 +89,13 @@ button:focus,
 textarea:focus {
 	outline: none;
 }
+::selection {
+	color:#C7261C;
+	background-color: initial;
+}
+.custom-selection::selection {
+	color: #C7261C;
+}
 
 a:hover,
 a:focus {
@@ -1135,7 +1142,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-	background: #ffffff;
+	background: #161616;
 	padding-top: 50px;
 }
 
@@ -1157,13 +1164,15 @@ ol {
 }
 
 .fs-about .fa-social a {
-	font-size: 20px;
+	font-size: 25px;
 	color: #9e1f16e5;
 	margin-right: 10px;
+	
 }
 
 .fs-about .fa-social a:last-child {
 	margin-right: 0;
+	align-items: center;
 }
 
 .fs-widget {

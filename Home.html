@@ -9,17 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Panda</title>
 
-    <style>
-        ::selection {
-            color:#df2d21;
-            background-color: initial;
-        }
-    </style>
-    <style>
-        .custom-selection::selection {
-        color: #e12e21;
-    }
-    </style>
+   
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -126,7 +116,7 @@
                         <div class="to-social">
                             <a href="https://www.facebook.com/mahmoudlifts"><i class="fab fa-tiktok"></i></a>
                             <a href="https://www.facebook.com/mahmoudlifts"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://www.instagram.com/mahmoud_lifts/"><i class="fa-brands fa-instagram fa-beat"></i></a>
+                            <a href="https://www.instagram.com/mahmoud_lifts/"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#"><i class="fa  fa-envelope-o"></i></a>
                        
                         </div>
@@ -158,15 +148,17 @@
         </div>
     </section>
     <!-- Hero Section End -->
-
+ 
     <!-- ChooseUs Section Begin -->
     <section class="ChooseUs-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 custom-selection">
                     <div class="section-title">
-                        <span>Why choose us?</span>
-                        <h3 style="color: black;" > LIFESTYLE , GOALS AND BUSY SCHEDULE</h3>
+                            <p>
+                                <span data-speed="2000" data-start="1500" data-stop="2013" id="animated-text">2000</span>
+                            </p>
+                        <h3 style="color: black;" > WITH MY 100% CUSTOMIZED FITNESS PLANS THAT FIT YOUR LIFESTYLE , GOALS AND BUSY SCHEDULE</h3>
                     </div>
                 </div>
             </div>
@@ -188,7 +180,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
                         <span class="flaticon-002-dumbell"></span>
-                        <h4>Adeqacy</h4>
+                        <h4>Adequacy</h4>
                         <p>Each client will get what fits his/her level.</p>
                     </div>
                 </div>
@@ -196,7 +188,7 @@
                     <div class="cs-item">
                         <span class="flaticon-014-heart-beat"></span>
                         <h4> Support</h4>
-                        <p>Customized Solutions Catered to Your Fitness Level and Goals.</p>
+                        <p>Direct contact with coach Mahmoud whether via e-mail or WhatsApp.</p>
                     </div>
                 </div>
             </div>
@@ -780,37 +772,14 @@
   
 
     <!-- Footer Section Begin -->
-    <section class="footer-section" style="padding-top: 10px">
+    <section class="footer-section" style="padding-top: 10px ;">
         <div class="container">
             
-                <div class="row">
-                   
-                    <div class="col-md-9" style="margin-bottom: 0px;margin-top: 0px;top:100px;height: 110px;">
-                        <div class="gt-text">
-                            <i class="fa fa-mobile"></i>
-                            <ul>
-                                <li>125-711-811</li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 "  style="margin-bottom: 0px;margin-top: 0px;top:100px;height: 110px;">
-                        <div class="gt-text email">
-                            <i class="fa fa-envelope" ></i>
-                            <p>Support.pandacoahing@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-          
-            <div class="row">
-                <div class="col-lg-4" >
+               
+            <div class="row"> 
+                <div class="col-lg-12 text-center"  style="height: 30px;" >
                     <div class="fs-about">
-                        <div class="fa-logo">
-                            <a href="Home.html">
-                            <img src="img/logo.png" alt="" style=" margin-left: 450px;">
-                        </div>
-                        <p></p>
-                        <div class="fa-social">
+                        <div class="fa-social"  >
                                         <a href="https://www.facebook.com/mahmoudlifts"><i class="fab fa-tiktok"></i></a>
                                         <a href="https://www.facebook.com/mahmoudlifts"><i class="fab fa-whatsapp"></i></a>
 
@@ -821,28 +790,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="fs-widget">
-                        <h4>Useful links</h4>
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Classes</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div> -->
-                <!-- <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="fs-widget">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Subscribe</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div> -->
+               
                 
             </div>
             <div class="row">
@@ -891,13 +839,33 @@
         window.addEventListener('scroll', handleScroll);
         document.addEventListener('DOMContentLoaded', handleScroll);
       </script>
-      
+    
+    <script>
+        // Get the element with the data-speed attribute
+        const animatedText = document.getElementById('animated-text');
 
-   
+        // Get the target stop value and start value from the data attributes
+        const startValue = parseInt(animatedText.getAttribute('data-start'));
+        const targetValue = parseInt(animatedText.getAttribute('data-stop'));
 
+        // Get the animation duration from the data-speed attribute
+        const duration = parseInt(animatedText.getAttribute('data-speed'));
 
+        // Initialize a variable for the current value
+        let currentValue = startValue;
 
+        // Define a function to update the text content with animation
+        function updateText() {
+            if (currentValue <= targetValue) {
+                animatedText.textContent = currentValue;
+                currentValue++;
+                setTimeout(updateText, duration / (targetValue - startValue + 1));
+            }
+        }
 
+        // Start the animation
+        updateText();
+    </script>
 </body>
 
 </html>
