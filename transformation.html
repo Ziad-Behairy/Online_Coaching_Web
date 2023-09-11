@@ -142,53 +142,34 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- transformation Section Begin -->
-    <section class="transformation-section transformation-page spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="transformation-title">
-                        <div class="section-title">
-                            <span>Top Transformation Clients </span>  
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ts-item set-bg" data-setbg="img/transformation/1.jpg">
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ts-item set-bg" data-setbg="img/transformation/2.jpg">
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ts-item set-bg" data-setbg="img/transformation/3.jpg">
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ts-item set-bg" data-setbg="img/transformation/Ashraf2.jpg">
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ts-item set-bg" data-setbg="img/transformation/5.jpg">
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ts-item set-bg" data-setbg="img/transformation/6.jpg">
-                        
+  <!-- transformation Section Begin -->
+  <section class="transformation-section transformation-page spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="transformation-title">
+                    <div class="section-title">
+                        <span>Top Transformation Clients</span>  
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- transformation Section End -->
+        <div class="row">
+            <!-- Use a JavaScript loop to generate images from 1.jpg to 24.jpg -->
+            <script>
+                for (let i = 1; i <= 30; i++) {
+                    document.write(`
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="ts-item set-bg" data-setbg="img/transformation/${i}.jpg"></div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </div>
+</section>
+<!-- transformation Section End -->
+
 
    
 

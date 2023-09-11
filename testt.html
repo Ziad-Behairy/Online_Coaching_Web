@@ -1,133 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-    :root {
-        /* Font Sizes */
-        --font-size-normal: 16px;
-        --font-size-huge: 42px;
-        --font-size-small: 13px;
-        --font-size-medium: 20px;
-        --font-size-large: 36px;
-        --font-size-x-large: 42px;
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-        /* Colors */
-        --color-black: #000000;
-        --color-cyan-bluish-gray: #abb8c3;
-        --color-white: #ffffff;
-        --color-pale-pink: #f78da7;
-        --color-vivid-red: #cf2e2e;
-        --color-luminous-vivid-orange: #ff6900;
-        --color-luminous-vivid-amber: #fcb900;
-        --color-light-green-cyan: #7bdcb5;
-        --color-vivid-green-cyan: #00d084;
-        --color-pale-cyan-blue: #8ed1fc;
-        --color-vivid-cyan-blue: #0693e3;
-        --color-vivid-purple: #9b51e0;
+        /* Style the pricing table container */
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-        /* Gradients */
-        --gradient-vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
-        /* ... (other gradients) ... */
+        /* Style each pricing card */
+        .pricing-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-        /* Spacing */
-        --spacing-20: 0.44rem;
-        /* ... (other spacing variables) ... */
+        /* Style the pricing card when hovered */
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
 
-        /* Shadows */
-        --shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
-        /* ... (other shadow variables) ... */
-    }
+        /* Style the pricing card header */
+        .pricing-card-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
 
-    body {
-        -webkit-text-size-adjust: 100%;
-        -webkit-font-smoothing: antialiased;
-        font-family: Montserrat;
-        color: #c12323;
-        font-weight: 400;
-        line-height: 1.66em;
-        -webkit-box-direction: normal;
-        font-size: 100%;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 1140px;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 10;
-        padding: 100px 0 0px;
-    }
-</style>
+        /* Style the pricing card title */
+        .pricing-card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Style the pricing card price */
+        .pricing-card-price {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Style the pricing card features */
+        .pricing-card-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-card-features li {
+            margin: 10px 0;
+        }
+
+        /* Style the pricing card button */
+        .pricing-card-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Add media queries for responsiveness */
+        @media (max-width: 768px) {
+            .pricing-table {
+                flex-direction: column;
+            }
+
+            .pricing-card {
+                width: 80%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
 <body>
-    <div class="page-section-content vc_row-fluid mk-grid ">
-        <div class="mk-padding-wrapper wpb_row">
-<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
-
-<h2 id="fancy-title-39" class="mk-fancy-title  simple-style jupiter-donut- hefth color-gradient">
-<span>
-    <i>		<p>Middle East’s #1 selling Online Coach</p>
-    </i>	</span>
-</h2>
-<div class="clearboth"></div>
-
-
-
-<div class=" vc_custom_1525838617471">
-
-<div id="text-block-40" class="mk-text-block  jupiter-donut- ">
-
-
-<p>Durrah has transformed thousands of clients to this day, creating custom plans that suit their everyday needs, not one individual is the same so there is no cookie cutter programs here.</p>
-
-<div class="clearboth"></div>
-</div>
-
-</div>
-
-
-<div class="wpb_row vc_inner vc_row vc_row-fluid jupiter-donut-   attched-false   ">
-        <div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-<div id="milestone-41" class="mk-milestone milestone-large center-align jupiter-donut- scroll-animated">
-
-    <i></i>
-
-<div class="milestone-top">
-            <span style="color:#ffffff;font-weight:bold" class="milestone-number" data-speed="2000" data-stop="2013">2013</span>
-            <div style="color:#ffffff;font-size:18px" class="milestone-text">Coaching since</div>	</div>
-
-<div class="clearboth"></div>
-</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-<div id="milestone-42" class="mk-milestone milestone-large center-align jupiter-donut- scroll-animated">
-
-    <i></i>
-
-<div class="milestone-top">
-            <span style="color:#ffffff;font-weight:bold" class="milestone-number" data-speed="2000" data-stop="8000">8000</span>
-            <div style="color:#ffffff;font-size:18px" class="milestone-text">Over 8000 programs made</div>	</div>
-
-<div class="clearboth"></div>
-</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-<div id="milestone-43" class="mk-milestone milestone-large center-align jupiter-donut- scroll-animated">
-
-    <i></i>
-
-<div class="milestone-top">
-            <span style="color:#ffffff;font-weight:bold" class="milestone-number" data-speed="2000" data-stop="600">600</span>
-            <div style="color:#ffffff;font-size:18px" class="milestone-text">Over 600 published transformations</div>	</div>
-
-<div class="clearboth"></div>
-</div>
-</div></div></div>	</div>
-<div id="mk-gradient-button-44" class="mk-gradient-button fullwidth-false btn-align-center custom-width-true">
-<a href="https://durrahnation.com/custom-programs/" class="mk-button mk-button--dimension-flat mk-button--size-medium mk-button--corner-full_rounded light-skin" target="_self">
-    <span class="text">BUY NOW</span>
-<i class="darker-background"></i></a>
-</div></div>
-</div>
-        <div class="clearboth"></div>
+    <div class="pricing-table">
+        <div class="pricing-card">
+            <div class="pricing-card-header">
+                <h3 class="pricing-card-title">Basic Plan</h3>
+            </div>
+            <div class="pricing-card-price">$19/month</div>
+            <ul class="pricing-card-features">
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+            <button class="pricing-card-button">Buy Now</button>
+        </div>
+        
+        <div class="pricing-card">
+            <div class="pricing-card-header">
+                <h3 class="pricing-card-title">Pro Plan</h3>
+            </div>
+            <div class="pricing-card-price">$39/month</div>
+            <ul class="pricing-card-features">
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+            <button class="pricing-card-button">Buy Now</button>
+        </div>
+        
+        <div class="pricing-card">
+            <div class="pricing-card-header">
+                <h3 class="pricing-card-title">Premium Plan</h3>
+            </div>
+            <div class="pricing-card-price">$59/month</div>
+            <ul class="pricing-card-features">
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+            <button class="pricing-card-button">Buy Now</button>
+        </div>
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Animated Text with Span</title>
+</head>
+<body>
+    <span class="animated-text" data-start="0" data-stop="100" data-speed="1000"></span>
+    <span class="animated-text" data-start="50" data-stop="200" data-speed="1500"></span>
+    <span class="animated-text" data-start="10" data-stop="50" data-speed="800"></span>
 
+    <script>
+        // Get all elements with the class "animated-text"
+        const animatedTextElements = document.querySelectorAll('.animated-text');
 
+        // Loop through each animated text element and start the animation
+        animatedTextElements.forEach((animatedText) => {
+            // Get the target stop value and start value from the data attributes
+            const startValue = parseInt(animatedText.getAttribute('data-start'));
+            const targetValue = parseInt(animatedText.getAttribute('data-stop'));
 
+            // Get the animation duration from the data-speed attribute
+            const duration = parseInt(animatedText.getAttribute('data-speed'));
+
+            // Initialize a variable for the current value
+            let currentValue = startValue;
+
+            // Define a function to update the text content with animation
+            function updateText() {
+                if (currentValue <= targetValue) {
+                    animatedText.textContent = currentValue;
+                    currentValue++;
+                    setTimeout(updateText, duration / (targetValue - startValue + 1));
+                }
+            }
+
+            // Start the animation
+            updateText();
+        });
+    </script>
+</body>
+</html>
