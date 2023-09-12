@@ -70,9 +70,9 @@ h6 {
 }
 
 p {
-	font-size: 16px;
-	font-family: "Muli", sans-serif;
-	color: #5e5d5d;
+	font-size: 18px;
+	font-family: 'Oswald';
+	color: #000;
 	font-weight: 400;
 	line-height: 24px;
 	margin: 0 0 15px 0;
@@ -120,10 +120,11 @@ ol {
 }
 
 .section-title span {
-	font-size: 31px;
+	font-size: 45px;
 	color: #C7261C;
 	text-transform: uppercase;
 	font-weight: 720;
+	FONT: O;
 }
 
 .section-title h2 {
@@ -167,7 +168,8 @@ ol {
 
 .primary-btn {
 	display: inline-block;
-	font-size: 14px;
+	font-size: 17px;
+	font-family: 'Oswald';
 	padding: 17px 30px 16px;
 	color: #ffffff;
 	background: #C7261C;
@@ -775,6 +777,7 @@ ol {
     margin-bottom: 56px;
 }
 
+
 .ps-item {
     text-align: center;
     padding: 40px 30px 48px;
@@ -818,7 +821,7 @@ ol {
 }
 
 .ps-item h3 {
-    font-size: 24px;
+    font-size: 32px;
     color: #c7261c;
     font-weight: 600;
     margin-bottom: 16px;
@@ -944,6 +947,68 @@ ol {
 
 .gallery .gs-item.grid-wide {
 	width: calc(50% - 10px);
+}
+/* Overlay styles for pricing plan cards */
+.ps-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-card {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the overlay background color and opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.ps-item:hover .overlay-card {
+    opacity: 1;
+}
+
+.overlay-card h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay-card .pi-price {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.overlay-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.overlay-card ul li {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.overlay-card .primary-btn.pricing-btn {
+    background: #C7261C;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.overlay-card .primary-btn.pricing-btn:hover {
+    background: #fff;
+    color: #C7261C;
 }
 
 /*---------------------
@@ -1247,6 +1312,17 @@ ol {
 .copyright-text i {
 	color: #C7261C;
 }
+.custom-icon {
+    width: 100px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    size: a1;
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    max-width: 100%; /* Ensure the images don't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the images horizontally */
+}
+
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
 
@@ -1324,7 +1400,7 @@ ol {
 .about-text {
 	background: #ffffff;
 	height: 640px;
-	padding: 120px 70px 0 70px;
+	padding: 10px 70px 0 70px;
 }
 
 .about-text .section-title {

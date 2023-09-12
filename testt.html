@@ -1,189 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Add some basic styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        /* Style the pricing table container */
-        .pricing-table {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        /* Style each pricing card */
-        .pricing-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 20px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        /* Style the pricing card when hovered */
-        .pricing-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Style the pricing card header */
-        .pricing-card-header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-
-        /* Style the pricing card title */
-        .pricing-card-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Style the pricing card price */
-        .pricing-card-price {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Style the pricing card features */
-        .pricing-card-features {
-            list-style: none;
-            padding: 0;
-        }
-
-        .pricing-card-features li {
-            margin: 10px 0;
-        }
-
-        /* Style the pricing card button */
-        .pricing-card-button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Add media queries for responsiveness */
-        @media (max-width: 768px) {
-            .pricing-table {
-                flex-direction: column;
-            }
-
-            .pricing-card {
-                width: 80%;
-                margin: 20px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="pricing-table">
-        <div class="pricing-card">
-            <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Basic Plan</h3>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="accordion w-100" id="basicAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Question #1
+            </button>
+          </h2>
+          <div id="basicAccordionCollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-mdb-parent="#basicAccordion" style="">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default,
+              until the collapse plugin adds the appropriate classes that we use to style each
+              element. These classes control the overall appearance, as well as the showing and
+              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+              our default variables. It's also worth noting that just about any HTML can go within
+              the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="pricing-card-price">$19/month</div>
-            <ul class="pricing-card-features">
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <button class="pricing-card-button">Buy Now</button>
+          </div>
         </div>
-        
-        <div class="pricing-card">
-            <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Pro Plan</h3>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#basicAccordionCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Question #2
+            </button>
+          </h2>
+          <div id="basicAccordionCollapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-mdb-parent="#basicAccordion" style="">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default,
+              until the collapse plugin adds the appropriate classes that we use to style each
+              element. These classes control the overall appearance, as well as the showing and
+              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+              our default variables. It's also worth noting that just about any HTML can go within
+              the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="pricing-card-price">$39/month</div>
-            <ul class="pricing-card-features">
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <button class="pricing-card-button">Buy Now</button>
+          </div>
         </div>
-        
-        <div class="pricing-card">
-            <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Premium Plan</h3>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#basicAccordionCollapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Question #3
+            </button>
+          </h2>
+          <div id="basicAccordionCollapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-mdb-parent="#basicAccordion" style="">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default,
+              until the collapse plugin adds the appropriate classes that we use to style each
+              element. These classes control the overall appearance, as well as the showing and
+              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+              our default variables. It's also worth noting that just about any HTML can go within
+              the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
-            <div class="pricing-card-price">$59/month</div>
-            <ul class="pricing-card-features">
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <button class="pricing-card-button">Buy Now</button>
+          </div>
         </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Animated Text with Span</title>
-</head>
-<body>
-    <span class="animated-text" data-start="0" data-stop="100" data-speed="1000"></span>
-    <span class="animated-text" data-start="50" data-stop="200" data-speed="1500"></span>
-    <span class="animated-text" data-start="10" data-stop="50" data-speed="800"></span>
+      </div>
 
-    <script>
-        // Get all elements with the class "animated-text"
-        const animatedTextElements = document.querySelectorAll('.animated-text');
-
-        // Loop through each animated text element and start the animation
-        animatedTextElements.forEach((animatedText) => {
-            // Get the target stop value and start value from the data attributes
-            const startValue = parseInt(animatedText.getAttribute('data-start'));
-            const targetValue = parseInt(animatedText.getAttribute('data-stop'));
-
-            // Get the animation duration from the data-speed attribute
-            const duration = parseInt(animatedText.getAttribute('data-speed'));
-
-            // Initialize a variable for the current value
-            let currentValue = startValue;
-
-            // Define a function to update the text content with animation
-            function updateText() {
-                if (currentValue <= targetValue) {
-                    animatedText.textContent = currentValue;
-                    currentValue++;
-                    setTimeout(updateText, duration / (targetValue - startValue + 1));
-                }
-            }
-
-            // Start the animation
-            updateText();
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>  
 </body>
 </html>
