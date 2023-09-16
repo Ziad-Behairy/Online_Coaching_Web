@@ -120,7 +120,7 @@ ol {
 }
 
 .section-title span {
-	font-size: 45px;
+	font-size: 47px;
 	color: #C7261C;
 	text-transform: uppercase;
 	font-weight: 720;
@@ -1333,6 +1333,8 @@ ol {
 .breadcrumb-section {
 	height: 500px;
 	padding-top: 230px;
+	background-image: url('https://durrahnation.com/wp-content/uploads/2018/05/coaching_section.jpg'); /* Updated background image URL */
+
 }
 
 .breadcrumb-text h2 {
@@ -3407,4 +3409,17 @@ ol {
 	  }
 	  
 	  
+}
+@media (max-width: 768px) {
+    /* Adjust the font size and margins for smaller screens */
+    .section-title span {
+        font-size: 40px;
+    }
+
+    .section-title h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    /* Add any other adjustments you need for smaller screens here */
 }

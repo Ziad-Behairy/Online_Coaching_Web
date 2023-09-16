@@ -26,6 +26,39 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
+    <style>
+        /* CSS for the slider container */
+        .slider-container {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* CSS for individual slides */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 33.33%; /* Three images in a row */
+            max-width: 33.33%;
+            height: auto;
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next { 
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -156,7 +189,7 @@
                 <div class="col-lg-12 custom-selection">
                     <div class="section-title">
                         <span>CHANGE YOUR LIFE</span>
-                        <h3 style="color: black;" > WITH MY 100% CUSTOMIZED FITNESS PLANS THAT FIT YOUR LIFESTYLE, GOALS, AND BUSY SCHEDULE</h3>
+                        <h3 style="color: black;" > WITH MY 100% CUSTOMIZED FITNESS PLANS THAT FIT YOUR LIFESTYLE , GOALS AND BUSY SCHEDULE</h3>
                     </div>
                 </div>
             </div>
@@ -369,58 +402,56 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <div class="section-title" >
-                    <span >Our Numbers</span>
-                  
+                <div class="section-title">
+                    <span style="padding-bottom: 20px;">THIS IS A TOTALLY UNIQUE ONLINE COACHING EXPERIENCE!</span>
                 </div>
             </div>
         </div>
-        <section>
         <div class="row">
-          <div class="col-lg-4 text-center">
-           
-            <div class="section-title" style="  margin-top: 80px; margin-bottom: 5px;">
-                <span style="color: white;" class="animated-text" data-start="2900" data-stop="3000" data-speed="1000"></span>
+            <div class="col-lg-12 text-center">
+                <p style="color: white; font-size: 22px;">Mahmoud has helped many people build their bodies while managing their lives in the healthiest and most sustainable way thanks to his customized programs and great follow-up service.</p>
             </div>
-          </div>
-          <div class="col-lg-4 text-center">
-           
-            <div class="section-title" style="  margin-top: 80px; margin-bottom: 5px;">
-                <span style="color: white;" class="animated-text" data-start="200" data-stop="900" data-speed="1000"></span>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center">
-           
-            <div class="section-title" style="  margin-top: 80px; margin-bottom: 5px;">
-                <span style="color: white;" class="animated-text" data-start="0" data-stop="50" data-speed="1000"></span>
-            </div>
-          </div>
         </div>
-        <div class="row">
 
-            <div class="col-lg-4 text-center">
-           
-                <div class="section-title"style="   margin-bottom: 30px;">
-                <h3  style="color: white;" >Clients</h3>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title">
+                    <span style="color: white; font-size: 65px;" class="animated-text" data-start="2000" data-stop="2019" data-speed="2000"></span>
                 </div>
-              </div>
-              <div class="col-lg-4 text-center">
-               
-                <div class="section-title"style="   margin-bottom: 30px;">
-                    <h3  style="color: white;" >Clients</h3>
-                    </div>
-              </div>
-              <div class="col-lg-4 text-center">
-               
-                <div class="section-title"style="   margin-bottom: 30px;">
-                    <h3  style="color: white;" >Clients</h3>
-                    </div>
-              </div>
-
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title">
+                    <span style="color: white; font-size: 65px;" class="animated-text" data-start="50" data-stop="200" data-speed="1000"></span>
+                    <span style="font-size: 55px;">+</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title">
+                    <span style="color: white; font-size: 65px;" class="animated-text" data-start="0" data-stop="50" data-speed="1500"></span>
+                    <span style="font-size: 55px;">+</span>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title" style="margin-bottom: 30px;">
+                    <h3 style="color: white; font-weight: 400;">Coaching since</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title" style="margin-bottom: 30px;">
+                    <h3 style="color: white; font-weight: 400;">Clients coached</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title" style="margin-bottom: 30px;">
+                    <h3 style="color: white; font-weight: 400;">Successful Transformations</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
 <!-- Breadcrumb Section End -->
     <!-- Gallery Section Begin -->
     <!-- <div class="gallery-section">
@@ -447,57 +478,98 @@
         </div>
     </div> -->
     <!-- Gallery Section End -->
-
-    <!-- transformation Section Begin -->
-    <section class="transformation-section spad">
+    <section class="pricing-section spad" style="padding-top: 50px;padding-bottom: 10px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>GO PREMIUM!</span>
+                        <h3>SUBSCRIBE AND START YOUR ONE-ON-ONE ONLINE COACHING MEMBERSHIP NOW</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 text-center ">
                     
-                        <div class="section-title">
-                            <span>Top clients</span>
-                        </div>
-                        <!-- <a href="https://calendly.com/ziad_behairy/appointment" class="primary-btn btn-normal appoinment-btn">appointment</a> -->
+                        <a href="https://calendly.com/pandaonlinecoaching/30min?month=2023-07" class="primary-btn  btn-normal" style="
+                        padding-right: 50px;
+                        padding-left: 50px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                     font-size: 23px;"> Learn More </a>
                     
+
+                </div>
+                
+              
+                
+            </div>
+        </div>
+    </section>
+    <!-- transformation Section Begin -->
+    <section class="transformation-section spad" style="padding-top: 50px;padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Top clients</span>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="ts-slider owl-carousel">
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/6.jpg">
+                <div class="col-lg-12">
+                    <!-- Start of the Slider -->
+                    <div class="slider-container">
+                        <div class="slider">
+                            <img class="slide" src="img/transformation/6.jpg" alt="Image 1">
+                            <img class="slide" src="img/transformation/9.jpg" alt="Image 2">
+                            <img class="slide" src="img/transformation/23.jpg" alt="Image 3">
+                            <img class="slide" src="img/transformation/20.jpg" alt="Image 4">
+                            <img class="slide" src="img/transformation/18.jpg" alt="Image 5">
+                            <img class="slide" src="img/transformation/21.jpg" alt="Image 6">
+                            <img class="slide" src="img/transformation/26.jpg" alt="Image 7">
+                            <img class="slide" src="img/transformation/1.jpg" alt="Image 8">
+                            <img class="slide" src="img/transformation/2.jpg" alt="Image 9">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 10">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 11">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 12">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 13">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 14">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 15">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 16">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 17">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 18">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 19">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 20">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 21">
+                            <img class="slide" src="img/transformation/6.jpg" alt="Image 22">
+                            <img class="slide" src="img/transformation/9.jpg" alt="Image 23">
+                            <img class="slide" src="img/transformation/20.jpg" alt="Image 24">
+                            <img class="slide" src="img/transformation/18.jpg" alt="Image 25">
+                            <img class="slide" src="img/transformation/21.jpg" alt="Image 26">
+                            <img class="slide" src="img/transformation/26.jpg" alt="Image 27">
+                            <img class="slide" src="img/transformation/1.jpg" alt="Image 28">
+                            <img class="slide" src="img/transformation/2.jpg" alt="Image 29">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 30">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 31">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 32">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 33">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 34">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 35">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 36">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 37">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 38">
+                            <img class="slide" src="img/transformation/3.jpg" alt="Image 39">
+                            <img class="slide" src="img/transformation/4.jpg" alt="Image 40">
+                            <img class="slide" src="img/transformation/5.jpg" alt="Image 41">                            <img class="slide" src="img/transformation/23.jpg" alt="Image 23">
+                            <img class="slide" src="img/transformation/23.jpg" alt="Image 42">
+
                             
                         </div>
+                        <div class="prev"></div>
+                        <div class="next"></div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/9.jpg">
-                           
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/23.jpg">
-                         
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/20.jpg">
-                       
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/18.jpg">
-                          
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/21.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/26.jpg">
-                            
-                        </div>
-                    </div>
+                    <!-- End of the Slider -->
                 </div>
             </div>
         </div>
@@ -817,13 +889,13 @@
                 <div class="col-lg-12 text-center"  style="height: 30px;" >
                     <div class="fs-about">
                         <div class="fa-social"  >
-                                        <a href="https://www.facebook.com/mahmoudlifts"><i class="fab fa-tiktok"></i></a>
-                                        <a href="https://www.facebook.com/mahmoudlifts"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://www.tiktok.com/@mahmoudlifts"><i class="fab fa-tiktok"></i></a>
+                                        <a href=" wa.link/rrowvf"><i class="fab fa-whatsapp"></i></a>
 
                             <!-- <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a> -->
                             <a href="https://www.instagram.com/mahmoud_lifts/"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                            <!-- <a href="mailto:zezomoh951@gmail.com"><i class="fa  fa-envelope-o"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -955,6 +1027,51 @@
             // Open the video in a new window or tab
             window.open(videoURL, "_blank");
         });
+    });
+</script>
+<!-- slider-container -->
+<script>
+    // JavaScript for the slider functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.querySelector('.slider');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const numSlides = slides.length;
+    const slideWidth = 33.33; // Width of each slide in percentage
+
+    function showSlide(index) {
+        currentSlide = index;
+        const translateValue = -currentSlide * slideWidth;
+        slider.style.transform = `translateX(${translateValue}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + numSlides) % numSlides;
+        showSlide(currentSlide);
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % numSlides;
+        showSlide(currentSlide);
+    });
+
+    // Automatically advance the slider one image at a time every 3 seconds
+    function autoSlide() {
+        currentSlide = (currentSlide + 1) % numSlides;
+        showSlide(currentSlide);
+    }
+
+    const interval = setInterval(autoSlide, 6500);
+
+    // Pause the slider on hover
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(interval);
+    });
+
+    // Resume the slider on mouse leave
+    slider.addEventListener('mouseleave', () => {
+        interval = setInterval(autoSlide, 6500);
     });
 </script>
 
