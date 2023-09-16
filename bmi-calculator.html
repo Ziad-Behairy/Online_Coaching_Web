@@ -262,27 +262,29 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
+   <script>
         // Function to handle the scroll event
-function handleScroll() {
-  const header = document.querySelector('.header-section');
-  const logo = header.querySelector('.logo');
-  const scrollPos = window.pageYOffset;
+        function handleScroll() {
+          const header = document.querySelector('.header-section');
+          const logo = header.querySelector('.logo');
+          const scrollPos = window.pageYOffset;
+      
+          if (scrollPos > 0) {
+            header.classList.add('scrolled');
+            logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
+            logo.style.top = '-90px'; // Adjust the scale value as desired
 
-  if (scrollPos > 0) {
-    header.classList.add('scrolled');
-    logo.style.display = 'none'; // Hide the logo when scrolling down
-  } else {
-    header.classList.remove('scrolled');
-    logo.style.display = 'block'; // Show the logo when at the top
-  }
-}
-
-// Add event listeners for scroll and DOMContentLoaded
-window.addEventListener('scroll', handleScroll);
-document.addEventListener('DOMContentLoaded', handleScroll);
-
-    </script>
+          } else {
+            header.classList.remove('scrolled');
+            logo.style.transform = 'scale(1)'; // Reset the scale when at the top
+            logo.style.top = '-60px';
+          }
+        }
+      
+        // Add event listeners for scroll and DOMContentLoaded
+        window.addEventListener('scroll', handleScroll);
+        document.addEventListener('DOMContentLoaded', handleScroll);
+      </script>
 
 
 
