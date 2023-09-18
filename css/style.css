@@ -120,11 +120,11 @@ ol {
 }
 
 .section-title span {
-	font-size: 47px;
+	font-size: 45px;
 	color: #C7261C;
 	text-transform: uppercase;
 	font-weight: 720;
-	FONT: O;
+		FONT: O;
 }
 
 .section-title h2 {
@@ -143,7 +143,7 @@ ol {
 
 .spad {
 	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-bottom: 15px;
 }
 
 .spad-2 {
@@ -334,9 +334,9 @@ ol {
 	padding: 0 15px;
 	padding-top: 55px;
 	z-index: 99;
-	background-color: transparent;
+	background-color: ;
 	transition: opacity 0.3s ease-in-out;
-  }
+	}
   
   .header-section.scrolled {
 	opacity: 1; /* Adjust the opacity value as desired */
@@ -3171,7 +3171,7 @@ ol {
 		width: 35px;
 		height: 30px;
 		color: #000000;
-		border: 1px solid #000000;
+		/* border: 1px solid #000000; */
 		border-radius: 2px;
 		line-height: 29px;
 		text-align: center;
@@ -3311,13 +3311,13 @@ ol {
 	}
 	.canvas-open {
 		position: absolute;
-		/* right: auto; */
-		top: 112px;
-		left: auto;
-		font-size: 22px;
-		width: 30px;
+		right: 40px;
+		top: 61px;
+		font-size: 26px;
+		width: 35px;
 		height: 30px;
-		border: black;
+		color: #000000;
+		/* border: 1px solid #000000; */
 		border-radius: 2px;
 		line-height: 29px;
 		text-align: center;
@@ -3628,9 +3628,41 @@ ol {
     }
 
     .section-title h3 {
-        font-size: 18px;
+        font-size: 25px;
         margin-bottom: 10px;
     }
     
     /* Add any other adjustments you need for smaller screens here */
+}
+/* Styles for the mobile section counter */
+.mobile-section {
+    background-image: url('img/counter.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
+.mobile-section h1 {
+    color: #C7261C;
+    font-size: 24px;
+}
+
+.mobile-section p {
+    font-size: 18px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter span {
+    color: white;
+    font-size: 40px;
+}
+
+.counter p {
+    color: white;
+    font-size: 18px;
 }

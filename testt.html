@@ -117,5 +117,27 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+<script>
+        // Function to handle the scroll event
+        function handleScroll() {
+            const windowWidth = window.innerWidth; // Get the current window width
+            const canvasOpen = document.querySelector('.canvas-open');
+            const scrollPos = window.pageYOffset;
+    
+            if (windowWidth <= 990) { // Check if the screen width is 990px or less (mobile)
+                if (scrollPos > 0) {
+                    canvasOpen.style.display = 'none'; // Hide the "canvas-open" div when scrolling down on mobile screens
+                } else {
+                    canvasOpen.style.display = 'block'; // Show the "canvas-open" div when at the top on mobile screens
+                }
+            }
+        }
+    
+        // Add event listeners for scroll and DOMContentLoaded
+        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
+        window.addEventListener('scroll', handleScroll);
+    
+        // Add an event listener for window resize to handle initial conditions
+        window.addEventListener('resize', handleScroll);
+    </script> </body>
 </html>

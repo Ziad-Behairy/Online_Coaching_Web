@@ -26,39 +26,16 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
+
     <style>
-        /* CSS for the slider container */
-        .slider-container {
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* CSS for individual slides */
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            flex: 0 0 33.33%; /* Three images in a row */
-            max-width: 33.33%;
-            height: auto;
-        }
-
-        /* Navigation buttons */
-        .prev,
-        .next { 
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-    </style>
+@media (max-width: 995px) {
+    /* Apply styles for screens less than or equal to 995px wide */
+    .col-lg-4 {
+        width: 100%; /* Make each column take up the full width */
+        margin-bottom: 20px; /* Add some spacing between stacked elements */
+    }
+}
+</style>
 </head>
 
 <body>
@@ -78,22 +55,11 @@
             <ul>
                 <li><a href="./Home.html">Home</a></li>
                 <li><a href="./About.html">The Panda</a></li>
-                <li><a href="./classes.html">Classes</a></li>
                 <li><a href="./Customized-Programs.html">Customized Programs</a></li>
+                <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
                  <li><a href="./transformation.html">Transformations</a></li>             
                  <li><a href="./Testimonial.html">Testimonial</a></li>
-                 <li><a href="#">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./About.html">The Panda</a></li>
-                        <li><a href="./class-timetable.html">Classes timetable</a></li>
-                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                         <li><a href="./transformation.html">Transformations</a></li>             
-                         <li><a href="./Testimonial.html">Testimonial</a></li>
-                        <li><a href="./gallery.html">Gallery</a></li>
-                        <li><a href="./Testimonial.html">Our blog</a></li>
-                        <li><a href="./404.html">404</a></li>
-                    </ul>
-                </li> 
+                
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -398,7 +364,7 @@
     </section>
     <!-- Pricing Section End -->
 <!-- Counter Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/counter.jpg" style="padding-top: 20px;">
+<section id="original-section" class="breadcrumb-section set-bg" data-setbg="img/counter.jpg" style="padding-top: 20px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -451,6 +417,49 @@
         </div>
     </div>
 </section>
+
+<section id="modified-section" class="breadcrumb-section set-bg" data-setbg="img/counter.jpg" style="padding-top: 20px; height: 1000px;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <span style="padding-bottom: 20px;">THIS IS A TOTALLY UNIQUE ONLINE COACHING EXPERIENCE!</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p style="color: white; font-size: 22px;">Mahmoud has helped many people build their bodies while managing their lives in the healthiest and most sustainable way thanks to his customized programs and great follow-up service.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Counter columns -->
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title">
+                    <span style="color: white; font-size: 50px;" class="animated-text" data-start="2000" data-stop="2019" data-speed="2000"></span>
+                    <h3 style="color: white; font-weight: 400;">Coaching since</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title">
+                    <span style="color: white; font-size: 50px;" class="animated-text" data-start="50" data-stop="200" data-speed="1000"></span>
+                    <span style="font-size: 55px;">+</span>
+                    <h3 style="color: white; font-weight: 400;">Clients coached</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <div class="section-title">
+                    <span style="color: white; font-size: 50px;" class="animated-text" data-start="0" data-stop="50" data-speed="1500"></span>
+                    <span style="font-size: 55px;">+</span>
+                    <h3 style="color: white; font-weight: 400;">Successful Transformations</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 
@@ -563,7 +572,7 @@
    <section class="testimonial-section spad" style="
    padding-bottom: 0px;
 " >
-    <div class="hs-item set-bg" data-setbg="img/testimonial/test.JPG" style="background-image: url(&quot;img/testimonial/test.JPG&quot;);height: 550px;">
+    <div class="hs-item set-bg" data-setbg="img/testimonial/test.JPG" style="background-image: url(&quot;img/testimonial/test.JPG&quot;);height: 600px;">
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
@@ -860,155 +869,169 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+        
     <script>
         // Function to handle the scroll event
         function handleScroll() {
-          const header = document.querySelector('.header-section');
-          const logo = header.querySelector('.logo');
-          const scrollPos = window.pageYOffset;
-      
-          if (scrollPos > 0) {
-            header.classList.add('scrolled');
-            logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
-            logo.style.top = '-90px'; // Adjust the scale value as desired
-
-          } else {
-            header.classList.remove('scrolled');
-            logo.style.transform = 'scale(1)'; // Reset the scale when at the top
-            logo.style.top = '-60px';
-          }
-        }
-      
-        // Add event listeners for scroll and DOMContentLoaded
-        window.addEventListener('scroll', handleScroll);
-        document.addEventListener('DOMContentLoaded', handleScroll);
-      </script>
+            const windowWidth = window.innerWidth; // Get the current window width
+            const header = document.querySelector('.header-section');
+            const logo = header.querySelector('.logo');
+            const nav = header.querySelector('.nav'); // Replace '.nav' with the appropriate class or selector for your navigation bar
+            const scrollPos = window.pageYOffset;
     
-
-
-    <script>
-        // Function to check if an element is in the viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-    
-        let animationPlayed = false; // Flag to track if animation has played
-    
-        // Function to start the counter animation
-        function startCounterAnimation() {
-            if (!animationPlayed) { // Check if animation has not played yet
-                // Get all elements with the class "animated-text"
-                const animatedTextElements = document.querySelectorAll('.animated-text');
-    
-                // Loop through each animated text element and start the animation if it is in the viewport
-                animatedTextElements.forEach((animatedText) => {
-                    if (isInViewport(animatedText)) {
-                        // Get the target stop value and start value from the data attributes
-                        const startValue = parseInt(animatedText.getAttribute('data-start'));
-                        const targetValue = parseInt(animatedText.getAttribute('data-stop'));
-    
-                        // Get the animation duration from the data-speed attribute
-                        const duration = parseInt(animatedText.getAttribute('data-speed'));
-    
-                        // Initialize a variable for the current value
-                        let currentValue = startValue;
-    
-                        // Define a function to update the text content with animation
-                        function updateText() {
-                            if (currentValue <= targetValue) {
-                                animatedText.textContent = currentValue;
-                                currentValue++;
-                                setTimeout(updateText, duration / (targetValue - startValue + 1));
-                            }
-                        }
-    
-                        // Start the animation
-                        updateText();
-    
-                        animationPlayed = true; // Set the flag to indicate that animation has played
-                    }
-                });
+            if (windowWidth > 990) { // Check if the screen width is greater than 990px
+                if (scrollPos > 0) {
+                    header.classList.add('scrolled');
+                    logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
+                    logo.style.top = '-90px'; // Adjust the scale value as desired
+                    nav.style.display = 'block'; // Show the navigation bar
+                } else {
+                    header.classList.remove('scrolled');
+                    logo.style.transform = 'scale(1)'; // Reset the scale when at the top
+                    logo.style.top = '-60px';
+                    nav.style.display = 'block'; // Show the navigation bar
+                }
+            } else {
+                if (scrollPos > 0) {
+                    logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
+                    nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
+                } else {
+                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
+                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                }
             }
         }
     
-        // Attach the startCounterAnimation function to the scroll event
-        window.addEventListener('scroll', startCounterAnimation);
+        // Add event listeners for scroll and DOMContentLoaded
+        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
+        window.addEventListener('scroll', handleScroll);
     
-        // Call startCounterAnimation once on page load in case the section is already in the viewport
-        startCounterAnimation();
+        // Add an event listener for window resize to handle initial conditions
+        window.addEventListener('resize', handleScroll);
+    </script>
+    
+    
+    
+    <script>
+        // Function to handle the scroll event
+        function handleScroll() {
+            const windowWidth = window.innerWidth; // Get the current window width
+            const canvasOpen = document.querySelector('.canvas-open');
+            const scrollPos = window.pageYOffset;
+    
+            if (windowWidth <= 990) { // Check if the screen width is 990px or less (mobile)
+                if (scrollPos > 0) {
+                    canvasOpen.style.display = 'none'; // Hide the "canvas-open" div when scrolling down on mobile screens
+                } else {
+                    canvasOpen.style.display = 'block'; // Show the "canvas-open" div when at the top on mobile screens
+                }
+            }
+        }
+    
+        // Add event listeners for scroll and DOMContentLoaded
+        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
+        window.addEventListener('scroll', handleScroll);
+    
+        // Add an event listener for window resize to handle initial conditions
+        window.addEventListener('resize', handleScroll);
+    </script>
+    
+
+    <script>
+        // Function to start the counter animation
+        function startCounterAnimation(animatedTextElements, startValue, targetValue, duration) {
+            // Initialize a variable for the current value
+            let currentValue = startValue;
+    
+            // Define a function to update the text content with animation
+            function updateText() {
+                if (currentValue <= targetValue) {
+                    animatedTextElements.textContent = currentValue;
+                    currentValue++;
+                    setTimeout(updateText, duration / (targetValue - startValue + 1));
+                }
+            }
+    
+            // Start the animation
+            updateText();
+        }
+    
+        // Function to handle counter animation when in viewport
+        function startCounterWhenVisible(entries) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Get all elements with the class "animated-text"
+                    const animatedTextElements = entry.target.querySelectorAll('.animated-text');
+    
+                    // Loop through each animated text element and start the animation if not already started
+                    animatedTextElements.forEach((animatedText) => {
+                        if (!animatedText.classList.contains('animated')) {
+                            // Get the target stop value and start value from the data attributes
+                            const startValue = parseInt(animatedText.getAttribute('data-start'));
+                            const targetValue = parseInt(animatedText.getAttribute('data-stop'));
+    
+                            // Get the animation duration from the data-speed attribute
+                            const duration = parseInt(animatedText.getAttribute('data-speed'));
+    
+                            // Start the animation
+                            startCounterAnimation(animatedText, startValue, targetValue, duration);
+    
+                            // Add a class to mark the element as animated
+                            animatedText.classList.add('animated');
+                        }
+                    });
+                }
+            });
+        }
+    
+        // Create a new Intersection Observer
+        const observer = new IntersectionObserver(startCounterWhenVisible, {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px', // No margin
+            threshold: 0.1, // Trigger when at least 10% of the element is visible
+        });
+    
+        // Target both the original and modified sections
+        const originalSection = document.querySelector('#original-section');
+        const modifiedSection = document.querySelector('#modified-section');
+    
+        // Start observing both sections
+        if (originalSection) {
+            observer.observe(originalSection);
+        }
+        if (modifiedSection) {
+            observer.observe(modifiedSection);
+        }
+    </script>
+    
+    
+    
+    <script>
+        function toggleSections() {
+            const originalSection = document.getElementById("original-section");
+            const modifiedSection = document.getElementById("modified-section");
+    
+            if (window.innerWidth <= 995) {
+                originalSection.style.display = "none";
+                modifiedSection.style.display = "block";
+            } else {
+                originalSection.style.display = "block";
+                modifiedSection.style.display = "none";
+            }
+        }
+    
+        // Initial check on page load
+        toggleSections();
+    
+        // Listen for window resize events
+        window.addEventListener("resize", toggleSections);
     </script>
     
 
 
-<script>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get the play button element
-        var playButton = document.querySelector(".play-btn");
 
-        // Add a click event listener to the play button
-        playButton.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the default link behavior
-
-            // Get the video URL from the href attribute of the play button
-            var videoURL = playButton.getAttribute("href");
-
-            // Open the video in a new window or tab
-            window.open(videoURL, "_blank");
-        });
-    });
-</script>
 <!-- slider-container -->
-<script>
-    // JavaScript for the slider functionality
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const slider = document.querySelector('.slider');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const numSlides = slides.length;
-    const slideWidth = 33.33; // Width of each slide in percentage
 
-    function showSlide(index) {
-        currentSlide = index;
-        const translateValue = -currentSlide * slideWidth;
-        slider.style.transform = `translateX(${translateValue}%)`;
-    }
-
-    prevButton.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + numSlides) % numSlides;
-        showSlide(currentSlide);
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % numSlides;
-        showSlide(currentSlide);
-    });
-
-    // Automatically advance the slider one image at a time every 3 seconds
-    function autoSlide() {
-        currentSlide = (currentSlide + 1) % numSlides;
-        showSlide(currentSlide);
-    }
-
-    const interval = setInterval(autoSlide, 6500);
-
-    // Pause the slider on hover
-    slider.addEventListener('mouseenter', () => {
-        clearInterval(interval);
-    });
-
-    // Resume the slider on mouse leave
-    slider.addEventListener('mouseleave', () => {
-        interval = setInterval(autoSlide, 6500);
-    });
-</script>
 
 
 </body>
