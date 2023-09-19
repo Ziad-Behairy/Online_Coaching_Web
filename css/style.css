@@ -1627,7 +1627,8 @@ ol {
 }
 
 .about-text {
-	background: #e7e5e5;
+	background: #f7f7f7;
+	OPACITY: inherit;
 	height: 640px;
 	padding: 10px 70px 0 70px;
 }
