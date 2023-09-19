@@ -610,7 +610,7 @@ ol {
 -----------------------*/
 
 .ChooseUs-section {
-	background: #ffffff;
+	background: #f2f2f2;
 	padding-bottom: 70px;
 }
 
@@ -627,7 +627,7 @@ ol {
 .cs-item span {
 	height: 90px;
 	width: 90px;
-	background: white;
+	background: #f2f2f2;
 	border-radius: 50%;
 	display: inline-block;
 	color: #C7261C;
@@ -786,7 +786,7 @@ ol {
 -----------------------*/
 
 .pricing-section {
-    background: #ffffff;
+    background: W;
 }
 
 .pricing-section .section-title {
@@ -1627,7 +1627,7 @@ ol {
 }
 
 .about-text {
-	background: #f7f7f7;
+	background: #ffffff;
 	OPACITY: inherit;
 	height: 640px;
 	padding: 10px 70px 0 70px;
