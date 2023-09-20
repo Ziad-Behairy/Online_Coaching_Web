@@ -40,7 +40,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	color: #111111;
+	color: w;
 	font-weight: 400;
 	font-family: "Oswald", sans-serif;
 }
@@ -124,7 +124,7 @@ ol {
 	color: #C7261C;
 	text-transform: uppercase;
 	font-weight: 720;
-		FONT: O;
+	FONT: O;
 }
 
 .section-title h2 {
@@ -158,7 +158,7 @@ ol {
 }
 
 .spad {
-	padding-top: 100px;
+	padding-top: px;
 	padding-bottom: 15px;
 }
 
@@ -610,7 +610,7 @@ ol {
 -----------------------*/
 
 .ChooseUs-section {
-	background: #f2f2f2;
+	background: ;
 	padding-bottom: 70px;
 }
 
@@ -627,7 +627,7 @@ ol {
 .cs-item span {
 	height: 90px;
 	width: 90px;
-	background: #f2f2f2;
+	background: #;
 	border-radius: 50%;
 	display: inline-block;
 	color: #C7261C;
