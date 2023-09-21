@@ -41,7 +41,7 @@ h5,
 h6 {
 	margin: 0;
 	color: w;
-	font-weight: 400;
+	font-weight: 00;
 	font-family: "Oswald",;
 }
 
@@ -134,18 +134,17 @@ ol {
 	text-transform: uppercase;
 	margin-top: 8px;
 }
-.section-title-testimonials h2 {
+.section-title-Testimonialss h2 {
 	color: #000000;
 	font-size: 35px;
-	font-weight: 600;
+	font-weight: 00;
 	text-transform: uppercase;
 	margin-top: 170px;
 	margin-bottom: 45px;
 	text-align: center;
-
 }
 @media (max-width: 600px) {
-	.section-title-testimonials h2 {
+	.section-title-Testimonialss h2 {
 	
 		margin-top: 50px;}
 
@@ -604,7 +603,30 @@ ol {
 	top: 100px;
 	opacity: 0;
 }
+.custom-slider-controls {
+	position: relative;
+	margin-top: 20px; /* Adjust the margin as needed */
+}
 
+.custom-slider-controls .owl-prev,
+.custom-slider-controls .owl-next {
+	background: transparent;
+	border: none;
+	font-size: 24px;
+	color: #000; /* Change the color as needed */
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.custom-slider-controls .owl-prev {
+	left: 20px; /* Adjust the left position as needed */
+}
+
+.custom-slider-controls .owl-next {
+	right: 20px; /* Adjust the right position as needed */
+}
 /*---------------------
   ChooseUs Section
 -----------------------*/
@@ -1066,7 +1088,7 @@ ol {
 
 .transformation-title .section-title {
 	text-align: center;
-	
+	padding-top: 5;
 }
 
 .primary-btn.appoinment-btn {
@@ -1678,10 +1700,10 @@ ol {
 }
 
 /*---------------------
-  Testimonial Section
+  Testimonials Section
 -----------------------*/
 
-.testimonial-section {
+.Testimonials-section {
 	background: #ffffff;
 }
 
@@ -3552,7 +3574,7 @@ ol {
 		margin-bottom: 20px;
 	}
 	.about-text {
-		padding: 70px 15px 60px;
+		padding: 70px 15px 0px;
 	}
 	.blog-details-section .p-0 {
 		padding: 15px !important;

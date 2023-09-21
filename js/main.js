@@ -108,7 +108,7 @@
     });
 
     /*------------------
-        Testimonial Slider
+        Testimonials Slider
     --------------------*/
     $(".ts_slider").owlCarousel({
         loop: true,
