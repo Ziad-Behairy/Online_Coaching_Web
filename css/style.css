@@ -627,6 +627,36 @@ ol {
 .custom-slider-controls .owl-next {
 	right: 20px; /* Adjust the right position as needed */
 }
+
+@media (max-width: 700px) {
+    /* Center the previous and next buttons below the slider */
+    .custom-slider-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; /* Adjust the margin as needed */
+    }
+
+    .custom-slider-controls .owl-prev
+	{
+		background: transparent;
+        border: none;
+        font-size: 24px;
+        color: #000; /* Change the color as needed */
+        cursor: pointer;
+        margin: 10px auto; /* Center the buttons horizontally */
+		top: -10;left: 50px;bottom: -38;bottom: -50;top: -10;padding-bottom: 600px;margin-top: 270px;
+	}
+    .custom-slider-controls .owl-next {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        color: #000; /* Change the color as needed */
+        cursor: pointer;
+        margin: 10px auto; /* Center the buttons horizontally */
+		right: 50px; padding-bottom: 600px;margin-top: 270px;
+    }
+}
 /*---------------------
   ChooseUs Section
 -----------------------*/
@@ -1102,6 +1132,7 @@ ol {
 	max-width: 100%;
 	align-content: center;
 }
+
 
 /* .ts-slider.owl-carousel .owl-dots {
 	text-align: center;
@@ -1705,6 +1736,8 @@ ol {
 
 .Testimonials-section {
 	background: #ffffff;
+	padding-bottom: 0px;
+    padding-top: 40px;
 }
 
 .ts_slider.owl-carousel .owl-item img {
@@ -1758,6 +1791,20 @@ ol {
 .ts_slider .ts_item .ti_text .tt-rating i {
 	font-size: 12px;
 	color: #d49d09;
+}
+
+
+/* Default styles for the background image */
+.hs-item[data-setbg] {
+    height: 550px;
+}
+
+/* Media query for screens with a width less than 700px (mobile view) */
+@media (max-width: 700px) {
+    /* Adjust the height for mobile view */
+    .hs-item[data-setbg] {
+        height: 800px;
+    }
 }
 
 /*---------------------
