@@ -1800,14 +1800,14 @@ ol {
 
 /* Default styles for the background image */
 .hs-item[data-setbg] {
-    height: 550px;
+   
 }
 
 /* Media query for screens with a width less than 700px (mobile view) */
 @media (max-width: 700px) {
     /* Adjust the height for mobile view */
     .hs-item[data-setbg] {
-        height: 800px;
+        height: 700px;
     }
 }
 
