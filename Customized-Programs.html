@@ -163,6 +163,7 @@
     <!-- Banner Section End -->
 
 <!-- Pricing Section Begin -->
+
 <section class="pricing-section service-pricing spad">
     <div class="container">
         <div class="row">
@@ -173,18 +174,29 @@
                 </div>
             </div>
         </div>
-        
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <!-- Add buttons to switch between card sets -->
+                    <button class="primary-btn pricing-btn" onclick="showCardSet1()">for egyptians</button>
+                    <button class="primary-btn pricing-btn" onclick="showCardSet2()">for forgeins</button>
+                    <!-- Add more buttons for additional card sets if needed -->
+                </div>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-8">
                 <div class="ps-item">
-                    <h3>Customized Diet Plan</h3>
+                    <h3 id="card-title-1">Customized Diet Plan</h3>
                     <div class="pi-price">
-                        <h2> 500 EGP </h2>
-                        <span>SINGLE CLASS</span>
-                        
+                        <h2 id="card-price-1">  200 EGP </h2>
+                        <span style="color: red;">for 1 month</span>
+                        <h2 id="card-price-11">  500 EGP </h2>
+                        <h4 id="card-price-111" style="display: inline-block; text-decoration: line-through; color: red;">600</h4>
+                        <span style="display: inline-block; color: red; margin-left: 5px;">for 3 month</span>
 
                     </div>
-                    <ul>
+                    <ul id="card-list-1">
                         <li>	Calories & Macros <span class="checkmark ">&#10003;</span></li>
                         <li>-	Detailed Meal Schedule</li>
                         <li>-	Measured Food Quantities</li>
@@ -204,12 +216,16 @@
             
             <div class="col-lg-4 col-md-8">
                 <div class="ps-item">
-                    <h3>The 2-in-1 Program</h3>
+                    <h3 id="card-title-2">The 2-in-1 Program</h3>
                     <div class="pi-price">
-                        <h2>800 EGP </h2>
-                        <span>SINGLE CLASS</span>
+                        <h2 id="card-price-2">  300 EGP </h2>
+                        <h4 id="card-price-22" style="display: inline-block; text-decoration: line-through; color: red;">400</h4>
+                        <span style="display: inline-block; color: red; margin-left: 5px;">for 1 month</span>
+                        <h2 id="card-price-222">  800 EGP </h2>
+                        <h4 id="card-price-2222" style="display: inline-block; text-decoration: line-through; color: red;">1200</h4>
+                        <span style="display: inline-block; color: red; margin-left: 5px;">for 3 month</span>
                     </div>
-                    <ul>
+                    <ul id="card-list-2">
                         <li>-	Customized Diet Plan</li>
                         <li>-	Customized Workout Program</li>
                         <li>-	Tips & Guidelines</li>
@@ -225,12 +241,15 @@
             </div>
         <div class="col-lg-4 col-md-8">
                 <div class="ps-item">
-                    <h3>Customized Workout Program</h3>
+                    <h3 id="card-title-3">Customized Workout Program</h3>
                     <div class="pi-price">
-                        <h2>500 EGP</h2>
-                        <span>SINGLE CLASS</span>
+                        <h2 id="card-price-3">  200 EGP </h2>
+                        <span style="color: red;">for 1 month</span>
+                        <h2 id="card-price-33">  500 EGP </h2>
+                        <h4 id="card-price-333" style="display: inline-block; text-decoration: line-through; color: red;">600</h4>
+                        <span style="display: inline-block; color: red; margin-left: 5px;">for 3 month</span>
                     </div>
-                    <ul>
+                    <ul id="card-list-3">
                         <li>Weekly Training Split</li>
                         <li>-	Daily Workout Schedule</li>
                         <li>-	Video Exercise Guides</li>
@@ -246,8 +265,44 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </section>
+<script>
+    // JavaScript functions to switch between card sets
+    function showCardSet1() {
+        // Set content for Card Set 1
+        document.getElementById("card-price-1").textContent = "200 EGP";
+        document.getElementById("card-price-11").textContent = "500";
+        document.getElementById("card-price-111").textContent = "600";
+        document.getElementById("card-price-2").textContent = "300 EGP";
+        document.getElementById("card-price-22").textContent = "400";
+        document.getElementById("card-price-222").textContent = "800";
+        document.getElementById("card-price-2222").textContent = "1200";
+        document.getElementById("card-price-3").textContent = "300 EGP";
+        document.getElementById("card-price-33").textContent = "400";
+        document.getElementById("card-price-333").textContent = "800";
+        
+        // Update list items as needed for Card 1
+        // Reset content for Card Set 2 and Card Set 3 if necessary
+    }
+
+    function showCardSet2() {
+        // Set content for Card Set 2
+        document.getElementById("card-price-1").textContent = "15 $";
+        document.getElementById("card-price-11").textContent = "35 $";
+        document.getElementById("card-price-111").textContent = "45 $";
+        document.getElementById("card-price-2").textContent = "25 $";
+        document.getElementById("card-price-22").textContent = "30 $";
+        document.getElementById("card-price-222").textContent = "60 $ ";
+        document.getElementById("card-price-2222").textContent = "75 $";
+        document.getElementById("card-price-3").textContent = "15 $";
+        document.getElementById("card-price-33").textContent = "35 $";
+        document.getElementById("card-price-333").textContent = "45 $";
+        // Update list items as needed for Card 2
+        // Reset content for Card Set 1 and Card Set 3 if necessary
+    }
+</script>
 <!-- Pricing Section End -->    
     
     <!DOCTYPE html>
