@@ -1370,9 +1370,15 @@ ol {
   
   
 
-.ts-item.set-bg {}
+.ts-item.set-bg {
+	position: relative;
+	overflow: hidden;
+	width: auto;
+	height: 0;
+	padding-bottom: 125%; /* 4:5 aspect ratio (5/4 * 100) */
+}
 
-.ts-item.set-bg {}
+
 
 .ts-item:hover .ts_text {
 	bottom: -35px;
@@ -1814,14 +1820,29 @@ ol {
 .hs-item[data-setbg] {
    
 }
+.hs-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
 /* Media query for screens with a width less than 700px (mobile view) */
 @media (max-width: 700px) {
     /* Adjust the height for mobile view */
-    .hs-item[data-setbg] {
-        height: 700px;
+    .hs-item {
+        height: 800px;
     }
 }
+
+/* Media query for screens with a width more than 700px (desktop view) */
+@media (min-width: 701px) {
+    /* Adjust the height for desktop view */
+    .hs-item {
+        height: 550px;
+    }
+}
+
+
 
 /*---------------------
   Services Section
