@@ -24,6 +24,37 @@
        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+     margin: 0;
+ }
+ 
+ .video-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     padding: 40px 20px;
+ }
+ 
+ .video-frame {
+     width: calc(50% - 20px); /* Two videos per row with space between them */
+     margin: 10px; /* Add margin to create space between videos */
+     cursor: pointer;
+     transition: transform 0.3s;
+ }
+ 
+ .video-frame:hover {
+     transform: scale(1.05);
+ }
+ 
+ @media (max-width: 768px) {
+     .video-frame {
+         width: calc(100% - 20px);
+     }
+ }
+     </style>
+     <script src="https://www.youtube.com/iframe_api"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 </head>  
 
 
@@ -143,98 +174,17 @@
                 ">
                         <span>YOUR FEEDBACK ALWAYS
                             MATTERS!</span>
-                        <h3 style="color: white;" >YOUR FEEDBACK ALWAYS MATTERS!</h3>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-pic">
-                            <img src="img/Testimonials/AhmedGalal.jpg" alt="">
-                        </div>
                         
-                        <div class="bi-text">
-                            <h5><a href="./blog-details.html">Ahmed Galal</a></h5>
-                            <ul>
-                                <li>trainer</li>
-                                <li>Aug,15, 2019</li>
-                                
-                            </ul>
-                            <p>The best coach.
-                                He makes the best plans and encourages you all the time
-                                to help you achieve your goal naturally.</p>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-pic">
-                            <img src="img/Testimonials/AhmedGalal.jpg" alt="">
-                        </div>
-                        <div class="bi-text">
-                            <h5><a href="./blog-details.html">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
-                                    Cobbler...</a></h5>
-                            <ul>
-                                <li>by Admin</li>
-                                <li>Aug,15, 2019</li>
-                                <li>20 Comment</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua accumsan lacus facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-pic">
-                            <img src="img/blog/blog-3.jpg" alt="">
-                        </div>
-                        <div class="bi-text">
-                            <h5><a href="./blog-details.html">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
-                                    Cobbler...</a></h5>
-                            <ul>
-                                <li>by Admin</li>
-                                <li>Aug,15, 2019</li>
-                                <li>20 Comment</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua accumsan lacus facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-pic">
-                            <img src="img/blog/blog-4.jpg" alt="">
-                        </div>
-                        <div class="bi-text">
-                            <h5><a href="./blog-details.html">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
-                                    Cobbler...</a></h5>
-                            <ul>
-                                <li>by Admin</li>
-                                <li>Aug,15, 2019</li>
-                                <li>20 Comment</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua accumsan lacus facilisis.</p>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-pic">
-                            <img src="img/blog/blog-5.jpg" alt="">
-                        </div>
-                        <div class="bi-text">
-                            <h5><a href="./blog-details.html">Vegan White Peach Mug Cobbler With Cardam Vegan White Peach Mug
-                                    Cobbler...</a></h5>
-                            <ul>
-                                <li>by Admin</li>
-                                <li>Aug,15, 2019</li>
-                                <li>20 Comment</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua accumsan lacus facilisis.</p>
-                        </div>
-                    </div>
-                    <!-- <div class="blog-pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">Next</a>
-                    </div> -->
-                </div>
                 
             </div>
+        </div>
+    </section>
+    <section>
+        <div class="video-container">
+            <div class="video-frame" id="video1"></div>
+            <div class="video-frame" id="video2"></div>
+            <div class="video-frame" id="video3"></div>
+            <div class="video-frame" id="video4"></div>
         </div>
     </section>
     <!-- Blog Section End -->
@@ -580,7 +530,73 @@
         window.addEventListener('resize', handleScroll);
     </script>
 
+<script>
+    // Replace with your YouTube video IDs
+    var videoId1 = 'v=EykWcFEtFqo';
+    var videoId2 = 'v=EykWcFEtFqo';
+    var videoId3 = 'v=EykWcFEtFqo';
+    var videoId4 = 'v=EykWcFEtFqo';
 
+    // Function to extract video ID from YouTube URL
+    function extractVideoId(url) {
+        var regex = /v=([A-Za-z0-9_-]+)/;
+        var match = url.match(regex);
+        if (match && match[1]) {
+            return match[1];
+        }
+        return null;
+    }
+
+    // Create players for each video
+    var players = [];
+
+    // Function to create a YouTube player
+    function onYouTubeIframeAPIReady() {
+        players.push(new YT.Player('video1', {
+            height: '360',
+            width: '640',
+            videoId: extractVideoId(videoId1),
+            playerVars: {
+                'autoplay': 0,
+                'controls': 1,
+            }
+        }));
+
+        players.push(new YT.Player('video2', {
+            height: '360',
+            width: '640',
+            videoId: extractVideoId(videoId2),
+            playerVars: {
+                'autoplay': 0,
+                'controls': 1,
+            }
+        }));
+
+        players.push(new YT.Player('video3', {
+            height: '360',
+            width: '640',
+            videoId: extractVideoId(videoId3),
+            playerVars: {
+                'autoplay': 0,
+                'controls': 1,
+            }
+        }));
+
+        players.push(new YT.Player('video4', {
+            height: '360',
+            width: '640',
+            videoId: extractVideoId(videoId4),
+            playerVars: {
+                'autoplay': 0,
+                'controls': 1,
+            }
+        }));
+
+        // Create GSAP animations for hover effect
+        gsap.to('.video-frame', { scale: 1.05, duration: 0.3, ease: 'power2.inOut' });
+        gsap.to('.video-frame', { scale: 1, duration: 0.3, ease: 'power2.inOut', delay: 0.3 });
+    }
+</script>
 
 <script>
         // Function to handle the scroll event

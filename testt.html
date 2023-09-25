@@ -3,75 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-
     <title>Your Page Title</title>
     <style>
-        /* Styles for #premium-section */
-        #premium-section {
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            min-height: 300px; /* Adjust this value as needed */
-            padding-top: 95px;
-            padding-bottom: 50px;
-            text-align: center;
-        }
+       body {
+    margin: 0;
+    background-color: #C7261C;
+}
 
-        #premium-section h3 {
-            font-size: 30px;
-            font-family: Oswald;
-            padding-bottom: 30px;
-        }
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+}
 
-        #premium-section .primary-btn {
-            padding-right: 50px;
-            padding-left: 50px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 23px;
-        }
+.video-frame {
+    width: calc(50% - 20px); /* Two videos per row with space between them */
+    margin: 10px; /* Add margin to create space between videos */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
 
-        /* Responsive styles for #premium-section */
-        @media (max-width: 768px) {
-            #premium-section {
-                height: auto;
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
+.video-frame:hover {
+    transform: scale(1.05);
+}
 
-            #premium-section h3 {
-                font-size: 20px;
-            }
-
-            #premium-section .primary-btn {
-                font-size: 18px;
-                padding-right: 30px;
-                padding-left: 30px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-            }
-        }
+@media (max-width: 768px) {
+    .video-frame {
+        width: calc(100% - 20px);
+    }
+}
     </style>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 </head>
 <body>
-    <section id="premium-section" class="breadcrumb-section set-bg" data-setbg="img/premiumfinal.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>GO PREMIUM!</span>
-                        <h3><br>Book a free call with the panda and start your one-on-one premium coaching subscription with a legitimate follow-up service now!</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 text-center">
-                    <a href="Premium-Coaching.html" class="primary-btn btn-normal">Learn More</a>
-                </div>
-            </div>
+    <!-- Video Section -->
+    <section>
+        <div class="video-container">
+            <div class="video-frame" id="video1"></div>
+            <div class="video-frame" id="video2"></div>
+            <div class="video-frame" id="video3"></div>
+            <div class="video-frame" id="video4"></div>
         </div>
     </section>
+
+    <script>
+        // Replace with your YouTube video IDs
+        var videoId1 = 'v=EykWcFEtFqo';
+        var videoId2 = 'v=EykWcFEtFqo';
+        var videoId3 = 'v=EykWcFEtFqo';
+        var videoId4 = 'v=EykWcFEtFqo';
+
+        // Function to extract video ID from YouTube URL
+        function extractVideoId(url) {
+            var regex = /v=([A-Za-z0-9_-]+)/;
+            var match = url.match(regex);
+            if (match && match[1]) {
+                return match[1];
+            }
+            return null;
+        }
+
+        // Create players for each video
+        var players = [];
+
+        // Function to create a YouTube player
+        function onYouTubeIframeAPIReady() {
+            players.push(new YT.Player('video1', {
+                height: '360',
+                width: '640',
+                videoId: extractVideoId(videoId1),
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 1,
+                }
+            }));
+
+            players.push(new YT.Player('video2', {
+                height: '360',
+                width: '640',
+                videoId: extractVideoId(videoId2),
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 1,
+                }
+            }));
+
+            players.push(new YT.Player('video3', {
+                height: '360',
+                width: '640',
+                videoId: extractVideoId(videoId3),
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 1,
+                }
+            }));
+
+            players.push(new YT.Player('video4', {
+                height: '360',
+                width: '640',
+                videoId: extractVideoId(videoId4),
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 1,
+                }
+            }));
+
+            // Create GSAP animations for hover effect
+            gsap.to('.video-frame', { scale: 1.05, duration: 0.3, ease: 'power2.inOut' });
+            gsap.to('.video-frame', { scale: 1, duration: 0.3, ease: 'power2.inOut', delay: 0.3 });
+        }
+    </script>
 </body>
 </html>
