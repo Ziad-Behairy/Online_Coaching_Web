@@ -3,141 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <title>Your Page Title</title>
     <style>
-        /* Add your custom CSS here */
-        body {
-            font-family: Montserrat, Arial, sans-serif;
-        background-image: url('https://durrahnation.com/wp-content/uploads/2018/05/coaching_section.jpg'); /* Updated background image URL */
-        background-size: cover;
-        background-position: center;
-        color: white;
+        /* Styles for #premium-section */
+        #premium-section {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 300px; /* Adjust this value as needed */
+            padding-top: 95px;
+            padding-bottom: 50px;
+            text-align: center;
         }
 
-        .breadcrumb-section {
-            padding-top: 20px;
+        #premium-section h3 {
+            font-size: 30px;
+            font-family: Oswald;
+            padding-bottom: 30px;
         }
 
-        .section-title {
-            padding-bottom: 20px;
+        #premium-section .primary-btn {
+            padding-right: 50px;
+            padding-left: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 23px;
         }
 
-        .animated-text {
-            font-size: 65px;
-        }
-
-        .plus {
-            font-size: 55px;
-        }
-
-        .section-content {
-            font-size: 22px;
-        }
-
-        /* Responsive Styles */
+        /* Responsive styles for #premium-section */
         @media (max-width: 768px) {
-            .col-lg-4 {
-                margin-top: 20px;
+            #premium-section {
+                height: auto;
+                padding-top: 30px;
+                padding-bottom: 30px;
             }
 
-            .animated-text {
-                font-size: 45px;
+            #premium-section h3 {
+                font-size: 20px;
             }
 
-            .plus {
-                font-size: 35px;
-            }
-
-            .section-content {
+            #premium-section .primary-btn {
                 font-size: 18px;
+                padding-right: 30px;
+                padding-left: 30px;
+                padding-top: 8px;
+                padding-bottom: 8px;
             }
         }
     </style>
 </head>
 <body>
-    <section class="breadcrumb-section set-bg">
+    <section id="premium-section" class="breadcrumb-section set-bg" data-setbg="img/premiumfinal.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center" style="height: 100px;">
+                <div class="col-lg-12">
                     <div class="section-title">
-                        <span>THIS IS A TOTALLY UNIQUE ONLINE COACHING EXPERIENCE!</span>
+                        <span>GO PREMIUM!</span>
+                        <h3><br>Book a free call with the panda and start your one-on-one premium coaching subscription with a legitimate follow-up service now!</h3>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="section-content">Mahmoud has helped many people build their bodies while managing their lives in the healthiest and most sustainable way thanks to his customized programs and great follow-up service.</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="section-title">
-                        <span class="animated-text" data-start="2000" data-stop="2019" data-speed="2000"></span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="section-title">
-                        <span class="animated-text" data-start="50" data-stop="200" data-speed="1000"></span>
-                        <span class="plus">+</span>            
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="section-title">
-                        <span class="animated-text" data-start="0" data-stop="50" data-speed="1500"></span>
-                        <span class="plus">+</span>            
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="section-title">
-                        <h3>Coaching since</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="section-title">
-                        <h3>Clients coached</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="section-title">
-                        <h3>Successful Transformations</h3>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 text-center">
+                    <a href="Premium-Coaching.html" class="primary-btn btn-normal">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-        // Function to handle the scroll event
-        function handleScroll() {
-            const windowWidth = window.innerWidth; // Get the current window width
-            const canvasOpen = document.querySelector('.canvas-open');
-            const scrollPos = window.pageYOffset;
-    
-            if (windowWidth <= 990) { // Check if the screen width is 990px or less (mobile)
-                if (scrollPos > 0) {
-                    canvasOpen.style.display = 'none'; // Hide the "canvas-open" div when scrolling down on mobile screens
-                } else {
-                    canvasOpen.style.display = 'block'; // Show the "canvas-open" div when at the top on mobile screens
-                }
-            }
-        }
-    
-        // Add event listeners for scroll and DOMContentLoaded
-        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
-        window.addEventListener('scroll', handleScroll);
-    
-        // Add an event listener for window resize to handle initial conditions
-        window.addEventListener('resize', handleScroll);
-    </script> </body>
+</body>
 </html>

@@ -610,7 +610,7 @@ ol {
 
 .custom-slider-controls .owl-prev,
 .custom-slider-controls .owl-next {
-	background: rgba(12, 12, 12, 0.1);
+	background: transparent;
 	border: none;
 	font-size: 24px;
 	color: #000; /* Change the color as needed */
@@ -639,7 +639,7 @@ ol {
 
     .custom-slider-controls .owl-prev,
     .custom-slider-controls .owl-next {
-        background: rgba(12, 12, 12, 0.1);
+        background: transparent;
         border: none;
         font-size: 24px;
         color: #000000; /* Transparent light gray color */
@@ -1618,9 +1618,8 @@ ol {
 -----------------------*/
 
 .breadcrumb-section {
-	height: 500px;
-	padding-top: 230px;
-	background-image: url('https://durrahnation.com/wp-content/uploads/2018/05/coaching_section.jpg'); /* Updated background image URL */
+	height: auto;
+	min-height: 500px;
 
 }
 
