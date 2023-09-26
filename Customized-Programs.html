@@ -137,7 +137,7 @@
      <!-- ChooseUs Section Begin -->
      <section class="ChooseUs-section spad" style="
      padding-top: 50px;
-     padding-bottom: 50px;
+     padding-bottom: 25px;
  ">
          <div class="container">
              <div class="row">
@@ -184,11 +184,11 @@
  
     
     <!-- Banner Section Begin -->
-    <section class="banner-section set-bg" data-setbg="img/ourclient2.jpg">
+    <section class="banner-section set-bg" data-setbg="img/ourclient2.jpg" style="height: 500px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="bs-text service-banner">
+                    <div class="bs-text service-banner" style="padding-top: 40px;">
                         <h2>Customized-Programs</h2>
                         <div class="bt-tips">Where health, beauty and fitness meet.</div>
                         <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i
@@ -202,24 +202,22 @@
 
 <!-- Pricing Section Begin -->
 
-<section class="pricing-section service-pricing spad">
+<section class="pricing-section service-pricing spad" style="padding-top: 50px;padding-bottom: 5px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-title">
-                    <span>OUR PROGRAMS
-                        
-                        </span>
+                <div class="section-title" style="margin-bottom: 30px;">
+                    <span>OUR PROGRAMS </span>
                     <h2>PICK YOUR OWN</h2>
                 </div>
             </div>
         </div>
-        <div class="container text-center">
+        <div class="container text-center" >
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <!-- Add buttons to switch between card sets -->
-                    <button class="primary-btn pricing-btn" onclick="showCardSet1()">for people living in egypt</button>
-                    <button class="primary-btn pricing-btn" onclick="showCardSet2()">for people living abroad </button>
+                    <button class="primary-btn pricing-btn" onclick="showCardSet1()" style="margin-bottom: 30px;">for people living in egypt</button>
+                    <button class="primary-btn pricing-btn" onclick="showCardSet2()"  style="margin-bottom: 30px;">for people living abroad </button>
                     <!-- Add more buttons for additional card sets if needed -->
                 </div>
             </div>
@@ -502,35 +500,62 @@
 <!-- ... (your table rows here) ... -->
     
 
-    <!-- Features Section Begin -->
-    <section class="ChooseUs-section spad">
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Important Notes!!</span>
-                    </div>
-                    <div class="single-features">
-                        <ul style="color: black;">
-                            <li style="border: 2px solid #000; padding: 20px; background-color: red; border-radius: 10px;">
-                                These programs are fully designed by me. That means no one else will make the programs for you, no one else will answer your questions, and no one else will update your programs upon further purchases. It's all going to be me.
-                            </li>
-                            <li style="border: 2px solid #000; padding: 20px; background-color: red; border-radius: 10px;">
-                                Program fees are not refundable as you will have my full service from the day of your purchase.
-                            </li>
-                            <li style="border: 2px solid #000; padding: 20px; background-color: red; border-radius: 10px;">
-                                Programs are all in English (No Full Arabic Programs Yet).
-                            </li>
-                            <li style="border: 2px solid #000; padding: 20px; background-color: red; border-radius: 10px;">
-                                Bonus service: If you purchase a customized program, you can send me all the questions that haven't been answered in the "Frequently asked questions" section in the program with a maximum of 1 email per month.
-                            </li>
-                        </ul>
-                    </div>
+
+
+<section class="PaymentMethods-section spad" style="
+padding-top: 20px;
+padding-bottom: 20px;
+">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 custom-selection">
+                <div class="section-title" style="padding-bottom: 20px;">
+                    <span>OUR PAYMENT METHODS</span>
+                    <h3 style="color: black;">CHOOSE YOUR PREFERRED PAYMENT OPTION</h3>
                 </div>
             </div>
-        </div> -->
-        
-            <div class="section-title">
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="payment-item">
+                    <span class="payment-icon"><img src="img/vodafone-cash-icon.png" alt="Vodafone Cash Icon"></span>
+                    <h4 style="margin-top: 5px;">Vodafone Cash</h4>
+                    <p>Pay using Vodafone Cash for a seamless experience.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="payment-item">
+                    <span class="payment-icon"><img src="img/instapay-icon2.png" alt="Instapay Icon"></span>
+                    <h4 style="margin-top: 5px;">Instapay</h4>
+                    <p>Make quick payments with Instapay.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="payment-item">
+                    <span class="payment-icon"><img src="img/telda-icon.png" alt="Telda Icon"></span>
+                    <h4 style="margin-top: 5px;">Telda</h4>
+                    <p>Use Telda for secure online payments.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="payment-item">
+                    <span class="payment-icon"><img src="img/bank-transfer-icon1.png" alt="Bank Transfer Icon"></span>
+                    <h4 style="margin-top: 5px;">Bank Transfer</h4>
+                    <p>Transfer funds directly to our bank account.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section Begin -->
+    <section class="ChooseUs-section spad" style="
+    padding-bottom: 50px;
+">
+
+            <div class="section-title" style="
+            padding-bottom: 30px;
+        ">
                 <span>Important Notes</span>
             </div>
         <div id="accordion" class="mx-auto">

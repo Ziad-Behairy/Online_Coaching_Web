@@ -661,11 +661,11 @@ ol {
 }
 
 /*---------------------
-  ChooseUs Section
+  ChooseUs Section & payment methods Section
 -----------------------*/
 
 .ChooseUs-section {
-	background: ;
+	
 	padding-bottom: 70px;
 }
 
@@ -699,6 +699,46 @@ ol {
 	font-weight: 600;
 	margin-top: 24px;
 	margin-bottom: 16px;
+}
+
+/* Payment Methods Section */
+/* Payment Methods Section */
+.PaymentMethods-section {
+    padding-bottom: 70px;
+}
+
+.payment-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment-item:hover .payment-icon {
+    /* Remove the background color and color change on hover */
+    background: none;
+    color: #000000; /* Set the color you want on hover */
+}
+
+.payment-icon {
+    /* Increase the icon size */
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    color: #000000; /* Set the default icon color */
+    line-height: 120px;
+    text-align: center;
+    -webkit-transition: none; /* Remove the transition effect on hover */
+    -o-transition: none;
+    transition: none;
+  
+}
+
+.payment-item h4 {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 16px;
 }
 
 /*---------------------
