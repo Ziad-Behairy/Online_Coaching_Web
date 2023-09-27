@@ -533,143 +533,32 @@
 
             <div class="row">
                 
-                <div class="ts-slider owl-carousel">
-                    <div class="col-lg-4 ">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/6.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/9.jpg">
-                           
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/18.jpg">
-                         
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/20.jpg">
-                       
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/21.jpg">
-                          
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/23.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/1.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/2.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/3.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/4.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/5.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/7.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/8.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/10.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/11.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/12.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/13.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/14.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/15.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/16.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/17.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/19.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/21.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/22.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/24.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/25.jpg">
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="ts-item set-bg" data-setbg="img/transformation/26.jpg">
-                            
-                        </div>
-                    </div>
-                </div>
+                <div class="ts-slider owl-carousel" id="imageContainer"></div>
+
+<script>
+    var imageContainer = document.getElementById('imageContainer');
+    var elements = []; // Create an array to store elements
+
+    for (let i = 1; i <= 31; i++) {
+        var div = document.createElement('div');
+        div.classList.add('col-lg-4');
+
+        var tsItem = document.createElement('div');
+        tsItem.classList.add('ts-item', 'set-bg');
+        tsItem.setAttribute('data-setbg', `img/transformation/${i}.jpg`);
+
+        var img = document.createElement('img');
+        img.src = `img/transformation/${i}.jpg`;
+
+        tsItem.appendChild(img);
+        div.appendChild(tsItem);
+        elements.push(div); // Add the element to the array
+    }
+
+    // Append all elements at once to reduce DOM manipulation
+    imageContainer.append(...elements);
+</script>
+
             </div>
           
         </div>
@@ -996,7 +885,7 @@
                 if (scrollPos > 0) {
                     header.classList.add('scrolled');
                     logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
-                    logo.style.top = '-90px'; // Adjust the scale value as desired
+                    logo.style.top = '-125px'; // Adjust the scale value as desired
                     nav.style.display = 'block'; // Show the navigation bar
                 } else {
                     header.classList.remove('scrolled');

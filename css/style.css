@@ -79,8 +79,9 @@ p {
 }
 
 img {
-	max-width: 75%;
-	/* align-self: auto; */
+	max-width: 100%;
+	width: auto;
+	height: auto;
 }
 
 input:focus,
@@ -1431,6 +1432,7 @@ ol {
 	width: auto;
 	height: 0;
 	padding-bottom: 125%; /* 4:5 aspect ratio (5/4 * 100) */
+	image-rendering: auto;
 }
 
 
@@ -1729,6 +1731,13 @@ ol {
 /*---------------------
   The Panda Section
 -----------------------*/
+.element {
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-ms-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
 
 .about-video {
 	height: 640px;
@@ -3844,13 +3853,10 @@ ol {
     font-size: 18px;
 }
 img {
+	position: relative;
+	overflow: hidden;
 	image-rendering: auto;
-	image-rendering: crisp-edges;
-	image-rendering: pixelated;
-  
-	/* Safari seems to support, but seems deprecated and does the same thing as the others. */
-	image-rendering: -webkit-optimize-contrast;
-  }
+}
 
   /* CSS class using direct background-image property */
 .test-direct {

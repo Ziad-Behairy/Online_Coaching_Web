@@ -142,7 +142,7 @@
             <div class="col-lg-12">
                 <div class="transformation-title">
                     <div class="section-title" style="padding-top: 50px;">
-                        <span>OUR PARTNERS IN SUCCESS<br></span>  
+                        <span >OUR PARTNERS IN SUCCESS<br></span>  
                         <p
                          style="color: black; font-size: 22px; padding-bottom: 30px;" > <br> We don’t have clients. We have a family. Below you can find some of our clients’ successful transformations who agreed to have their pictures<br> shown to inspire you. We still have more on the backstage. Salute to all of our partners! </p>
 
@@ -154,13 +154,10 @@
             <!-- Use a JavaScript loop to generate images from 1.jpg to 24.jpg -->
             <script>
                 for (let i = 1; i <= 30; i++) {
-                    document.write(`
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="ts-item set-bg" data-setbg="img/transformation/${i}.jpg"></div>
-                        </div>
-                    `);
+                    document.write('<div class="col-lg-4 col-sm-6"><img src="img/transformation/' + i + '.jpg"  ></div>');
                 }
             </script>
+            
         </div>
     </div>
 </section>
@@ -228,7 +225,7 @@
                 if (scrollPos > 0) {
                     header.classList.add('scrolled');
                     logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
-                    logo.style.top = '-90px'; // Adjust the scale value as desired
+                    logo.style.top = '-125px'; // Adjust the scale value as desired
                     nav.style.display = 'block'; // Show the navigation bar
                 } else {
                     header.classList.remove('scrolled');
