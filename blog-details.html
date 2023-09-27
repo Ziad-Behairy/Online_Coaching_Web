@@ -28,9 +28,9 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+ <div id="preloader">
+        <img class="yin-yang" src="img/yin-yang.png" alt="Yin Yang Sign">
+      </div>
 
     <!-- Offcanvas Menu Section Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -78,8 +78,7 @@
                 <div class="col-lg-3">
                      <div class="logo" style="position: relative; top: -60px; ">
                         <a href="./Home.html">
-                            <img src="img/logo.png" alt="">
-                        </a>
+<img src="img/logo.png" alt="" style="max-width: 75%;">                        </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -394,7 +393,7 @@
                 if (scrollPos > 0) {
                     header.classList.add('scrolled');
                     logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
-                    logo.style.top = '-125px'; // Adjust the scale value as desired
+                    logo.style.top = '-90px'; // Adjust the scale value as desired
                     nav.style.display = 'block'; // Show the navigation bar
                 } else {
                     header.classList.remove('scrolled');
@@ -444,7 +443,17 @@
         window.addEventListener('scroll', handleScroll);
     
         // Add an event listener for window resize to handle initial conditions
-        window.addEventListener('resize', handleScroll);
-    </script> </body>
+     window.addEventListener('resize', handleScroll);
+    </script> 
 
+
+    // Wait for the document to fully load
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Hide the preloader
+      var preloader = document.getElementById("preloader");
+      preloader.style.display = "none";
+    });
+    </script>
+</body>
 </html>
