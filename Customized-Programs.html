@@ -397,15 +397,8 @@
             </div>
         </div>
         <div class="row">
-            <div id="PAY4" class="col-lg-3 col-sm-6">
-                <div class="payment-item">
-                    <span class="payment-icon payment-icon-pulse"><img src="img/bank-transfer-icon1.png" alt="Bank Transfer Icon"  style="max-width: 85%;"></span>
-                    <h4 style="margin-top: 5px;">Bank Transfer</h4>
-                    <!-- <p>Transfer funds directly to our bank account.</p> -->
-                    <li> Account Number: 0501453209960010 | IBAN: EG950023000500501453209960010 | Swift Code: WABAEGCXHAR or WABAEGCXXXX.</li>
-                
-                </div>
-            </div>
+            
+            
             <div id="PAY1" class="col-lg-3 col-sm-6">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/vodafone-cash-icon.png" alt="Vodafone Cash Icon" style="max-width: 85%;"></span>
@@ -428,6 +421,15 @@
                     <h4 style="margin-top: 5px;">Telda</h4>
                     <!-- <p>Use Telda for secure online payments.</p> -->
                     <li>@mahmoudlifts</li>
+                </div>
+            </div>
+            <div id="PAY4" class="col-lg-3 col-sm-6">
+                <div class="payment-item">
+                    <span class="payment-icon payment-icon-pulse"><img src="img/bank-transfer-icon1.png" alt="Bank Transfer Icon"  style="max-width: 85%;"></span>
+                    <h4 style="margin-top: 5px;">Bank Transfer</h4>
+                    <!-- <p>Transfer funds directly to our bank account.</p> -->
+                    <li> Account Number: 0501453209960010 | IBAN: EG950023000500501453209960010 | Swift Code: WABAEGCXHAR or WABAEGCXXXX.</li>
+                
                 </div>
             </div>
             
@@ -653,29 +655,31 @@
 
 
 
-<script>
-        // Function to handle the scroll event
-        function handleScroll() {
-            const windowWidth = window.innerWidth; // Get the current window width
-            const canvasOpen = document.querySelector('.canvas-open');
-            const scrollPos = window.pageYOffset;
-    
-            if (windowWidth <= 990) { // Check if the screen width is 990px or less (mobile)
-                if (scrollPos > 0) {
-                    canvasOpen.style.display = 'none'; // Hide the "canvas-open" div when scrolling down on mobile screens
-                } else {
-                    canvasOpen.style.display = 'block'; // Show the "canvas-open" div when at the top on mobile screens
-                }
-            }
+    <script>
+        const paymentIcons = document.querySelectorAll(".payment-icon-pulse img");
+        const paymentDetailsContainers = document.querySelectorAll(".payment-details-container");
+        const overlay = document.getElementById("overlay");
+
+        paymentIcons.forEach((icon, index) => {
+            icon.addEventListener("click", function () {
+                // Hide all payment details containers
+                paymentDetailsContainers.forEach((container) => {
+                    container.style.display = "none";
+                });
+
+                // Show the clicked payment detail container and overlay
+                paymentDetailsContainers[index].style.display = "block";
+                overlay.style.display = "block";
+            });
+        });
+
+        // Function to close payment details and overlay
+        function closePaymentDetails(containerId) {
+            const container = document.getElementById(containerId);
+            container.style.display = "none";
+            overlay.style.display = "none";
         }
-    
-        // Add event listeners for scroll and DOMContentLoaded
-        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
-        window.addEventListener('scroll', handleScroll);
-    
-        // Add an event listener for window resize to handle initial conditions
-     window.addEventListener('resize', handleScroll);
-    </script> 
+    </script>
 
 
     

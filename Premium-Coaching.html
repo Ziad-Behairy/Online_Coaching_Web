@@ -433,6 +433,49 @@
             </div>
         </div>
     </div>
+   <!-- Payment details containers with close buttons -->
+   <div class="overlay" id="overlay"></div>
+   <div id="vodafone-cash-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('vodafone-cash-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Vodafone Cash</div>
+        <p><strong>Vodafone Cash:</strong> 01002211543</p>
+    </div>
+</div>
+
+<div id="instapay-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('instapay-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Instapay</div>
+        <p><strong>Instapay:</strong> maahmoudaabdelhaalim@instapay</p>
+    </div>
+</div>
+
+<!-- Telda payment details container -->
+<div id="telda-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('telda-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Telda</div>
+        <p><strong>Telda:</strong> @mahmoudlifts</p>
+    </div>
+</div>
+
+<!-- Bank Transfer payment details container -->
+<div id="bank-transfer-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('bank-transfer-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Bank Transfer</div>
+        <p><strong>Bank Name:</strong> National Bank of Kuwait "NBK"</p>
+        <p><strong>Account Number:</strong> 0501453209960010</p>
+        <p><strong>IBAN:</strong> EG950023000500501453209960010</p>
+        <p><strong>Swift Code:</strong> WABAEGCXHAR or WABAEGCXXXX</p>
+    </div>
+</div>
+
+
+
+
+    
 </section>
 <!-- PaymentMethods-section End -->
 
@@ -686,5 +729,32 @@
       preloader.style.display = "none";
     });
     </script>
+    <!-- // JavaScript to show payment details on image click -->
+    <script>
+        const paymentIcons = document.querySelectorAll(".payment-icon-pulse img");
+        const paymentDetailsContainers = document.querySelectorAll(".payment-details-container");
+        const overlay = document.getElementById("overlay");
+
+        paymentIcons.forEach((icon, index) => {
+            icon.addEventListener("click", function () {
+                // Hide all payment details containers
+                paymentDetailsContainers.forEach((container) => {
+                    container.style.display = "none";
+                });
+
+                // Show the clicked payment detail container and overlay
+                paymentDetailsContainers[index].style.display = "block";
+                overlay.style.display = "block";
+            });
+        });
+
+        // Function to close payment details and overlay
+        function closePaymentDetails(containerId) {
+            const container = document.getElementById(containerId);
+            container.style.display = "none";
+            overlay.style.display = "none";
+        }
+    </script>
+    
 </body>
 </html>
