@@ -215,19 +215,16 @@ ol {
 	top: 0;
 	left: 0;
 	z-index: 999999;
-	background:white;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   }
   
   .yin-yang {
-	width: 150px;
-	height: 150px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -50px;
-	margin-left: -50px;
+	width: 100px;
+	height: 100px;
 	animation: spin 2s linear infinite;
-	
 	border-radius: 50%;
   }
   
@@ -240,7 +237,15 @@ ol {
 	}
   }
   
-
+  /* Media query for mobile view */
+  @media screen and (max-width: 768px) {
+	.yin-yang {
+	  width: 100px; /* Adjust the size for mobile view */
+	  height: 100px; /* Adjust the size for mobile view */
+	}
+  }
+  
+  
 .spacial-controls {
 	position: fixed;
 	width: 111px;

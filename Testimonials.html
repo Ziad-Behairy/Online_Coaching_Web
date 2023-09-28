@@ -531,73 +531,61 @@
         window.addEventListener('resize', handleScroll);
     </script>
 
-<script>
-    // Replace with your YouTube video IDs
-    var videoId1 = 'v=EykWcFEtFqo';
-    var videoId2 = 'v=EykWcFEtFqo';
-    var videoId3 = 'v=EykWcFEtFqo';
-    var videoId4 = 'v=EykWcFEtFqo';
-
-    // Function to extract video ID from YouTube URL
-    function extractVideoId(url) {
-        var regex = /v=([A-Za-z0-9_-]+)/;
-        var match = url.match(regex);
-        if (match && match[1]) {
-            return match[1];
+    <script>
+        // Define your YouTube video IDs
+        var videoId1 = 'v=EykWcFEtFqo';
+        var videoId2 = 'v=EykWcFEtFqo';
+        var videoId3 = 'v=EykWcFEtFqo';
+        var videoId4 = 'v=EykWcFEtFqo';
+        
+        // Function to extract video ID from YouTube URL
+        function extractVideoId(url) {
+            var regex = /v=([A-Za-z0-9_-]+)/;
+            var match = url.match(regex);
+            if (match && match[1]) {
+                return match[1];
+            }
+            return null;
         }
-        return null;
-    }
-
-    // Create players for each video
-    var players = [];
-
-    // Function to create a YouTube player
-    function onYouTubeIframeAPIReady() {
-        players.push(new YT.Player('video1', {
-            height: '360',
-            width: '640',
-            videoId: extractVideoId(videoId1),
-            playerVars: {
-                'autoplay': 0,
-                'controls': 1,
-            }
-        }));
-
-        players.push(new YT.Player('video2', {
-            height: '360',
-            width: '640',
-            videoId: extractVideoId(videoId2),
-            playerVars: {
-                'autoplay': 0,
-                'controls': 1,
-            }
-        }));
-
-        players.push(new YT.Player('video3', {
-            height: '360',
-            width: '640',
-            videoId: extractVideoId(videoId3),
-            playerVars: {
-                'autoplay': 0,
-                'controls': 1,
-            }
-        }));
-
-        players.push(new YT.Player('video4', {
-            height: '360',
-            width: '640',
-            videoId: extractVideoId(videoId4),
-            playerVars: {
-                'autoplay': 0,
-                'controls': 1,
-            }
-        }));
-
-        // Create GSAP animations for hover effect
-        gsap.to('.video-frame', { scale: 1.05, duration: 0.3, ease: 'power2.inOut' });
-        gsap.to('.video-frame', { scale: 1, duration: 0.3, ease: 'power2.inOut', delay: 0.3 });
-    }
-</script>
+        
+        // Function to create a YouTube player
+        function createYouTubePlayer(videoId, frameId) {
+            return new YT.Player(frameId, {
+                height: '360',
+                width: '640',
+                videoId: videoId,
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 1,
+                }
+            });
+        }
+        
+        // Create players for each video
+        var players = [];
+        
+        function setupYouTubePlayers() {
+            players.push(createYouTubePlayer(extractVideoId(videoId1), 'video1'));
+            players.push(createYouTubePlayer(extractVideoId(videoId2), 'video2'));
+            players.push(createYouTubePlayer(extractVideoId(videoId3), 'video3'));
+            players.push(createYouTubePlayer(extractVideoId(videoId4), 'video4'));
+        }
+        
+        // Function to set up YouTube API when it's ready
+        function onYouTubeIframeAPIReady() {
+            setupYouTubePlayers();
+        
+            // Create GSAP animations for hover effect
+            gsap.to('.video-frame', { scale: 1.05, duration: 0.3, ease: 'power2.inOut' });
+            gsap.to('.video-frame', { scale: 1, duration: 0.3, ease: 'power2.inOut', delay: 0.3 });
+        }
+        
+        // Call setupYouTubePlayers on page load
+        window.addEventListener('load', function () {
+            setupYouTubePlayers();
+        });
+        </script>
+        
 
 <script>
         // Function to handle the scroll event
@@ -624,7 +612,7 @@
     </script> 
 
 
-    // Wait for the document to fully load
+    
     <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Hide the preloader
