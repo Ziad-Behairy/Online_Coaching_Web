@@ -229,7 +229,7 @@
                         <span style="color: gray;">for 1 month</span>
                         <h2 id="card-price-11">  500 EGP </h2>
                         <h5 id="card-price-111" style="display: inline-block; text-decoration: line-through; color: #C7261C;">600 EGP</h4>
-                        <span style="display: inline-block; color: gray; margin-left: 5px;">for 3 month</span>
+                        <span style="display: inline-block; color: gray; margin-left: 5px;">for 3 months</span>
 
                     </div>
                     <ul id="card-list-1">
@@ -259,7 +259,7 @@
                         <span style="color: gray;">for 1 month</span>
                         <h2 id="card-price-33">  500 EGP </h2>
                         <h5 id="card-price-333" style="display: inline-block; text-decoration: line-through; color: #C7261C;">600 EGP</h4>
-                        <span style="display: inline-block; color: gray; margin-left: 5px;">for 3 month</span>
+                        <span style="display: inline-block; color: gray; margin-left: 5px;">for 3 months</span>
                     </div>
                     <ul id="card-list-3">
                         <li style="font-size: large;">-   Weekly Training Split</li>
@@ -285,7 +285,7 @@
                         <span style="display: inline-block; color: gray; margin-left: 5px;">for 1 month</span>
                         <h2 id="card-price-222">  800 EGP </h2>
                         <h5 id="card-price-2222" style="display: inline-block; text-decoration: line-through ; color: #C7261C;">1200 EGP</h4>
-                        <span style="display: inline-block; color: gray; margin-left: 5px;">for 3 month</span>
+                        <span style="display: inline-block; color: gray; margin-left: 5px;">for 3 months</span>
                     </div>
                     <ul id="card-list-2">
                         <li  style="font-size: large;">-	Customized Diet Plan</li>
@@ -397,44 +397,83 @@
             </div>
         </div>
         <div class="row">
-            
-            
             <div id="PAY1" class="col-lg-3 col-sm-6">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/vodafone-cash-icon.png" alt="Vodafone Cash Icon" style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Vodafone Cash</h4>
-                    <!-- <p>Pay using Vodafone Cash for a seamless experience.</p> -->
-                    <li> 01002211543</li>
+                    <p>Pay using Vodafone Cash for a seamless experience.</p>
                 </div>
             </div>
             <div id="PAY2" class="col-lg-3 col-sm-6">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/instapay-icon2.png" alt="Instapay Icon"  style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Instapay</h4>
-                    <!-- <p>Make quick payments with Instapay.</p> -->
-                    <li>maahmoudaabdelhaalim@instapay</li>
+                    <p>Make quick payments with Instapay.</p>
                 </div>
             </div>
-            <div id="PAY3" class="col-lg-3 col-sm-6">
+            <div  id="PAY3" class="col-lg-3 col-sm-6">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/telda-icon.png" alt="Telda Icon"  style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Telda</h4>
-                    <!-- <p>Use Telda for secure online payments.</p> -->
-                    <li>@mahmoudlifts</li>
+                    <p>Use Telda for secure online payments.</p>
                 </div>
             </div>
             <div id="PAY4" class="col-lg-3 col-sm-6">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/bank-transfer-icon1.png" alt="Bank Transfer Icon"  style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Bank Transfer</h4>
-                    <!-- <p>Transfer funds directly to our bank account.</p> -->
-                    <li> Account Number: 0501453209960010 | IBAN: EG950023000500501453209960010 | Swift Code: WABAEGCXHAR or WABAEGCXXXX.</li>
-                
+                    <p>Transfer funds directly to our bank account.</p>
                 </div>
             </div>
-            
         </div>
     </div>
+   <!-- Payment details containers with close buttons -->
+   <div class="overlay" id="overlay"></div>
+   <div id="vodafone-cash-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('vodafone-cash-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Vodafone Cash</div>
+        <p><strong>Vodafone Cash:</strong> 01002211543</p>
+    </div>
+</div>
+
+<div id="instapay-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('instapay-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Instapay</div>
+        <p><strong>Instapay:</strong> maahmoudaabdelhaalim@instapay</p>
+    </div>
+</div>
+
+<!-- Telda payment details container -->
+<div id="telda-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('telda-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Telda</div>
+        <p><strong>Telda:</strong> @mahmoudlifts</p>
+    </div>
+</div>
+
+<!-- Bank Transfer payment details container -->
+<div id="bank-transfer-details" class="payment-details-container">
+    <div class="close-button" onclick="closePaymentDetails('bank-transfer-details')">X</div>
+    <div class="payment-details">
+        <div class="payment-header">Bank Transfer</div>
+        <p><strong>Name:</strong> Mahmoud Abdelhalim Mahmoud</p>
+        <p><strong>Bank Name:</strong> National Bank of Kuwait "NBK"</p>
+        <p><strong>Account Number:</strong> 0501453209960010</p>
+        <p><strong>IBAN:</strong> EG950023000500501453209960010</p>
+        <p><strong>Swift Code:</strong> WABAEGCXHAR or WABAEGCXXXX</p>
+        <p><strong>Country:</strong> Egypt </p>
+        <p><strong>City:</strong> Giza</p>
+        <p><strong>Branch:</strong> Haram</p>
+    </div>
+</div>
+
+
+
+
+    
 </section>
 <!-- PaymentMethods-section End -->
 
