@@ -689,6 +689,8 @@ ol {
 .payment-item {
     text-align: center;
     margin-bottom: 30px;
+    /* padding: 0; */
+    padding: 0;
 }
 
 .payment-item:hover .payment-icon {
