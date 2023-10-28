@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Panda Online Coaching ">
-    <meta name="keywords" content="Online Coahcing, unica, creative, html">
+    <meta name="keywords" content="Online Coaching, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Panda</title>
@@ -23,6 +23,19 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <style>
+        #payment-icons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .payment-icon-container {
+            display: block;
+        }
+    </style>
 </head>  <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
 
 
@@ -347,6 +360,13 @@
         document.getElementById("PAY2").style.display = 'block';
         document.getElementById("PAY3").style.display = 'block';
         document.getElementById("PAY4").style.display = 'block';
+        document.querySelectorAll('.payment-icon-container').forEach(function(icon) {
+            icon.style.display = 'block';
+        });
+        document.getElementById('PAY4').style.display = 'block';
+        document.getElementById('PAY4').style.left = '0px';
+
+
         
         // Update list items as needed for Card 1
         // Reset content for Card Set 2 and Card Set 3 if necessary
@@ -369,6 +389,12 @@
         document.getElementById("PAY2").style.display = 'none';
         document.getElementById("PAY3").style.display = 'none';
         document.getElementById("PAY4").style.display = 'block';
+        document.querySelectorAll('.payment-icon-container').forEach(function(icon) {
+            icon.style.display = 'none';
+        });
+        // Show Bank Transfer icon
+        document.getElementById('PAY4').style.display = 'block';
+        document.getElementById('PAY4').style.left = '430px';
         // Update list items as needed for Card 2
         // Reset content for Card Set 1 and Card Set 3 if necessary
     }
@@ -417,28 +443,28 @@
             </div>
         </div>
         <div class="row">
-            <div id="PAY1" class="col-lg-3 col-sm-6">
+            <div id="PAY1" class="col-lg-3 col-sm-6 payment-icon-container">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/vodafone-cash-icon.png" alt="Vodafone Cash Icon" style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Vodafone Cash</h4>
                     <p>Pay using Vodafone Cash for a seamless experience.</p>
                 </div>
             </div>
-            <div id="PAY2" class="col-lg-3 col-sm-6">
+            <div id="PAY2" class="col-lg-3 col-sm-6 payment-icon-container">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/instapay-icon2.png" alt="Instapay Icon"  style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Instapay</h4>
                     <p>Make quick payments with Instapay.</p>
                 </div>
             </div>
-            <div  id="PAY3" class="col-lg-3 col-sm-6">
+            <div  id="PAY3" class="col-lg-3 col-sm-6 payment-icon-container">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/telda-icon.png" alt="Telda Icon"  style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Telda</h4>
                     <p>Use Telda for secure online payments.</p>
                 </div>
             </div>
-            <div id="PAY4" class="col-lg-3 col-sm-6">
+            <div id="PAY4" class="col-lg-3 col-sm-6 payment-icon-container">
                 <div class="payment-item">
                     <span class="payment-icon payment-icon-pulse"><img src="img/bank-transfer-icon1.png" alt="Bank Transfer Icon"  style="max-width: 85%;"></span>
                     <h4 style="margin-top: 5px;">Bank Transfer</h4>
@@ -495,6 +521,8 @@
 
     
 </section>
+
+
 <!-- PaymentMethods-section End -->
 
 
@@ -773,6 +801,6 @@
             overlay.style.display = "none";
         }
     </script>
-    
+
 </body>
 </html>
