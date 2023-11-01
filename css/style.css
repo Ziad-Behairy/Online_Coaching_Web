@@ -155,7 +155,7 @@ ol {
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
-    background-position: center center;
+	background-position: center center;
 }
 
 .spad {
@@ -538,7 +538,7 @@ ol {
 }
 
 .hs-slider .hs-item {
-	height: 1040px;
+	 height: 800px; 
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1733,7 +1733,6 @@ image-rendering: auto;
 	height: auto;
 	min-height: 500px;
 	position: relative;
-
 }
 
 .breadcrumb-text h2 {
@@ -1789,7 +1788,7 @@ image-rendering: auto;
 -----------------------*/
 
 .about-video {
-	height: 640px;
+	height: 660px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1936,8 +1935,8 @@ image-rendering: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-	overflow: hidden;
-	position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 /* Media query for screens with a width less than 700px (mobile view) */
@@ -3937,4 +3936,6 @@ position: relative;
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the entire section */
     z-index: -1; /* Place the image behind the section content */
+    max-width: 100%;
+    background-size: contain;
 }
