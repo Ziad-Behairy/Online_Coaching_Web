@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Panda Online Coaching ">
     <meta name="keywords" content="Online Coaching, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Panda</title>
 
@@ -24,7 +24,22 @@
        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://www.youtube.com/iframe_api"></script>
-</head>  <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
+
+    <style>
+        @media (max-width: 995px) {
+            /* Apply styles for screens less than or equal to 995px wide */
+            .col-lg-4 {
+                width: 100%; /* Make each column take up the full width */
+                margin-bottom: 20px; /* Add some spacing between stacked elements */
+            }
+        }
+        body {
+            overflow-x: hidden;
+          }
+        </style>
+
+</head> 
 
 
 
@@ -188,7 +203,7 @@
       <html lang="en">
       <head>
           <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
           <title>Centered YouTube Video</title>
           <style>
               /* Center the video horizontally and vertically */
@@ -377,41 +392,24 @@
         document.getElementById("PAY2").style.display = 'none';
         document.getElementById("PAY3").style.display = 'none';
         document.getElementById("PAY4").style.display = 'block';
-        document.getElementById('PAY4').style.left = '430px';
+
+
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 768) {
+          // For mobile view, set the left property to '0px'
+          document.getElementById('PAY4').style.left = '0px';
+        } else {
+          // For desktop view, set the left property to '430px'
+          document.getElementById('PAY4').style.left = '430px';
+        }
+
+        document.getElementById("iban-value").textContent = "EG060023000500502453209960010";
+
         // Update list items as needed for Card 2
         // Reset content for Card Set 1 and Card Set 3 if necessary
     }
     </script>
-        <script>
-        // Function to handle the scroll event
-        function handleScroll() {
-            const windowWidth = window.innerWidth; // Get the current window width
-            const canvasOpen = document.querySelector('.canvas-open');
-            const scrollPos = window.pageYOffset;
-    
-            if (windowWidth <= 990) { // Check if the screen width is 990px or less (mobile)
-                if (scrollPos > 0) {
-                    canvasOpen.style.display = 'none'; // Hide the "canvas-open" div when scrolling down on mobile screens
-                } else {
-                    canvasOpen.style.display = 'block'; // Show the "canvas-open" div when at the top on mobile screens
-                }
-            }
-        }
-    
-        // Add event listeners for scroll and DOMContentLoaded
-        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
-        window.addEventListener('scroll', handleScroll);
-    
-        // Add an event listener for window resize to handle initial conditions
-     window.addEventListener('resize', handleScroll);
-        </script> 
-            <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Hide the preloader
-      var preloader = document.getElementById("preloader");
-      preloader.style.display = "none";
-    });
-            </script>
+     
     <!-- Pricing Section End -->
 
 
@@ -493,7 +491,7 @@
         <p><strong>Name:</strong> Mahmoud Abdelhalim Mahmoud</p>
         <p><strong>Bank Name:</strong> National Bank of Kuwait "NBK"</p>
         <p><strong>Account Number:</strong> 0501453209960010</p>
-        <p><strong>IBAN:</strong> EG950023000500501453209960010</p>
+        <p><strong>IBAN:</strong> <span id="iban-value">EG950023000500501453209960010</span></p>
         <p><strong>Swift Code:</strong> WABAEGCXHAR or WABAEGCXXXX</p>
         <p><strong>Country:</strong> Egypt </p>
         <p><strong>City:</strong> Giza</p>
@@ -722,7 +720,29 @@
         // Add an event listener for window resize to handle initial conditions
         window.addEventListener('resize', handleScroll);
     </script>
-
+    <script>
+        // Function to handle the scroll event
+        function handleScroll() {
+            const windowWidth = window.innerWidth; // Get the current window width
+            const canvasOpen = document.querySelector('.canvas-open');
+            const scrollPos = window.pageYOffset;
+    
+            if (windowWidth <= 990) { // Check if the screen width is 990px or less (mobile)
+                if (scrollPos > 0) {
+                    canvasOpen.style.display = 'none'; // Hide the "canvas-open" div when scrolling down on mobile screens
+                } else {
+                    canvasOpen.style.display = 'block'; // Show the "canvas-open" div when at the top on mobile screens
+                }
+            }
+        }
+    
+        // Add event listeners for scroll and DOMContentLoaded
+        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
+        window.addEventListener('scroll', handleScroll);
+    
+        // Add an event listener for window resize to handle initial conditions
+     window.addEventListener('resize', handleScroll);
+    </script> 
 
 
     <script>
