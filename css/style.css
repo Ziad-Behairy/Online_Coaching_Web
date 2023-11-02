@@ -108,7 +108,7 @@ a:focus {
 
 ul,
 ol {
-	padding: 0;
+	padding: 15px;
 	margin: 0;
 }
 
@@ -1788,7 +1788,7 @@ image-rendering: auto;
 -----------------------*/
 
 .about-video {
-	height: 660px;
+	height: 670px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1813,9 +1813,9 @@ image-rendering: auto;
 }
 
 .about-text {
-	background: #ffffff;
+	background: #efefef;
 	OPACITY: inherit;
-	height: 640px;
+	height: 670px;
 	padding: 10px 70px 0 70px;
 }
 
