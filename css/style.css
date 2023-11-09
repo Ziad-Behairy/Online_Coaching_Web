@@ -154,9 +154,11 @@ ol {
 
 .set-bg {
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center center;
 }
+
+section.breadcrumb-section.set-bg {}
 
 .spad {
 	
@@ -1731,6 +1733,7 @@ image-rendering: auto;
 
 .breadcrumb-section {
 	height: auto;
+	width: auto;
 	min-height: 500px;
 	position: relative;
 }
@@ -1774,7 +1777,7 @@ image-rendering: auto;
 
     @media (max-width: 1000px) {
         p, .animated-text {
-            font-size: 15px;
+            font-size: 18px;
         }
 
         /* Further reduce the font size of span elements */
@@ -3717,7 +3720,7 @@ image-rendering: auto;
 	}
 	.hs-slider .hs-item {
 		height: auto;
-		padding: 250px 0 150px;
+		padding: 251px 0 150px;
 	}
 	.hs-slider .hs-item .hi-text h1 {
 		font-size: 48px;
@@ -3902,11 +3905,7 @@ image-rendering: auto;
     color: white;
     font-size: 18px;
 }
-img {
-position: relative;
-	overflow: hidden;
-	image-rendering: auto;
-  }
+img {position: relative;overflow: hidden;image-rendering: auto;}
 
   /* CSS class using direct background-image property */
 .test-direct {

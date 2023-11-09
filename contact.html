@@ -134,23 +134,44 @@
     </header>
     <!-- Header End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb-text">
-                        <h2 style="padding-top: 230px;">Contact Us</h2>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+    <!-- Cover Section Begin -->
+
+
+
+<!-- HTML for Desktop and Mobile View -->
+<section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/CONTACT-US-Desktop.jpg" data-setbg-mobile="img/covers/CONTACT-US-Mobile.jpg">
+    <!-- Your content goes here -->
+</section>
+
+<script>
+    // Get the section element
+    var section = document.querySelector('.breadcrumb-section');
+
+    // Set the background image based on screen width
+    function setBgImage() {
+        var desktopImage = section.getAttribute('data-setbg-desktop');
+        var mobileImage = section.getAttribute('data-setbg-mobile');
+        var minWidthForMobile = 768; // Adjust as needed
+
+        if (window.innerWidth < minWidthForMobile) {
+            section.style.backgroundImage = 'url(' + mobileImage + ')';
+            section.style.minHeight = '600px';
+        } else {
+            section.style.backgroundImage = 'url(' + desktopImage + ')';
+            section.style.minHeight = '600px';
+        }
+    }
+
+    // Call the function on page load and window resize
+    window.addEventListener('load', setBgImage);
+    window.addEventListener('resize', setBgImage);
+</script>
+
+
+   <!-- Cover Section End -->
 
     <!-- Contact Section Begin -->
-    <section class="contact-section spad" style="padding-top: 40px; padding-bottom: 30px;">
+    <section class="contact-section spad" style="padding-top: 0px; padding-bottom: 30px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -253,8 +274,8 @@
                     logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
                     nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
                 } else {
-                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                    logo.style.display = 'none'; // Show the logo when at the top on mobile screens
+                    nav.style.display = 'none'; // Show the navigation bar when at the top on mobile screens
                 }
             }
         }

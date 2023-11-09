@@ -138,21 +138,38 @@ body {
     </header>
     <!-- Header End -->
 
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="hs-slider owl-carousel">
-            <div class="hs-item " >
-                <img src="img/hero/hero-1.jpg" alt="Background Image" class="background-img" >
+ <!-- HTML for Desktop and Mobile View -->
+<section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/Home-Desktop.jpg" data-setbg-mobile="img/covers/Home-Mobile.jpg">
+    <!-- Your content goes here -->
+</section>
 
-            </div>
-           
-        </div>
-    </section>
-    <!-- Hero Section End -->
+<script>
+    // Get the section element
+    var section = document.querySelector('.breadcrumb-section');
+
+    // Set the background image based on screen width
+    function setBgImage() {
+        var desktopImage = section.getAttribute('data-setbg-desktop');
+        var mobileImage = section.getAttribute('data-setbg-mobile');
+        var minWidthForMobile = 768; // Adjust as needed
+
+        if (window.innerWidth < minWidthForMobile) {
+            section.style.backgroundImage = 'url(' + mobileImage + ')';
+            section.style.minHeight = '770px';
+        } else {
+            section.style.backgroundImage = 'url(' + desktopImage + ')';
+            section.style.minHeight = '810px';
+        }
+    }
+
+    // Call the function on page load and window resize
+    window.addEventListener('load', setBgImage);
+    window.addEventListener('resize', setBgImage);
+</script>
  
     <!-- ChooseUs Section Begin -->
     <section class="ChooseUs-section spad" style="
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 25px;
 ">
         <div class="container">
@@ -204,7 +221,7 @@ body {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-5 p-0">
-                    <div class="about-video set-bg" data-setbg="img/about-us.jpg" style="background-image: url(&quot;img/about-us.jpg&quot;);">
+                    <div class="about-video set-bg" data-setbg="img/about-us.jpg" style="background-size: cover;">
                         
                     </div>
                 </div>
@@ -214,7 +231,6 @@ body {
                             
                             <span>MY STORY</span>
                             <p>This is Mahmoud, the founder of Panda Fitness EG, an engineer, online coach, and natural bodybuilder. </p>
-                            <!-- <h2 style="color: white;"> WHY WOULD I BE THE BEST COACH FOR YOU?<h2> -->
                             <p>Growing up in an Egyptian household with less-than-ideal eating habits, I experienced the struggles of being overweight. The low self-confidence, the insecurities, and the dissatisfaction with my own body were all too familiar. Determined to make a change, my fitness journey began at the age of 15 when I stepped into my local gym. It was there that I discovered the captivating art of bodybuilding. </p>                                
                             <P>Like many beginners, I faced the challenge of not knowing where to start. Endlessly trying diets, workout routines, and weight loss pills, I couldn't find a sustainable solution. But I didn't give up. With an unwavering desire to learn and improve, I dedicated myself to understanding the science behind exercise and nutrition. I delved into the realms of biomechanics, bodybuilding, strength training, sports nutrition, and program design. </P>
                             <p>In 2021, while juggling my demanding engineering studies, I became a personal trainer at Gold's Gym Egypt. It was during this time that a brilliant idea sparked in my mind. If I could manage my busy academic life, stay healthy, and look good, why not help others do the same? </p> 
@@ -223,7 +239,7 @@ body {
 
                                 </P>
                             
-                            <P style="margin-bottom: 0px;"> About the panda? There is a story to be told...  <br> <br></P>    
+                            <P style=" padding-bottom: 10px; "> About the panda? There is a story to be told...  <br> <br></P>    
                         </div>
                    
                         
@@ -809,8 +825,8 @@ body {
                     logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
                     nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
                 } else {
-                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                    logo.style.display = 'none'; // Show the logo when at the top on mobile screens
+                    nav.style.display = 'none'; // Show the navigation bar when at the top on mobile screens
                 }
             }
         }

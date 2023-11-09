@@ -134,23 +134,39 @@
     <!-- Header End -->
     
     
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb-text">
-                        <h2 style="padding-top: 230px;">Customized Programs</h2>
+    <!-- Cover Section Begin -->
+    <!-- HTML for Desktop and Mobile View -->
+<section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/CUSTOMIZED-PROGRAMS-Desktop.jpg" data-setbg-mobile="img/covers/CUSTOMIZED-PROGRAMS-Mobile.jpg">
+    <!-- Your content goes here -->
+</section>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+<script>
+    // Get the section element
+    var section = document.querySelector('.breadcrumb-section');
+
+    // Set the background image based on screen width
+    function setBgImage() {
+        var desktopImage = section.getAttribute('data-setbg-desktop');
+        var mobileImage = section.getAttribute('data-setbg-mobile');
+        var minWidthForMobile = 768; // Adjust as needed
+
+        if (window.innerWidth < minWidthForMobile) {
+            section.style.backgroundImage = 'url(' + mobileImage + ')';
+            section.style.minHeight = '600px';
+        } else {
+            section.style.backgroundImage = 'url(' + desktopImage + ')';
+            section.style.minHeight = '600px';
+        }
+    }
+
+    // Call the function on page load and window resize
+    window.addEventListener('load', setBgImage);
+    window.addEventListener('resize', setBgImage);
+</script>
+   <!-- Cover Section End -->
      <!-- ChooseUs Section Begin -->
      <section class="ChooseUs-section spad" style="
-     padding-top: 50px;
+     padding-top:0px;
      padding-bottom: 25px;
  ">
          <div class="container">
@@ -223,7 +239,7 @@
       </head>
       <body>
           <div class="video-container">
-              <iframe width="1000" height="500" src="https://www.youtube.com/embed/lGC9kHr5qtE?si=46VtTSmg3Ie3LMCy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="1000" height="500" src="https://www.youtube.com/embed/zff6PAkSuPA?si=L1UT1jP9aZBHA1_X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
       </body>
       </html>
@@ -708,8 +724,8 @@
                     logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
                     nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
                 } else {
-                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                    logo.style.display = 'none'; // Show the logo when at the top on mobile screens
+                    nav.style.display = 'none'; // Show the navigation bar when at the top on mobile screens
                 }
             }
         }

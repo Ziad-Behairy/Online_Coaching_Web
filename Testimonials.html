@@ -161,21 +161,34 @@
         </div>
     </header>
     <!-- Header End -->
+<!-- HTML for Desktop and Mobile View -->
+<section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/TESTIMONIALS-Desktop.jpg" data-setbg-mobile="img/covers/TESTIMONIALS-Mobile.jpg">
+    <!-- Your content goes here -->
+</section>
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb-text">
-                        <h2 style="padding-top: 230px;" style="padding-top: 230px;">Testimonials</h2>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+<script>
+    // Get the section element
+    var section = document.querySelector('.breadcrumb-section');
+
+    // Set the background image based on screen width
+    function setBgImage() {
+        var desktopImage = section.getAttribute('data-setbg-desktop');
+        var mobileImage = section.getAttribute('data-setbg-mobile');
+        var minWidthForMobile = 768; // Adjust as needed
+
+        if (window.innerWidth < minWidthForMobile) {
+            section.style.backgroundImage = 'url(' + mobileImage + ')';
+            section.style.minHeight = '600px';
+        } else {
+            section.style.backgroundImage = 'url(' + desktopImage + ')';
+            section.style.minHeight = '600px';
+        }
+    }
+
+    // Call the function on page load and window resize
+    window.addEventListener('load', setBgImage);
+    window.addEventListener('resize', setBgImage);
+</script>
 
     <!-- Blog Section Begin -->
     <section class="blog-section spad">
@@ -183,7 +196,7 @@
             <div class="row">
                 <div class="col-lg-12 p-0">
                     <div class="section-title" style="
-                    padding-top: 45px;">
+                    padding-top: 0px;">
                         <span>YOUR FEEDBACK ALWAYS
                             MATTERS!</span>
                         
@@ -194,12 +207,16 @@
     <section>
         <div class="video-container" style="
         padding-top: 15px;
-        padding-bottom: 30px;
+        padding-bottom: 55px;
     ">
             <div class="video-frame" id="video1"></div>
             <div class="video-frame" id="video2"></div>
             <div class="video-frame" id="video3"></div>
             <div class="video-frame" id="video4"></div>
+            <div class="video-frame" id="video5"></div>
+            <div class="video-frame" id="video6"></div>
+
+
         </div>
     </section>
     <!-- Blog Section End -->
@@ -531,8 +548,8 @@
                     logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
                     nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
                 } else {
-                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                    logo.style.display = 'none'; // Show the logo when at the top on mobile screens
+                    nav.style.display = 'none'; // Show the navigation bar when at the top on mobile screens
                 }
             }
         }
@@ -547,11 +564,13 @@
 
     <script>
         // Define your YouTube video IDs
-        var videoId1 = 'v=EykWcFEtFqo';
-        var videoId2 = 'v=EykWcFEtFqo';
-        var videoId3 = 'v=EykWcFEtFqo';
-        var videoId4 = 'v=EykWcFEtFqo';
-        
+        var videoId1 = 'v=7IDs29zUAo8';
+        var videoId2 = 'v=ksVFV6toqZM';
+        var videoId3 = 'v=7KQEb_yIJbo';
+        var videoId4 = 'v=k4EjjBiMVsA';
+        var videoId5 = 'v=or5tRmBi2h0';
+        var videoId6 = 'v=Wt0319QgoY0';
+
         // Function to extract video ID from YouTube URL
         function extractVideoId(url) {
             var regex = /v=([A-Za-z0-9_-]+)/;
@@ -583,6 +602,9 @@
             players.push(createYouTubePlayer(extractVideoId(videoId2), 'video2'));
             players.push(createYouTubePlayer(extractVideoId(videoId3), 'video3'));
             players.push(createYouTubePlayer(extractVideoId(videoId4), 'video4'));
+            players.push(createYouTubePlayer(extractVideoId(videoId5), 'video5'));
+            players.push(createYouTubePlayer(extractVideoId(videoId6), 'video6'));
+
         }
         
         // Function to set up YouTube API when it's ready
