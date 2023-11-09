@@ -425,11 +425,11 @@ section.breadcrumb-section.set-bg {}
 .nav-menu ul li a {
 	color: #000000;
 	display: block;
-	font-size: 16px;
-	font-weight: 00;
-	/* text-transform: uppercase; */
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-family: "Poppins", sans-serif;
+	font-family: "Oswald", sans-serif;
 	padding: 10px 0px;
 	position: relative;
 	-webkit-transition: all 0.3s;
@@ -3551,7 +3551,7 @@ image-rendering: auto;
 	.canvas-open {
 		position: absolute;
 		right: 40px;
-		top: 61px;
+		top: 25px;
 		font-size: 26px;
 		width: 35px;
 		height: 30px;
@@ -3937,4 +3937,15 @@ img {position: relative;overflow: hidden;image-rendering: auto;}
     z-index: -1; /* Place the image behind the section content */
     max-width: 100%;
     background-size: contain;
+}
+/* Default style for larger screens */
+.logo img {
+    max-width: 75%;
+}
+
+/* Media query for screens with a maximum width of 600 pixels (adjust as needed) */
+@media only screen and (max-width: 600px) {
+    .logo img {
+        max-width: 40%;
+    }
 }

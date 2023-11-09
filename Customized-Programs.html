@@ -37,8 +37,27 @@
         body {
             overflow-x: hidden;
           }
-        </style>
-
+       
+        
+            /* Add this CSS for button hover effects */
+            .primary-btn {
+                background-color: #C7261C; /* Set your default button color */
+                color: #ffffff; /* Set the text color */
+                padding: 10px 20px;
+                border: none;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s; /* Add transition for a smooth color change */
+            }
+    
+            .primary-btn:hover {
+                background-color: black; /* Set the button color on hover */
+            }
+        
+    </style>
 </head> 
 
 
@@ -86,7 +105,7 @@
                 <div class="col-lg-3">
                     <div class="logo" style="position: relative; top: -60px; ">
                         <a href="./Home.html">
-<img src="img/logo.png" alt="" style="max-width: 75%;">                        </a>
+<img src="img/logo.png" >                        </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -378,9 +397,9 @@
         document.getElementById("card-price-22").textContent = "400 EGP";
         document.getElementById("card-price-222").textContent = "800 EGP";
         document.getElementById("card-price-2222").textContent = "1200 EGP";
-        document.getElementById("card-price-3").textContent = "300 EGP";
-        document.getElementById("card-price-33").textContent = "400 EGP";
-        document.getElementById("card-price-333").textContent = "800 EGP";
+        document.getElementById("card-price-3").textContent = "200 EGP";
+        document.getElementById("card-price-33").textContent = "500 EGP";
+        document.getElementById("card-price-333").textContent = "600 EGP";
         document.getElementById("PAY1").style.display = 'block';
         document.getElementById("PAY2").style.display = 'block';
         document.getElementById("PAY3").style.display = 'block';
@@ -724,8 +743,8 @@
                     logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
                     nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
                 } else {
-                    logo.style.display = 'none'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'none'; // Show the navigation bar when at the top on mobile screens
+                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
+                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
                 }
             }
         }
