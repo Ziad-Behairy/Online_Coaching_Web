@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Panda Online Coaching ">
-    <meta name="keywords" content="Online Coaching, unica, creative, html">
+    <meta name="description" content="Start your fitness journey with the best online coaching brand. Customized programs for busy schedules. Premium coaching with 24/7 support system.">
+    <meta name="keywords" content="Online Coaching, Panda Fitness EG,pandafitnesseg,panda fitness,the panda ,coaching ">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Panda Fitness EG</title>
-
+    <title>Panda Fitness EG | Not All Pandas Are Fat</title>
+    <meta property="og:title" content="Panda Fitness EG | Not All Pandas Are Fat">
+    <meta property="og:description" content="Start your fitness journey with the best online coaching brand. Customized programs for busy schedules. Premium coaching with 24/7 support system.">
+    <meta property="og:image" content="https://www.pandafitnesseg.com/img/logo.png">
+    <meta property="og:url" content="https://www.pandafitnesseg.com">
+    <meta property="og:type" content="website">
+    
    
 
     <!-- Google Font --> 
@@ -41,7 +46,39 @@
 body {
     overflow-x: hidden;
   }
+
+
+  .priciing-btn {
+    background-color: #f7a701; /* Gold color */
+    transition: background-color 0.3s ease;
+    color: #fff;
+    text-decoration: none; /* Remove underlines from links */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+
+.go-basic-btn {
+    /* Add styles for the Go Basic button */
+    /* You can customize the styles as needed */
+    background-color: #c7261c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 10px; /* Adjust the spacing between buttons */
+}
+
+
+
+
 </style>
+
 </head>
 
 <body>
@@ -60,7 +97,7 @@ body {
       
         <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./">Home</a></li>
                 <li><a href="./About.html">The Panda</a></li>
                 <li><a href="./Customized-Programs.html">Customized Programs</a></li>
                 <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -87,7 +124,7 @@ body {
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo" style="position: relative; top: -60px; ">
-                        <a href="./Home.html">
+                        <a href="./">
                             <img src="img/logo.png" >
                         </a>
                     </div>
@@ -95,23 +132,13 @@ body {
                 <div class="col-lg-7">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="./Home.html">Home</a></li>
+                            <li class="active"><a href="./">Home</a></li>
                             <li><a href="./About.html">The Panda</a></li>
                             <li><a href="./Customized-Programs.html">Customized Programs</a></li>
                             <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
                              <li><a href="./transformation.html">Transformations</a></li>             
                              <li><a href="./Testimonials.html">Testimonials</a></li>
-                            <!--   <li><a href="#">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./About.html">The Panda</a></li>
-                        <li><a href="./class-timetable.html">Classes timetable</a></li>
-                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                         <li><a href="./transformation.html">Transformations</a></li>             <li><a href="./Testimonials.html">Testimonials</a></li>
-                        <li><a href="./gallery.html">Gallery</a></li>
-                        <li><a href="./Testimonials.html">Our blog</a></li>
-                        <li><a href="./404.html">404</a></li>
-                    </ul>
-                </li> --> 
+                            
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
@@ -139,33 +166,34 @@ body {
     <!-- Header End -->
 
  <!-- HTML for Desktop and Mobile View -->
-<section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/Home-Desktop.jpg" data-setbg-mobile="img/covers/Home-Mobile.jpg">
+ <section class="custom-section">
+    <img id="backgroundImage" src="img/covers/Home-Desktop.jpg" alt="Background Image" loading="lazy" style="padding-top: 80px;">
     <!-- Your content goes here -->
 </section>
 
-<script>
-    // Get the section element
-    var section = document.querySelector('.breadcrumb-section');
-
-    // Set the background image based on screen width
-    function setBgImage() {
-        var desktopImage = section.getAttribute('data-setbg-desktop');
-        var mobileImage = section.getAttribute('data-setbg-mobile');
-        var minWidthForMobile = 768; // Adjust as needed
-
-        if (window.innerWidth < minWidthForMobile) {
-            section.style.backgroundImage = 'url(' + mobileImage + ')';
-            section.style.minHeight = '770px';
-        } else {
-            section.style.backgroundImage = 'url(' + desktopImage + ')';
-            section.style.minHeight = '810px';
-        }
+<style>
+    .custom-section {
+        min-height: 810px; /* Default height for desktop */
+        position: relative;
     }
 
-    // Call the function on page load and window resize
-    window.addEventListener('load', setBgImage);
-    window.addEventListener('resize', setBgImage);
-</script>
+    .custom-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .custom-section {
+            min-height: 770px; /* Height for mobile */
+        }
+        .custom-section img {
+            content: url('img/covers/Home-Mobile.jpg');
+        }
+    }
+</style>
+
+
  
     <!-- ChooseUs Section Begin -->
     <section class="ChooseUs-section spad" style="
@@ -264,27 +292,28 @@ body {
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-8">
                     <div class="ps-item">
-                        
                         <h3>Diet Plan</h3>
                         <img src="img/schedule.png" alt="Custom Icon 1" class="custom-icon">
-                        <a href="./Customized-Programs.html" class="primary-btn pricing-btn" style="margin-top: 20px;">Learn More</a>
+                        <a href="./premium-Coaching.html" class="primary-btn priciing-btn" style="width: 250px;">Go Premium</a>
+                        <a href="./Customized-Programs.html" class="primary-btn go-basic-btn" style="width: 150px;">Go Basic</a>
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-8">
                     <div class="ps-item">
-                       
-                        <h3> Workout Program </h3>
+                        <h3>Workout Program</h3>
                         <img src="img/report.png" alt="Custom Icon 2" class="custom-icon">
-                        <a href="./Customized-Programs.html" class="primary-btn pricing-btn " style="margin-top: 20px;">Learn More</a>
+                        <a href="./premium-Coaching.html" class="primary-btn priciing-btn" style="width: 250px;">Go Premium</a>
+                        <a href="./Customized-Programs.html" class="primary-btn go-basic-btn" style="width: 150px;">Go Basic</a>
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-8">
                     <div class="ps-item">
-                        <h3> 2-in-1 Program</h3>
+                        <h3>2-in-1 Program</h3>
                         <img src="img/dumbbell (2).png" alt="Custom Icon 3" class="custom-icon">
-                        <a href="./Customized-Programs.html" class="primary-btn pricing-btn" style="margin-top: 20px;">Learn More</a>
+                        <a href="./premium-Coaching.html" class="primary-btn priciing-btn" style="width: 250px;">Go Premium</a>
+                        <a href="./Customized-Programs.html" class="primary-btn go-basic-btn" style="width: 150px;">Go Basic</a>
                     </div>
                 </div>
                 
@@ -461,7 +490,7 @@ body {
                 
                 <div class="ts-slider owl-carousel" id="imageContainer"></div>
 
-<script>
+<script async >
     var imageContainer = document.getElementById('imageContainer');
     var elements = []; // Create an array to store elements
 
@@ -776,7 +805,7 @@ body {
                 <div class="col-lg-12 text-center">
                     <div class="copyright-text" style="margin-top: 0px;padding-bottom: 5px;padding-top: 5px;border-top-width: 0px;">
 
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+  Copyright &copy;<script async >document.write(new Date().getFullYear());</script> All rights reserved</p>
                     </div>
                 </div>
             </div>
@@ -799,7 +828,7 @@ body {
     <script src="js/main.js"></script>
 
         
-    <script>
+    <script async >
         // Function to handle the scroll event
         function handleScroll() {
             const windowWidth = window.innerWidth; // Get the current window width
@@ -841,7 +870,7 @@ body {
     
     
     
-    <script>
+    <script async >
         // Function to handle the scroll event
         function handleScroll() {
             const windowWidth = window.innerWidth; // Get the current window width
@@ -866,7 +895,7 @@ body {
     </script>
     
 
-    <script>
+    <script async >
         // Function to start the counter animation
         function startCounterAnimation(animatedTextElements, startValue, targetValue, duration) {
             // Initialize a variable for the current value
@@ -935,7 +964,7 @@ body {
     
     
     
-    <script>
+    <script async >
         function toggleSections() {
             const originalSection = document.getElementById("original-section");
             const modifiedSection = document.getElementById("modified-section");
@@ -960,7 +989,7 @@ body {
 
 
 <!-- slider-container -->
-<script>
+<script async >
     $(document).ready(function () {
         var owl = $(".ts-slider");
 
@@ -983,7 +1012,7 @@ body {
 </script>
 
 
-<script>
+<script async >
 document.addEventListener("DOMContentLoaded", function () {
   // Hide the preloader
   var preloader = document.getElementById("preloader");

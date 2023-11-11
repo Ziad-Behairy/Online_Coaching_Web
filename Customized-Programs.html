@@ -77,7 +77,7 @@
       
          <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./About.html">The Panda</a></li>
                 <li><a href="./Customized-Programs.html">Customized Programs</a></li>
                 <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -104,14 +104,14 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo" style="position: relative; top: -60px; ">
-                        <a href="./Home.html">
+                        <a href="./index.html">
 <img src="img/logo.png" >                        </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <nav class="nav-menu">
                         <ul>
-                            <li><a href="./Home.html">Home</a></li>
+                            <li><a href="./index.html">Home</a></li>
                             <li><a href="./About.html">The Panda</a></li>
                             <li class="active"><a href="./Customized-Programs.html">Customized Programs</a></li>
                             <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -155,33 +155,35 @@
     
     <!-- Cover Section Begin -->
     <!-- HTML for Desktop and Mobile View -->
-<section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/CUSTOMIZED-PROGRAMS-Desktop.jpg" data-setbg-mobile="img/covers/CUSTOMIZED-PROGRAMS-Mobile.jpg">
-    <!-- Your content goes here -->
-</section>
-
-<script>
-    // Get the section element
-    var section = document.querySelector('.breadcrumb-section');
-
-    // Set the background image based on screen width
-    function setBgImage() {
-        var desktopImage = section.getAttribute('data-setbg-desktop');
-        var mobileImage = section.getAttribute('data-setbg-mobile');
-        var minWidthForMobile = 768; // Adjust as needed
-
-        if (window.innerWidth < minWidthForMobile) {
-            section.style.backgroundImage = 'url(' + mobileImage + ')';
-            section.style.minHeight = '600px';
-        } else {
-            section.style.backgroundImage = 'url(' + desktopImage + ')';
-            section.style.minHeight = '600px';
+    <section class="customized-cover-section">
+        <img src="img/covers/CUSTOMIZED-PROGRAMS-Desktop.jpg" alt="Background Image" loading="lazy" >
+        <!-- Your content goes here -->
+    </section>
+    
+    <style>
+        .customized-cover-section {
+            min-height: 600px; /* Default height for both desktop and mobile */
+            position: relative;
+           
         }
-    }
-
-    // Call the function on page load and window resize
-    window.addEventListener('load', setBgImage);
-    window.addEventListener('resize', setBgImage);
-</script>
+    
+        .customized-cover-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            content: url('img/covers/CUSTOMIZED-PROGRAMS-Desktop.jpg');
+            padding-top: 85px;
+        }
+    
+        @media only screen and (max-width: 767px) {
+            .customized-cover-section img {
+                content: url('img/covers/CUSTOMIZED-PROGRAMS-Mobile.jpg');
+                padding-top: 30px; 
+              
+            }
+        }
+    </style>
+    
    <!-- Cover Section End -->
      <!-- ChooseUs Section Begin -->
      <section class="ChooseUs-section spad" style="
@@ -386,7 +388,7 @@
         
     </div>
 </section>
-    <script>
+    <script async >
     // JavaScript functions to switch between card sets
     function showCardSet1() {
         // Set content for Card Set 1
@@ -405,7 +407,7 @@
         document.getElementById("PAY3").style.display = 'block';
         document.getElementById("PAY4").style.display = 'block';
         document.getElementById('PAY4').style.left = '0px';
-        document.getElementById("iban-value").textContent = " EG950023000500501453209960010";
+        document.getElementById("iban-value").textContent = "EG950023000500501453209960010";
 
         // Update list items as needed for Card 1
         // Reset content for Card Set 2 and Card Set 3 if necessary
@@ -698,7 +700,7 @@
                 <div class="col-lg-12 text-center">
                                         <div class="copyright-text" style="margin-top: 0px;padding-bottom: 5px;padding-top: 5px;border-top-width: 0px;">
 
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+  Copyright &copy;<script async >document.write(new Date().getFullYear());</script> All rights reserved</p>
                     </div>
                 </div>
             </div>
@@ -717,7 +719,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-  <script>
+  <script async >
         // Function to handle the scroll event
         function handleScroll() {
             const windowWidth = window.innerWidth; // Get the current window width
@@ -756,7 +758,7 @@
         // Add an event listener for window resize to handle initial conditions
         window.addEventListener('resize', handleScroll);
     </script>
-    <script>
+    <script async >
         // Function to handle the scroll event
         function handleScroll() {
             const windowWidth = window.innerWidth; // Get the current window width
@@ -781,7 +783,7 @@
     </script> 
 
 
-    <script>
+    <script async >
         const paymentIcons = document.querySelectorAll(".payment-icon-pulse img");
         const paymentDetailsContainers = document.querySelectorAll(".payment-details-container");
         const overlay = document.getElementById("overlay");
@@ -809,7 +811,7 @@
 
 
     
-    <script>
+    <script async >
     document.addEventListener("DOMContentLoaded", function () {
       // Hide the preloader
       var preloader = document.getElementById("preloader");

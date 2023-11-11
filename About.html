@@ -40,7 +40,7 @@
       
         <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./About.html">The Panda</a></li>
                 <li><a href="./Customized-Programs.html">Customized Programs</a></li>
                 <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -67,14 +67,14 @@
             <div class="row">
                 <div class="col-lg-3">
                      <div class="logo" style="position: relative; top: -60px; ">
-                        <a href="./Home.html">
+                        <a href="./index.html">
 <img src="img/logo.png" alt="" >                        </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <nav class="nav-menu">
                         <ul>
-                            <li><a href="./Home.html">Home</a></li>
+                            <li><a href="./index.html">Home</a></li>
                             <li class="active"><a href="./About.html">The Panda</a></li>
                             <li><a href="./Customized-Programs.html">Customized Programs</a></li>
                             <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -117,33 +117,32 @@
 
     <!-- Cover Section Begin -->
    <!-- HTML for Desktop and Mobile View -->
-   <section class="breadcrumb-section set-bg" data-setbg-desktop="img/covers/THE-PANDA-Desktop.jpg" data-setbg-mobile="img/covers/THE-PANDA-Mobile.jpg">
+   <section class="about-cover-section">
+    <img id="backgroundImage" src="img/covers/THE-PANDA-Desktop.jpg" alt="Background Image" loading="lazy">
     <!-- Your content goes here -->
 </section>
 
-<script>
-    // Get the section element
-    var section = document.querySelector('.breadcrumb-section');
-
-    // Set the background image based on screen width
-    function setBgImage() {
-        var desktopImage = section.getAttribute('data-setbg-desktop');
-        var mobileImage = section.getAttribute('data-setbg-mobile');
-        var minWidthForMobile = 768; // Adjust as needed
-
-        if (window.innerWidth < minWidthForMobile) {
-            section.style.backgroundImage = 'url(' + mobileImage + ')';
-            section.style.minHeight = '600px';
-        } else {
-            section.style.backgroundImage = 'url(' + desktopImage + ')';
-            section.style.minHeight = '600px';
-        }
+<style>
+    .about-cover-section {
+        min-height: 600px; /* Default height for both desktop and mobile */
+        position: relative;
     }
 
-    // Call the function on page load and window resize
-    window.addEventListener('load', setBgImage);
-    window.addEventListener('resize', setBgImage);
-</script>
+    .about-cover-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding-top: 85px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .about-cover-section img {
+            content: url('img/covers/THE-PANDA-Mobile.jpg');
+            padding-top:30px;
+        }
+    }
+</style>
+
    <!-- Cover Section End -->
 
 
@@ -282,7 +281,7 @@
                 <div class="col-lg-12 text-center">
                                         <div class="copyright-text" style="margin-top: 0px;padding-bottom: 5px;padding-top: 5px;border-top-width: 0px;">
 
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+  Copyright &copy;<script async >document.write(new Date().getFullYear());</script> All rights reserved</p>
                     </div>
                 </div>
             </div>
@@ -301,7 +300,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
- <script>
+ <script async >
         // Function to handle the scroll event
         function handleScroll() {
             const windowWidth = window.innerWidth; // Get the current window width
@@ -344,7 +343,7 @@
     </script>
 
 
-<script>
+<script async >
         // Function to handle the scroll event
         function handleScroll() {
             const windowWidth = window.innerWidth; // Get the current window width
@@ -370,7 +369,7 @@
 
 
     
-    <script>
+    <script async >
     document.addEventListener("DOMContentLoaded", function () {
       // Hide the preloader
       var preloader = document.getElementById("preloader");

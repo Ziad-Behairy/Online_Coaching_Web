@@ -83,6 +83,7 @@ img {
 	max-width: 100%;
 	width: auto;
 	height: auto;
+	max-height: 100%;
 }
 
 input:focus,
@@ -123,10 +124,10 @@ ol {
 
 .section-title span {
 	font-size: 45px;
-	color: #C7261C;
+	color: #c7261c;
 	text-transform: uppercase;
 	font-weight: 720;
-	FONT: O;
+	
 }
 
 .section-title h2 {
@@ -1235,7 +1236,7 @@ section.breadcrumb-section.set-bg {}
 
 .transformation-title .section-title {
 	text-align: center;
-	padding-top: 5;
+	padding-top: 50;
 }
 
 .primary-btn.appoinment-btn {
@@ -3936,7 +3937,7 @@ img {position: relative;overflow: hidden;image-rendering: auto;}
     object-fit: cover; /* Maintain aspect ratio and cover the entire section */
     z-index: -1; /* Place the image behind the section content */
     max-width: 100%;
-    background-size: contain;
+    background-size: c;
 }
 /* Default style for larger screens */
 .logo img {
