@@ -723,7 +723,7 @@
     
       <!-- transformation Section Begin -->
       <section class="transformation-section spad" style="
-      padding-top: 50px;
+      padding-top: 0px;
       padding-bottom: 0px">
           <div class="container">
               <div class="row">
@@ -1178,6 +1178,29 @@
             overlay.style.display = "none";
         }
     </script>
+    <!-- slider-container -->
+<script async >
+    $(document).ready(function () {
+        var owl = $(".ts-slider");
+
+        // Initialize the Owl Carousel slider
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            nav: false, // Disable default navigation
+        });
+
+        // Add click event handlers for custom navigation buttons
+        $("#prevButton").click(function () {
+            owl.trigger("prev.owl.carousel");
+        });
+
+        $("#nextButton").click(function () {
+            owl.trigger("next.owl.carousel");
+        });
+    });
+</script>
+
             
 </body>
 </html>
