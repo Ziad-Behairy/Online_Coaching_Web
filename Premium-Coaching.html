@@ -721,7 +721,322 @@
     </section>
     <!-- Features Section End -->
     
-   
+      <!-- transformation Section Begin -->
+      <section class="transformation-section spad" style="
+      padding-top: 50px;
+      padding-bottom: 0px">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      
+                          <div class="section-title" style="
+                          margin-bottom: 0px;
+                      ">
+                              <span>Top clients</span>
+                          </div>
+                          <!-- <a href="https://calendly.com/ziad_behairy/appointment" class="primary-btn btn-normal appoinment-btn">appointment</a> -->
+                      
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="custom-slider-controls" style="height: 50px; margin-bottom: 10px; margin-top: 0px;">
+                          <button id="prevButton" class="owl-prev" style="top: -10;left: 50px;bottom: -38;bottom: -50;top: -10;padding-right: 15px;padding-left: 15px; padding-bottom: 5px; padding-top: 0px;"><i class="fa fa-angle-left"></i></button>
+                          <button id="nextButton" class="owl-next" style="right: 50px; padding-bottom: 5px; padding-top: 0px;padding-left: 15px;padding-right: 15px;"><i class="fa fa-angle-right"></i></button>
+                      </div>
+                  </div>
+                        
+              </div>
+  
+              <div class="row">
+                  
+                  <div class="ts-slider owl-carousel" id="imageContainer"></div>
+  
+  <script async >
+      var imageContainer = document.getElementById('imageContainer');
+      var elements = []; // Create an array to store elements
+  
+      for (let i = 1; i <= 30; i++) {
+          var div = document.createElement('div');
+          div.classList.add('col-lg-4');
+  
+          var tsItem = document.createElement('div');
+          tsItem.classList.add('ts-item', 'set-bg');
+          tsItem.setAttribute('data-setbg', `img/transformation/${i}.jpg`);
+  
+          var img = document.createElement('img');
+          img.src = `img/transformation/${i}.jpg`;
+  
+          tsItem.appendChild(img);
+          div.appendChild(tsItem);
+          elements.push(div); // Add the element to the array
+      }
+  
+      // Append all elements at once to reduce DOM manipulation
+      imageContainer.append(...elements);
+  </script>
+  
+              </div>
+            
+          </div>
+      </section>
+      <!-- transformation Section End -->
+     <!-- Testimonials Section Begin -->
+     <section class="Testimonials-section spad" style="
+     padding-bottom: 0px;
+     padding-top: 15px;" >
+  <div class="hs-item"  style="background-image: url(img/ourclient2.jpg);">
+      
+                
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="section-title-Testimonialss">
+                         <h2 style="color: white; font-size: 50px; margin-bottom: 25px; margin-top: 150px;">Our cilents say</h2>
+                     </div>
+                 </div>
+              </div>
+             <div class="ts_slider owl-carousel">
+                 <div class="ts_item">
+                     <div class="row">
+                         <div class="col-lg-12 text-center">
+                             <!-- <div class="ti_pic">
+                                 <img src="img/Testimonials/Testimonials-1.jpg" alt="">
+                             </div> -->
+                             <div class="ti_text" >
+                              <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%;margin-bottom: 0; padding: 0 10% 20px 10%;">
+                                  "Mahmoud is the best! He creates the best plans and encourages you all the time to help you achieve your goal naturally."
+                              </div>
+                                 <h5 style="color: white;">AHMED GALAL</h5>
+                                 <h6 style="color: white;">25, Engineer, Egypt</h6>
+                                 <div class="tt-rating">
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="ts_item">
+                     <div class="row">
+                         <div class="col-lg-12 text-center">
+                          
+                             <div class="ti_text" style="color: white; ">
+                              <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%;margin-bottom: 0; padding: 0 10% 20px 10%;">
+                                  “Mahmoud is the most comfortable person I have ever dealt with. I started with him in Ramadan I was overweight, but the results were amazing and the diet was very flexible! Thanks for your time, effort, and quick response”</div>
+                                 
+                                  <h5 style="color: white;">ASMAA ISMAIL</h5>
+                                 <h6 style="color: white;">35, Mother, Egypt</h6>
+                                 <div class="tt-rating">
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="ts_item">
+                     <div class="row">
+                         <div class="col-lg-12 text-center">
+                             <!-- <div class="ti_pic">
+                                 <img src="img/Testimonials/Testimonials-1.jpg" alt="">
+                             </div> -->
+                             <div class="ti_text" style="color: white; ">
+                              <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%;margin-bottom: 0; padding: 0 10% 20px 10%;">
+                                  “Well, I’ve got to say that it’s far beyond a body transformation or a program. It’s more of building a healthy lifestyle and that is what Mahmoud helps you do.”
+                              </div>
+                                 <h5 style="color: white;"> HAGAR MOHAMED </h5>
+                                 <h6 style="color: white;">22, College Student, Egypt</h6>
+                                 <div class="tt-rating">
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                
+                 <div class="ts_item">
+                  <div class="row">
+                      <div class="col-lg-12 text-center">
+                          <!-- <div class="ti_pic">
+                             <img src="img/Testimonials/Testimonials-1.jpg" alt="">
+                         </div> -->
+                          <div class="ti_text" style="color: white; ">
+                              <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
+                                  “Coach Mahmoud is very respectful, well-educated, and a literal hard worker. He managed to create a great customized 2-in-1 program for me. He was also very responsive and helpful. I recommend him to everyone.”
+                              </div>
+                              <h5 style="color: white;">MADONNA ADEL</h5>
+                              <h6 style="color: white;">27, Saleswoman, Egypt</h6>
+                              <div class="tt-rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Repeat the above structure for other Testimonialss with their respective content -->
+              <div class="ts_item">
+                  <div class="row">
+                      <div class="col-lg-12 text-center">
+                          <!-- <div class="ti_pic">
+                              <img src="img/Testimonials/Testimonials-1.jpg" alt="">
+                          </div> -->
+                          <div class="ti_text" style="color: white; ">
+                              <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 5px 10%;">
+                                  “Honestly, the best thing about Mahmoud is how supportive and motivating he is as a coach and a friend. Also, everything was tailored to fit my goal and routine. Mahmoud never missed any of my messages and was always active.”
+                              </div>
+                              <h5 style="color: white;"> <br>MOHAMED ISMAIL</h5>
+                              <h6 style="color: white;">24, Engineer, Egypt</h6>
+                              <div class="tt-rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Repeat the structure for the remaining Testimonialss with their respective content -->
+              
+              <!-- Testimonials 3 -->
+              <div class="ts_item">
+                  <div class="row">
+                      <div class="col-lg-12 text-center">
+                          <!-- <div class="ti_pic">
+                              <img src="img/Testimonials/Testimonials-1.jpg" alt="">
+                          </div> -->
+                          <div class="ti_text" style="color: white; ">
+                              <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
+                                  “A reliable and knowledgeable coach who will give you the best training experience that’s customized to your body shape, and your personal target, and very much suits your energy as well.”
+                              </div>
+                              <h5 style="color: white;">MOHAMED KHALIL</h5>
+                              <h6 style="color: white;">24, Master’s Student, USA</h6>
+                              <div class="tt-rating">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Testimonials 4 -->
+  <div class="ts_item">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+             
+              <div class="ti_text" style="color: white; ">
+                  <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
+                      “Coach Mahmoud is very respectful, well-educated, and a literal hard worker. He managed to create a great customized 2-in-1 program for me. He was also very responsive and helpful. I recommend him to everyone.”
+                  </div>
+                  <h5 style="color: white;">MADONNA ADEL</h5>
+                  <h6 style="color: white;">27, Saleswoman, Egypt</h6>
+                  <div class="tt-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Testimonials 5 -->
+  <div class="ts_item">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+             
+              <div class="ti_text" style="color: white; ">
+                  <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
+                      “He is the best one I have been coached by for real! I’ve learned about so many things from this man. He is extremely knowledgeable about what he does. Highly recommended.”
+                  </div>
+                  <h5 style="color: white;">MUHAMMED GAMAL</h5>
+                  <h6 style="color: white;">21, Student, Egypt</h6>
+                  <div class="tt-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Testimonials 6 -->
+  <div class="ts_item">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+             
+              <div class="ti_text" style="color: white; ">
+                  <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
+                      “He can put the best diet plan for you according to your specific situation, and it works so well. Thank you so much Mahmoud. Highly recommended.”
+                  </div>
+                  <h5 style="color: white;">NORHAN MOHSEN</h5>
+                  <h6 style="color: white;">24, PhD Student, UAE</h6>
+                  <div class="tt-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Testimonials 7 -->
+  <div class="ts_item">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+             
+              <div class="ti_text" style="color: white; ">
+                  <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 5px 10%;">
+                      “My technique and performance at the gym have been improving ever since I started working with Mahmoud. I feel so much better now physically and mentally. Even people around me can notice it clearly. He is the best in this business.”
+                  </div>
+                  <h5 style="color: white;"> <br>RANA ALLAM</h5>
+                  <h6 style="color: white;">30, Architect, Egypt</h6>
+                  <div class="tt-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+              
+        </div> 
+      </div>  
+     </section>
+       <!-- Testimonials Section End -->
+    
 
     <!-- Footer Section Begin -->
     <section class="footer-section" style="padding-top: 10px ;">

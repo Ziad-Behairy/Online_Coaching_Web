@@ -268,47 +268,65 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
- <script async >
-        // Function to handle the scroll event
+    <script async>
         function handleScroll() {
-            const windowWidth = window.innerWidth; // Get the current window width
+            const windowWidth = window.innerWidth;
             const header = document.querySelector('.header-section');
-            const logo = header.querySelector('.logo');
-            const nav = header.querySelector('.nav'); // Replace '.nav' with the appropriate class or selector for your navigation bar
-            const scrollPos = window.pageYOffset;
     
-            if (windowWidth > 990) { // Check if the screen width is greater than 990px
+            if (!header) {
+                return; // Exit function if header element is not found
+            }
+    
+            const logo = header.querySelector('.logo');
+            const nav = header.querySelector('.nav');
+    
+            if (windowWidth > 990) {
+                const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    
                 if (scrollPos > 0) {
                     header.classList.add('scrolled');
-                    logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
-                    logo.style.top = '-90px'; // Adjust the scale value as desired
-                    nav.style.display = 'block'; // Show the navigation bar
+                    if (logo) {
+                        logo.style.transform = 'scale(0.45)';
+                        logo.style.top = '-90px';
+                    }
+                    if (nav) {
+                        nav.style.display = 'block';
+                    }
                 } else {
                     header.classList.remove('scrolled');
-                    logo.style.transform = 'scale(1)'; // Reset the scale when at the top
-                    logo.style.top = '-60px';
-                    nav.style.display = 'block'; // Show the navigation bar
+                    if (logo) {
+                        logo.style.transform = 'scale(1)';
+                        logo.style.top = '-60px';
+                    }
+                    if (nav) {
+                        nav.style.display = 'block';
+                    }
                 }
             } else {
+                const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    
                 if (scrollPos > 0) {
-                    logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
-                    nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
+                    if (logo) {
+                        logo.style.display = 'none';
+                    }
+                    if (nav) {
+                        nav.style.display = 'none';
+                    }
                 } else {
-                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                    if (logo) {
+                        logo.style.display = 'block';
+                    }
+                    if (nav) {
+                        nav.style.display = 'block';
+                    }
                 }
             }
         }
     
-        // Add event listeners for scroll and DOMContentLoaded
-        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
+        window.addEventListener('DOMContentLoaded', handleScroll);
         window.addEventListener('scroll', handleScroll);
-    
-        // Add an event listener for window resize to handle initial conditions
         window.addEventListener('resize', handleScroll);
     </script>
-
 
 <script async >
         // Function to handle the scroll event
