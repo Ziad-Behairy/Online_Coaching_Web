@@ -25,8 +25,36 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://kit.fontawesome.com/938db285e1.js" crossorigin="anonymous"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 
     <style>
+
+
+
+        .video-container-testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .video-frame {
+            width: calc(50% - 20px); /* Two videos per row with space between them */
+            margin: 10px; /* Add margin to create space between videos */
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .video-frame:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .video-frame {
+                width: calc(100% - 20px);
+            }
+        }
         @media (max-width: 995px) {
             /* Apply styles for screens less than or equal to 995px wide */
             .col-lg-4 {
@@ -77,7 +105,7 @@
       
          <nav class="canvas-menu mobile-menu">
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./">Home</a></li>
                 <li><a href="./About.html">The Panda</a></li>
                 <li><a href="./Customized-Programs.html">Customized Programs</a></li>
                 <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -104,14 +132,14 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo" style="position: relative; top: -60px; ">
-                        <a href="./index.html">
+                        <a href="./">
 <img src="img/logo.png" >                        </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <nav class="nav-menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./">Home</a></li>
                             <li><a href="./About.html">The Panda</a></li>
                             <li class="active"><a href="./Customized-Programs.html">Customized Programs</a></li>
                             <li><a href="./Premium-Coaching.html">Premium Coaching</a></li>
@@ -449,6 +477,98 @@
     </script>
      
     <!-- Pricing Section End -->
+      <!-- transformation Section Begin -->
+      <section class="transformation-section spad" style="
+      padding-top: 0px;
+      padding-bottom: 0px">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      
+                          <div class="section-title" style="
+                          margin-bottom: 0px;
+                          padding-top: 0px;
+                      ">
+                              <span>Top clients</span>
+                          </div>
+                          <!-- <a href="https://calendly.com/ziad_behairy/appointment" class="primary-btn btn-normal appoinment-btn">appointment</a> -->
+                      
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="custom-slider-controls" style="height: 50px; margin-bottom: 10px; margin-top: 0px;">
+                          <button id="prevButton" class="owl-prev" style="top: -10;left: 50px;bottom: -38;bottom: -50;top: -10;padding-right: 15px;padding-left: 15px; padding-bottom: 5px; padding-top: 0px;"><i class="fa fa-angle-left"></i></button>
+                          <button id="nextButton" class="owl-next" style="right: 50px; padding-bottom: 5px; padding-top: 0px;padding-left: 15px;padding-right: 15px;"><i class="fa fa-angle-right"></i></button>
+                      </div>
+                  </div>
+                        
+              </div>
+  
+              <div class="row">
+                  
+                  <div class="ts-slider owl-carousel" id="imageContainer"></div>
+  
+  <script async >
+      var imageContainer = document.getElementById('imageContainer');
+      var elements = []; // Create an array to store elements
+  
+      for (let i = 1; i <= 30; i++) {
+          var div = document.createElement('div');
+          div.classList.add('col-lg-4');
+  
+          var tsItem = document.createElement('div');
+          tsItem.classList.add('ts-item', 'set-bg');
+          tsItem.setAttribute('data-setbg', `img/transformation/${i}.jpg`);
+  
+          var img = document.createElement('img');
+          img.src = `img/transformation/${i}.jpg`;
+  
+          tsItem.appendChild(img);
+          div.appendChild(tsItem);
+          elements.push(div); // Add the element to the array
+      }
+  
+      // Append all elements at once to reduce DOM manipulation
+      imageContainer.append(...elements);
+  </script>
+  
+              </div>
+            
+          </div>
+      </section>
+      <!-- transformation Section End -->
+
+
+          <!-- Blog Section Begin -->
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div class="section-title" style="
+                    padding-top: 0px;">
+                        <span>YOUR FEEDBACK ALWAYS
+                            MATTERS!</span>
+                        
+                
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="video-container-testimonials" style="
+        padding-top: 15px;
+        padding-bottom: 20px;
+    ">
+            <div class="video-frame" id="video1"></div>
+            <div class="video-frame" id="video2"></div>
+            <div class="video-frame" id="video3"></div>
+            <div class="video-frame" id="video4"></div>
+       
+
+
+        </div>
+    </section>
+    <!-- Blog Section End -->
 
 
 
@@ -671,323 +791,10 @@
         </div>
     </section>
     <!-- Features Section End -->
-       <!-- transformation Section Begin -->
-       <section class="transformation-section spad" style="
-       padding-top: 0px;
-       padding-bottom: 0px">
-           <div class="container">
-               <div class="row">
-                   <div class="col-lg-12">
-                       
-                           <div class="section-title" style="
-                           margin-bottom: 0px;
-                       ">
-                               <span>Top clients</span>
-                           </div>
-                           <!-- <a href="https://calendly.com/ziad_behairy/appointment" class="primary-btn btn-normal appoinment-btn">appointment</a> -->
-                       
-                   </div>
-               </div>
-               <div class="row">
-                   <div class="col-lg-12">
-                       <div class="custom-slider-controls" style="height: 50px; margin-bottom: 10px; margin-top: 0px;">
-                           <button id="prevButton" class="owl-prev" style="top: -10;left: 50px;bottom: -38;bottom: -50;top: -10;padding-right: 15px;padding-left: 15px; padding-bottom: 5px; padding-top: 0px;"><i class="fa fa-angle-left"></i></button>
-                           <button id="nextButton" class="owl-next" style="right: 50px; padding-bottom: 5px; padding-top: 0px;padding-left: 15px;padding-right: 15px;"><i class="fa fa-angle-right"></i></button>
-                       </div>
-                   </div>
-                         
-               </div>
-   
-               <div class="row">
-                   
-                   <div class="ts-slider owl-carousel" id="imageContainer"></div>
-   
-   <script async >
-       var imageContainer = document.getElementById('imageContainer');
-       var elements = []; // Create an array to store elements
-   
-       for (let i = 1; i <= 30; i++) {
-           var div = document.createElement('div');
-           div.classList.add('col-lg-4');
-   
-           var tsItem = document.createElement('div');
-           tsItem.classList.add('ts-item', 'set-bg');
-           tsItem.setAttribute('data-setbg', `img/transformation/${i}.jpg`);
-   
-           var img = document.createElement('img');
-           img.src = `img/transformation/${i}.jpg`;
-   
-           tsItem.appendChild(img);
-           div.appendChild(tsItem);
-           elements.push(div); // Add the element to the array
-       }
-   
-       // Append all elements at once to reduce DOM manipulation
-       imageContainer.append(...elements);
-   </script>
-   
-               </div>
-             
-           </div>
-       </section>
-       <!-- transformation Section End -->
-      <!-- Testimonials Section Begin -->
-      <section class="Testimonials-section spad" style="
-      padding-bottom: 0px;
-      padding-top: 15px;" >
-   <div class="hs-item"  style="background-image: url(img/ourclient2.jpg);">
-       
-                 
-              <div class="row">
-                  <div class="col-lg-12">
-                      <div class="section-title-Testimonialss">
-                          <h2 style="color: white; font-size: 50px; margin-bottom: 25px; margin-top: 150px;">Our cilents say</h2>
-                      </div>
-                  </div>
-               </div>
-              <div class="ts_slider owl-carousel">
-                  <div class="ts_item">
-                      <div class="row">
-                          <div class="col-lg-12 text-center">
-                              <!-- <div class="ti_pic">
-                                  <img src="img/Testimonials/Testimonials-1.jpg" alt="">
-                              </div> -->
-                              <div class="ti_text" >
-                               <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%;margin-bottom: 0; padding: 0 10% 20px 10%;">
-                                   "Mahmoud is the best! He creates the best plans and encourages you all the time to help you achieve your goal naturally."
-                               </div>
-                                  <h5 style="color: white;">AHMED GALAL</h5>
-                                  <h6 style="color: white;">25, Engineer, Egypt</h6>
-                                  <div class="tt-rating">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="ts_item">
-                      <div class="row">
-                          <div class="col-lg-12 text-center">
-                           
-                              <div class="ti_text" style="color: white; ">
-                               <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%;margin-bottom: 0; padding: 0 10% 20px 10%;">
-                                   “Mahmoud is the most comfortable person I have ever dealt with. I started with him in Ramadan I was overweight, but the results were amazing and the diet was very flexible! Thanks for your time, effort, and quick response”</div>
-                                  
-                                   <h5 style="color: white;">ASMAA ISMAIL</h5>
-                                  <h6 style="color: white;">35, Mother, Egypt</h6>
-                                  <div class="tt-rating">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="ts_item">
-                      <div class="row">
-                          <div class="col-lg-12 text-center">
-                              <!-- <div class="ti_pic">
-                                  <img src="img/Testimonials/Testimonials-1.jpg" alt="">
-                              </div> -->
-                              <div class="ti_text" style="color: white; ">
-                               <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%;margin-bottom: 0; padding: 0 10% 20px 10%;">
-                                   “Well, I’ve got to say that it’s far beyond a body transformation or a program. It’s more of building a healthy lifestyle and that is what Mahmoud helps you do.”
-                               </div>
-                                  <h5 style="color: white;"> HAGAR MOHAMED </h5>
-                                  <h6 style="color: white;">22, College Student, Egypt</h6>
-                                  <div class="tt-rating">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                 
-                  <div class="ts_item">
-                   <div class="row">
-                       <div class="col-lg-12 text-center">
-                           <!-- <div class="ti_pic">
-                              <img src="img/Testimonials/Testimonials-1.jpg" alt="">
-                          </div> -->
-                           <div class="ti_text" style="color: white; ">
-                               <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
-                                   “Coach Mahmoud is very respectful, well-educated, and a literal hard worker. He managed to create a great customized 2-in-1 program for me. He was also very responsive and helpful. I recommend him to everyone.”
-                               </div>
-                               <h5 style="color: white;">MADONNA ADEL</h5>
-                               <h6 style="color: white;">27, Saleswoman, Egypt</h6>
-                               <div class="tt-rating">
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               
-               <!-- Repeat the above structure for other Testimonialss with their respective content -->
-               <div class="ts_item">
-                   <div class="row">
-                       <div class="col-lg-12 text-center">
-                           <!-- <div class="ti_pic">
-                               <img src="img/Testimonials/Testimonials-1.jpg" alt="">
-                           </div> -->
-                           <div class="ti_text" style="color: white; ">
-                               <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 5px 10%;">
-                                   “Honestly, the best thing about Mahmoud is how supportive and motivating he is as a coach and a friend. Also, everything was tailored to fit my goal and routine. Mahmoud never missed any of my messages and was always active.”
-                               </div>
-                               <h5 style="color: white;"> <br>MOHAMED ISMAIL</h5>
-                               <h6 style="color: white;">24, Engineer, Egypt</h6>
-                               <div class="tt-rating">
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               
-               <!-- Repeat the structure for the remaining Testimonialss with their respective content -->
-               
-               <!-- Testimonials 3 -->
-               <div class="ts_item">
-                   <div class="row">
-                       <div class="col-lg-12 text-center">
-                           <!-- <div class="ti_pic">
-                               <img src="img/Testimonials/Testimonials-1.jpg" alt="">
-                           </div> -->
-                           <div class="ti_text" style="color: white; ">
-                               <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
-                                   “A reliable and knowledgeable coach who will give you the best training experience that’s customized to your body shape, and your personal target, and very much suits your energy as well.”
-                               </div>
-                               <h5 style="color: white;">MOHAMED KHALIL</h5>
-                               <h6 style="color: white;">24, Master’s Student, USA</h6>
-                               <div class="tt-rating">
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                                   <i class="fa fa-star"></i>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               
-               <!-- Testimonials 4 -->
-   <div class="ts_item">
-       <div class="row">
-           <div class="col-lg-12 text-center">
-              
-               <div class="ti_text" style="color: white; ">
-                   <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
-                       “Coach Mahmoud is very respectful, well-educated, and a literal hard worker. He managed to create a great customized 2-in-1 program for me. He was also very responsive and helpful. I recommend him to everyone.”
-                   </div>
-                   <h5 style="color: white;">MADONNA ADEL</h5>
-                   <h6 style="color: white;">27, Saleswoman, Egypt</h6>
-                   <div class="tt-rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   
-   <!-- Testimonials 5 -->
-   <div class="ts_item">
-       <div class="row">
-           <div class="col-lg-12 text-center">
-              
-               <div class="ti_text" style="color: white; ">
-                   <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
-                       “He is the best one I have been coached by for real! I’ve learned about so many things from this man. He is extremely knowledgeable about what he does. Highly recommended.”
-                   </div>
-                   <h5 style="color: white;">MUHAMMED GAMAL</h5>
-                   <h6 style="color: white;">21, Student, Egypt</h6>
-                   <div class="tt-rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   
-   <!-- Testimonials 6 -->
-   <div class="ts_item">
-       <div class="row">
-           <div class="col-lg-12 text-center">
-              
-               <div class="ti_text" style="color: white; ">
-                   <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 20px 10%;">
-                       “He can put the best diet plan for you according to your specific situation, and it works so well. Thank you so much Mahmoud. Highly recommended.”
-                   </div>
-                   <h5 style="color: white;">NORHAN MOHSEN</h5>
-                   <h6 style="color: white;">24, PhD Student, UAE</h6>
-                   <div class="tt-rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-   
-   <!-- Testimonials 7 -->
-   <div class="ts_item">
-       <div class="row">
-           <div class="col-lg-12 text-center">
-              
-               <div class="ti_text" style="color: white; ">
-                   <div style="color: white; font-size: 25px; display: inline-block; text-align: center; width: 80%; margin-bottom: 0; padding: 0 10% 5px 10%;">
-                       “My technique and performance at the gym have been improving ever since I started working with Mahmoud. I feel so much better now physically and mentally. Even people around me can notice it clearly. He is the best in this business.”
-                   </div>
-                   <h5 style="color: white;"> <br>RANA ALLAM</h5>
-                   <h6 style="color: white;">30, Architect, Egypt</h6>
-                   <div class="tt-rating">
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                       <i class="fa fa-star"></i>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-               
-         </div> 
-       </div>  
-      </section>
-        <!-- Testimonials Section End -->
-     
     
+
+
+  
 <!-- Footer Section Begin -->
     <section class="footer-section" style="padding-top: 10px ;">
         <div class="container">
@@ -1034,45 +841,66 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-  <script async >
-        // Function to handle the scroll event
-        function handleScroll() {
-            const windowWidth = window.innerWidth; // Get the current window width
-            const header = document.querySelector('.header-section');
-            const logo = header.querySelector('.logo');
-            const nav = header.querySelector('.nav'); // Replace '.nav' with the appropriate class or selector for your navigation bar
-            const scrollPos = window.pageYOffset;
-    
-            if (windowWidth > 990) { // Check if the screen width is greater than 990px
-                if (scrollPos > 0) {
-                    header.classList.add('scrolled');
-                    logo.style.transform = 'scale(0.45)'; // Adjust the scale value as desired
-                    logo.style.top = '-90px'; // Adjust the scale value as desired
-                    nav.style.display = 'block'; // Show the navigation bar
-                } else {
-                    header.classList.remove('scrolled');
-                    logo.style.transform = 'scale(1)'; // Reset the scale when at the top
-                    logo.style.top = '-60px';
-                    nav.style.display = 'block'; // Show the navigation bar
+<script async>
+    function handleScroll() {
+        const windowWidth = window.innerWidth;
+        const header = document.querySelector('.header-section');
+
+        if (!header) {
+            return; // Exit function if header element is not found
+        }
+
+        const logo = header.querySelector('.logo');
+        const nav = header.querySelector('.nav');
+
+        if (windowWidth > 990) {
+            const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+            if (scrollPos > 0) {
+                header.classList.add('scrolled');
+                if (logo) {
+                    logo.style.transform = 'scale(0.45)';
+                    logo.style.top = '-90px';
+                }
+                if (nav) {
+                    nav.style.display = 'block';
                 }
             } else {
-                if (scrollPos > 0) {
-                    logo.style.display = 'none'; // Hide the logo when screen width is mobile and scrolling down
-                    nav.style.display = 'none'; // Hide the navigation bar when screen width is mobile and scrolling down
-                } else {
-                    logo.style.display = 'block'; // Show the logo when at the top on mobile screens
-                    nav.style.display = 'block'; // Show the navigation bar when at the top on mobile screens
+                header.classList.remove('scrolled');
+                if (logo) {
+                    logo.style.transform = 'scale(1)';
+                    logo.style.top = '-60px';
+                }
+                if (nav) {
+                    nav.style.display = 'block';
+                }
+            }
+        } else {
+            const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+            if (scrollPos > 0) {
+                if (logo) {
+                    logo.style.display = 'none';
+                }
+                if (nav) {
+                    nav.style.display = 'none';
+                }
+            } else {
+                if (logo) {
+                    logo.style.display = 'block';
+                }
+                if (nav) {
+                    nav.style.display = 'block';
                 }
             }
         }
-    
-        // Add event listeners for scroll and DOMContentLoaded
-        window.addEventListener('DOMContentLoaded', handleScroll); // Run once on page load
-        window.addEventListener('scroll', handleScroll);
-    
-        // Add an event listener for window resize to handle initial conditions
-        window.addEventListener('resize', handleScroll);
-    </script>
+    }
+
+    window.addEventListener('DOMContentLoaded', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+</script>
+
     <script async >
         // Function to handle the scroll event
         function handleScroll() {
@@ -1125,6 +953,63 @@
     </script>
 
 
+    <script async >
+        // Define your YouTube video IDs
+        var videoId1 = 'v=or5tRmBi2h0';
+        var videoId2 = 'v=ksVFV6toqZM';
+        var videoId3 = 'v=7KQEb_yIJbo';
+        var videoId4 = 'v=k4EjjBiMVsA';
+       
+
+        // Function to extract video ID from YouTube URL
+        function extractVideoId(url) {
+            var regex = /v=([A-Za-z0-9_-]+)/;
+            var match = url.match(regex);
+            if (match && match[1]) {
+                return match[1];
+            }
+            return null;
+        }
+        
+        // Function to create a YouTube player
+        function createYouTubePlayer(videoId, frameId) {
+            return new YT.Player(frameId, {
+                height: '360',
+                width: '640',
+                videoId: videoId,
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 1,
+                }
+            });
+        }
+        
+        // Create players for each video
+        var players = [];
+        
+        function setupYouTubePlayers() {
+            players.push(createYouTubePlayer(extractVideoId(videoId1), 'video1'));
+            players.push(createYouTubePlayer(extractVideoId(videoId2), 'video2'));
+            players.push(createYouTubePlayer(extractVideoId(videoId3), 'video3'));
+            players.push(createYouTubePlayer(extractVideoId(videoId4), 'video4'));
+         
+
+        }
+        
+        // Function to set up YouTube API when it's ready
+        function onYouTubeIframeAPIReady() {
+            setupYouTubePlayers();
+        
+            // Create GSAP animations for hover effect
+            gsap.to('.video-frame', { scale: 1.05, duration: 0.3, ease: 'power2.inOut' });
+            gsap.to('.video-frame', { scale: 1, duration: 0.3, ease: 'power2.inOut', delay: 0.3 });
+        }
+        
+        // Call setupYouTubePlayers on page load
+        window.addEventListener('load', function () {
+            setupYouTubePlayers();
+        });
+        </script>
     
     <script async >
     document.addEventListener("DOMContentLoaded", function () {
