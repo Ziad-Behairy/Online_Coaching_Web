@@ -214,6 +214,8 @@
             <div class="video-frame" id="video4"></div>
             <div class="video-frame" id="video5"></div>
             <div class="video-frame" id="video6"></div>
+            <div class="video-frame" id="video7"></div>
+            <div class="video-frame" id="video8"></div>
 
 
         </div>
@@ -566,9 +568,11 @@
         var videoId1 = 'v=or5tRmBi2h0';
         var videoId2 = 'v=ksVFV6toqZM';
         var videoId3 = 'v=7KQEb_yIJbo';
-        var videoId4 = 'v=k4EjjBiMVsA';
-        var videoId5 = 'v=7IDs29zUAo8';
+        var videoId4 = 'v=RuU8SraX4rM';
+        var videoId5 = 'v=k4EjjBiMVsA';
         var videoId6 = 'v=Wt0319QgoY0';
+        var videoId7 = 'v=7IDs29zUAo8';
+        var videoId8 = 'v=lQ-ybGYbjQA';
 
         // Function to extract video ID from YouTube URL
         function extractVideoId(url) {
@@ -603,6 +607,10 @@
             players.push(createYouTubePlayer(extractVideoId(videoId4), 'video4'));
             players.push(createYouTubePlayer(extractVideoId(videoId5), 'video5'));
             players.push(createYouTubePlayer(extractVideoId(videoId6), 'video6'));
+            players.push(createYouTubePlayer(extractVideoId(videoId7), 'video7'));
+            players.push(createYouTubePlayer(extractVideoId(videoId8), 'video8'));
+
+
 
         }
         
