@@ -29,6 +29,62 @@
 
     <style>
 
+
+        .floating-button {
+            position: fixed;
+            bottom: 5vh; /* Adjust as needed */
+            right: 1vw; /* Adjust as needed */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            z-index: 1000;
+            overflow: visible;
+        }
+        
+        .floating-button img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        
+        .floating-button:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        /* Initially hide the text */
+        .floating-button::after  {
+            content: 'Go Premium';
+            position: absolute;
+            bottom: -30px; /* Position below the button */
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 14px;
+            color: #000; /* Change as needed */
+            background-color:#f6ae1e; /* Change as needed */
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            opacity: 1; /* Set opacity to 1 to make it always visible */
+            visibility: visible; /* Set visibility to visible */
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        
+        /* Show the text on hover */
+        .floating-button:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        
+        
+
+
         .video-container-testimonials {
             display: flex;
             flex-wrap: wrap;
@@ -50,6 +106,9 @@
         @media (max-width: 768px) {
             .video-frame {
                 width: calc(100% - 20px);
+            }
+            .floating-button {
+                right: 4vw; /* Adjust the right property for mobile view */
             }
         }
            
@@ -282,7 +341,7 @@
 
 
 <!-- Pricing Section Begin -->
-<section class="pricing-section service-pricing spad" style="padding-top: 50px;padding-bottom: 25px;">
+<section class="pricing-section service-pricing spad" id="pricing-section" style="padding-top: 50px;padding-bottom: 25px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -301,7 +360,7 @@
             <li  style="padding-top: 10px;font-size:large;" >Weekly check-ins to assess progress and make program modifications if needed.</li>
             <li  style="padding-top: 10px;font-size:large;">24/7 WhatsApp support for prompt and personalized assistance.</li>
             
-          </ul>           
+      </ul>           
                       
                       
                     
@@ -478,10 +537,12 @@
         // Reset content for Card Set 1 and Card Set 3 if necessary
     }
     </script>
-      
     <!-- Pricing Section End -->
 
-
+  <!-- Floating Button -->
+  <a href="#pricing-section" class="floating-button">
+    <img src="img/logo.png" alt="Logo">
+</a>
     <section id="premium-section" class="breadcrumb-section ">
         <img src="img/premiumfinal.jpg" alt="Background Image" class="background-img">
         <div class="container">
@@ -890,6 +951,19 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+
+
+
+    <script>
+        document.querySelector('.floating-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const section = document.querySelector('.pricing-section');
+            const offset = section.getBoundingClientRect().top + 560;
+            window.scrollBy({ top: offset, behavior: 'smooth' });
+        });
+    </script>
+    
 
    <script async>
     function handleScroll() {
